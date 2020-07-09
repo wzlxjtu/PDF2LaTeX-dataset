@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}
+
+\begin{document}
+\section{Gervini-Yohai $d$-variate filter}
+In this Section we are going to show that the filters introduced in  are a special case of our approach, using the following Gervini-Yohai depth
+\begin{equation*}
+d_{GY}(\bf{t}, F, G) = 1 - G(\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F))) ,
+\end{equation*}
+where $G$ is a continuous distribution function, $\bf{\mu}(F)$ and $\bf{\Sigma}(F)$ are the location and scatter matrix functionals and $\Delta(t, F) = \Delta(\bf{t}, \bf{\mu}(F), \bf{\Sigma}(F)) = (\bf{t} - \bf{\mu}(F))^\top \bf{\Sigma}(F)^{-1} (\bf{t} - \bf{\mu}(F))$ is the squared Mahalanobis distance. Appendix  shows that this is a statistical data depth function. Let $\{ G_n \}_{n=1}^\infty$ be a sequence of discrete distribution functions that might depends on $\hat{F}_n$ and such that $\sup_{t} |G_n(t) - G(t)| \stackrel{a.s.}{\rightarrow} 0$, we might define the finite sample version of the Gervini-Yohai depth as
+\begin{equation*}
+d_{GY}(\bf{t}, \hat{F}_n, G_n) = 1 - G_n(\Delta(\bf{t},\bf{\mu}(\hat{F}_n),\bf{\Sigma}(\hat{F}_n))) \ ,
+\end{equation*}
+however for filtering purpose we will use two alternative definitions later on.
+The use of $G_n$, that might depend on the data, instead of $G$ makes this sample depth semiparametric. We notice that the Mahalanobis depth, which is completely parametric, cannot be used for the purpose of defining a filter in a similar fashion.
+Let $1 \le d \le p$, $j_1, \ldots, j_d$ be an $d$-tuple of the integer numbers $1, \ldots, p$ and, for easy of presentation, let $\bf{Y}_i = (X_{ij_1}, \ldots , X_{ij_d})$ be a subvector of dimension $d$ of $\bf{X}_i$. Consider a pair of initial location and scatter estimators
+\begin{equation*}
+ \bf{T}_{0n}^{(d)} =  \left (
+				\begin{array}{ll}
+				T_{0n,j_1} \\
+ 				\ldots \\
+				T_{0n,j_d}
+				\end{array}
+			\right )
+			\quad \mbox{ and } \quad 
+        \bf{C}_{0n}^{(d)} =  \left (
+				\begin{array}{lll}
+				C_{0n,j_1j_1}  \ldots    C_{0n,j_1j_d} \\
+ 				\ldots             \ldots       \ldots            \\
+				C_{0n,j_dj_1} \ldots     C_{0n,j_dj_d}
+				\end{array}
+			\right ) \ .
+\end{equation*}
+Now, define the squared Mahalanobis distance for a data point $\bf{Y}_i$ by $\Delta_i = \Delta(\bf{Y}_i, \hat{F}_n) = \Delta(\bf{Y}_i, \bf{T}_{0n}^{(d)}, \bf{C}_{0n}^{(d)})$. Consider $G$ the distribution function of a $\chi_d^2$, $H$ the distribution function of $\Delta = \Delta(\cdot, F)$ and let $\hat{H}_n$ be the empirical distribution function of $\Delta_i$ ($1 \le i \le n$). We consider two finite sample version of the Gervini-Yohai depth, i.e., 
+\begin{equation*}
+d_{GY}(\bf{t}, \hat{F}_n, G) = 1 - G(\Delta(\bf{t}, \hat{F}_n)) ,
+\end{equation*}
+and
+\begin{equation*}
+d_{GY}(\bf{t}, \hat{F}_n, \hat{H}_n) = 1 - \hat{H}_n(\Delta(\bf{t}, \hat{F}_n)) .
+\end{equation*}
+The proportion of flagged $d$-variate outliers is defined by
+\begin{equation*}
+d_n = \sup_{\bf{t} \in A} \{ d_{GY}(\bf{t}, \hat{F}_n, \hat{H}_n) - d_{GY}(\bf{t}, \hat{F}_n, G) \}^+ .
+\end{equation*}
+\end{document}

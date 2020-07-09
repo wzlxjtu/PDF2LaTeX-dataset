@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+
+\subsection{Mass deformations}
+In the following, we consider the coset with $n=1$, i.e. a single vector multiplet. The coset representative is expressed in terms of four scalars $\phi^i, i=0,1,2,3$ via
+\begin{eqnarray}
+L=\prod_{i=0}^3e^{\phi^i K^i}
+\end{eqnarray}
+where $K^i$ are the non compact generators of $SO(4,1)$; see  for details. Note that  $\phi^0$ is an $SU(2)_R$ singlet, while the other three scalars $\phi^r$ form an $SU(2)_R$ triplet. 
+The scalar potential for this specific case can be obtained from and takes the following form
+\begin{align}
+V(\sigma,\phi^i) =- g^2 e^{2 \sigma }+\frac{1}{8} m e^{-6 \sigma } \bigg[-32 g e^{4 \sigma } \cosh \phi^0 \cosh \phi^1 \cosh \phi^2 \cosh \phi^3+8 m \cosh ^2\phi^0
+\nonumber\\
++m \sinh ^2 \phi^0 \bigg(-6+8 \cosh ^2\phi^1 \cosh ^2 \phi^2 \cosh (2 \phi^3)+\cosh (2 (\phi^1-\phi^2))\nonumber\\
++\cosh (2 (\phi^1+\phi^2))+2 \cosh (2 \phi^1)+2 \cosh (2 \phi^2)\bigg)\bigg]
+\end{align}
+The supersymmetric AdS$_6$ vacuum is given by setting $g=3m$ and setting all scalars to vanish. The masses of the  linearized  scalar fluctuation around the AdS vacuum  determine the dimensions of the dual scalar operators in the SCFT via
+\begin{eqnarray}
+m^2l^2= \Delta(\Delta-5)
+\end{eqnarray}
+where $l$ is the curvature radius of the AdS$_6$ vacuum. For the scalars at hand, one finds
+\begin{eqnarray}
+m_\sigma^2 l^2 = -6 \hspace{0.8 in} m_{\phi^0}^2 l^2 = -4 \hspace{0.8 in} m_{\phi^r}^2 l^2 = -6\,\,,\,\,\,\,r=1,2,3
+\end{eqnarray}
+Hence the dimensions of the dual operators are 
+\begin{eqnarray}
+\Delta_{{\cal O}_\sigma} = 3, \hspace{0.8 in} \Delta_{{\cal O}_{\phi^0}} = 4, \hspace{0.8 in} \Delta_{{\cal O}_{\phi^r}} = 3\,\,,\,\,\,\,r=1,2,3
+\end{eqnarray}
+In  these CFT operators were expressed in terms of free hypermultiplets (i.e. the singleton sector). The case of $n=1$ corresponds to having a single free hypermultiplet, consisting of four real scalars $q_A^I$ and two symplectic Majorana spinors $\psi ^I$. Here $I=1,2$ is the $SU(2)_R$ R-symmetry index and $A=1,2$ is the $SU(2)$ flavor symmetry index. The gauge invariant operators appearing in are related to these fundamental fields as follows,
+\begin{eqnarray}
+{\cal O}_{\sigma}=(q^*)^A_{\;\;I} q_{\;\;A}^I,  \hspace{0.4 in} {\cal O}_{\phi^0}= \bar \psi_I \psi^I,  \hspace{0.4 in}{\cal O}_{\phi^r}=  (q^*) ^A_{\;\;I}  (\sigma^r)_A^{\;\; B}  {q^I}_B\,\,, \,\,\,\,\,r=1,2,3
+\end{eqnarray}
+Note that the first two operators correspond to mass terms for the scalars and fermions, respectively, in the hypermultiplet. The third operator is a triplet with respect to the
+\end{document}

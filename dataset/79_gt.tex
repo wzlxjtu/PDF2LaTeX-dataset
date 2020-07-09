@@ -1,0 +1,34 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+\allowdisplaybreaks
+$C^{(M,L; i)}_{{\mathfrak J}}(z)$, corresponding to a sphere with single puncture, by computing residues. We define these to be
+\begin{gather*}
+C^{(M,L;i)}_{{\mathfrak J}}(z)=\frac1{\Big(\prod\limits_{j\neq i}\Gamma_e(a_i/a_j)\Big)\Gamma_e\big( pq t^2\frac1{a_i^2}\big)(q;q)(p;p)}\operatorname{Res}_{u\to \frac1{(q p)^{\frac12} q^M p^L t} a_i} \frac1u T_{{\mathfrak J},\overline{\mathfrak J}}(u,z) .
+\end{gather*}
+ The cap theory for zero values of $M$ and $L$ is a model corresponding to sphere with one puncture and flux $-\frac34$ for ${\rm U}(1)_t$, $\frac78$ for ${\rm U}(1)_i$, and $-\frac18$ for ${\rm U}(1)_j$. See for details of the derivation of the flux.
+The index can be thought as partition function on ${\mathbb S}^1\times {\mathbb S}^3$, and for non vanishing values of~$M$ and~$L$ the theory
+also has surface defects wrapping the~${\mathbb S}^1$ and one of the two equators of~${\mathbb S}^3$. Finally we have a three punctured sphere $T_{{\mathfrak J}_B,{\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)$
+\begin{gather*}
+T_{{\mathfrak J}_B,{\mathfrak J}_C,{\mathfrak J}_D}(w,u,v) = \Gamma_e\big((q p)^{\frac12} t\big(B^{-1}A\big)^{\pm1} w^{\pm1}\big)\Gamma_e\left(\frac{q p}{t^2}\right) (q;q)(p;p)\\
+\quad{} \times \oint \frac{{\rm d} h}{4\pi i h} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}\big(A B^{-1}\big)^{\pm1}h^{\pm1}\big)}{\Gamma_e\big(h^{\pm2}\big)}\Gamma_e\big(t h^{\pm1} w^{\pm1}\big) H\big(u,D,v,C,\sqrt{h B},\sqrt{h^{-1}B}; A\big),
+\end{gather*} where we have defined
+\begin{gather}
+H(z_1,z_2,v_1,v_2, a , b; A ) = (q;q)^2(p;p)^2\oint\frac{{\rm d}w_1}{4\pi i w_1}\oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}w_1^{\pm1}w_2^{\pm1}\big)}{\Gamma_e\big(w_2^{\pm2}\big)\Gamma_e\big(w_1^{\pm2}\big)} \nonumber\\
+ \quad{} \times \Gamma_e\big( (q p)^{\frac14}t A^{\frac12}b^{-1} w_1^{\pm1}z_1^{\pm1}\big) \Gamma_e\big((qp)^{\frac14} A^{\frac12} bw_1^{\pm1}z_2^{\pm1}\big)\Gamma_e\big((q p)^{\frac14} t A^{-\frac12} b w_2^{\pm1} z_1^{\pm1}\big)\nonumber\\
+\quad{} \times \Gamma_e \big((q p)^{\frac14} A^{-\frac12} b^{-1} z_2^{\pm1}w_2^{\pm1}\big) \Gamma_e\big((q p)^{\frac14} t A^{-\frac12} a w_1^{\pm1} v_1^{\pm1}\big)\Gamma_e\big( ( q p)^{\frac14} A^{-\frac12} a^{-1} v_2^{\pm1} w_1^{\pm1}\big)\nonumber\\
+\quad{} \times \Gamma_e\big( ( q p )^{\frac14} t A^{\frac12} a^{-1} w_2^{\pm1} v_1^{\pm1}\big) \Gamma_e\big( ( q p )^{\frac14} A^{\frac12} a w_2^{\pm1} v_2^{\pm1}\big) . 
+ \end{gather}
+The above expressions are non trivial to derive. The theory corresponding to three punctured spheres is constructed by starting from a gauge theory, index of which is roughly speaking $H$, and arguing that at some point on the conformal manifold the ${\rm U}(1)$ symmetry corresponding to fugacity $\sqrt{a/b}$ enhances to ${\rm SU}(2)$. This is a non trivial fact which follows from dualities. This~${\rm SU}(2)$ is then taken to be dynamical with addition of some chiral fields. The resulting index is given above. The statement that this theory corresponds to three punctured sphere is made by performing a variety of physical consistency checks. Note that the construction also gives a theory having only rank five symmetry as opposed to rank eight.
+For the three punctured sphere we have flux $3/4$ for ${\rm U}(1)_t$ and vanishing flux for the Cartan generators of ${\rm SU}(8)$. The three punctured sphere depends on four parameters $(A,B,C,D)$ which parametrize ${\rm SO}(8)$ inside ${\rm SU}(8)$. That is,
+\begin{gather}
+ (a_1,a_2,a_3,a_4) =A^{\pm1} B^{\pm1} ,\qquad (a_5,a_6,a_7,a_8) =C^{\pm1} D^{\pm1} .
+\end{gather}
+\end{document} 

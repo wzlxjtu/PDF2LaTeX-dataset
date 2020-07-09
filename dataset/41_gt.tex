@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\begin{itemize}
+\item[a)] and Assumption 4a, the average and quantile direct effects on never-takers are identified:
+\begin{equation*}
+\theta_1^n= \theta_1^{1,0}(1) \mbox{ and } \theta_1^n(q)= \theta_1^{1,0}(q,1).
+\end{equation*}
+\item[b)] and Assumption 4, the average direct effect under $d = 0$ on compliers is identified:
+\begin{align*}
+\displaystyle \theta_1^{c}(0) = \frac{p_{0|0}}{p_{0|0} - p_{0|1}} \theta_1^{0,0}(0)   - \frac{p_{0|1}}{p_{0|0} - p_{0|1}} \theta_1^{1,0}(1) .
+\end{align*}
+Furthermore, the potential outcome distributions under $d = 0$ on compliers are identified:
+\begin{equation} \begin{array}{rl} \displaystyle
+ F_{Y_{1}(1,0)|\tau=c}(y) = \displaystyle \frac{p_{0|0}}{p_{0|0} - p_{0|1}}  F_{Q_{10}(Y_{0})|D=0,M=0}(y) \\ \displaystyle \qquad - \frac{p_{0|1}}{ p_{0|0} - p_{0|1}c}  F_{Y_1|D=1,M=0}(y), \end{array}
+ \end{equation}
+ \begin{equation}
+ \begin{array}{rl}\displaystyle
+F_{Y_{1}(0,0)|\tau=c}(y) = \displaystyle \frac{p_{0|0}}{p_{0|0} - p_{0|1}} F_{Y_{1}|D=0,M=0}(y) \\ \displaystyle \qquad - \frac{p_{0|1} }{p_{0|0} - p_{0|1}}F_{Q_{00}(Y_{0})|D=1,M=0}(y)  . 
+\end{array}
+\end{equation}
+Therefore, the direct quantile effect under $d = 0$ on compliers, $\theta_1^{c}(q,0) = F_{Y_{1}(1,0)|c}^{-1}(q)-F_{Y_{1}(0,0)|c}^{-1}(q)$, is identified.
+\end{itemize}
+\textbf{Proof.} See Appendix .
+\noindent \textbf{Theorem 4:} Under Assumptions 1–2, 5, 7-8,
+\begin{itemize}
+\item[a)] and Assumption 6a, the average and quantile direct effects on
+always-takers are identified:
+\begin{equation*}
+\theta_1^a= \theta_1^{0,1}(0) \mbox{ and } \theta_1^a(q)= \theta_1^{0,1}(q,0).
+\end{equation*}
+\item[b)] and Assumption 6, the average direct effect under $d = 1$ on compliers is identified:
+\begin{align*}
+\theta_{1}^{c}(1) = \frac{p_{1|1}}{ p_{1|1} - p_{1|0}} \theta_1^{1,1}(1) -\frac{p_{1|0}}{p_{1|1} - p_{1|0}}\theta_1^{0,1}(0).
+\end{align*}
+Furthermore, the potential outcome distributions under $d = 1$ for compliers
+\end{itemize}
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Let $\Delta_{1}^{Д} = E[Y_{1}(1,\ M(1))\ -Y_{1}(0,\ M(0))|Д]$ denote the ATE conditional on $Д\in$
+
+$\{a,\ c,\ de,\ n\}$; ?t1 ({\it d}) and dt1 ({\it d}) denote the corresponding direct and indirect effects.
+
+Because $M(1) =M(0) =0$ for any never-taker, the indirect effect for this group is
+
+by definition zero $($d{\it n}1 $(d)=E[Y_{1}(d,\ 0)-Y_{1}(d,\ 0)|Д=n]=0)$ and $\Delta_{1}^{n}=E[Y_{1}(1,0)-$
+
+$Y_{1} (0$, 0$) |Д=n]=ё n1$ (1) $=ё n1$ (0) $=ё n1$ equals the direct effect for never-takers. Corre-
+
+spondingly, because $M(1) = M(0) = 1$ for any always-taker, the indirect effect
+
+for this group is by definition zero (d{\it a}1 ({\it d}) $= E[Y_{1}(d,\ 1) -Y_{1}(d$, 1)$|$t $= a] = 0$)
+
+and $\Delta_{1}^{a} = E[Y_{1}(1,1)\ -\ Y_{1}(0,\ 1)|Д\ =\ a] =$ ?{\it a}1 (1) $=$ ?{\it a}1 (0) $=$ ?{\it a}1 equals the di-
+
+rect effect for always-takers. For the compliers, both direct and indirect effects
+
+may exist. Note that $M(d) = d$ due to the definition of compliers. Accord-
+
+ingly, ?{\it c}1 ({\it d}) $= E[Y_{1}(1,\ d)\ -Y_{1}(0,\ d)|Д\ =\ c]$ equals the direct effect for compliers,
+
+d1{\it c}({\it d}) $= E[Y_{1}(d,\ 1)\ -Y_{1}(d,\ 0)|Д\ =\ c]$ equals the indirect effect for compliers, and
+
+$\Delta_{1}^{c} = E[Y_{1}(1,1)-Y_{1}(0,\ 0)|Д\ =\ c]$ equals the total effect for compliers. In the ab-
+
+sence of any direct effect, the indirect effects on the compliers are homogeneous,
+
+d1{\it c}(1) $=\ovalbox{\tt\small REJECT} 1$ (0) $=\ovalbox{\tt\small REJECT} 1,$ and correspond to the local average treatment effect. Analogous
+
+results hold for the defiers. As already mentioned, we will also consider direct effects
+
+conditional on specific values $D=d$ and mediator states $M=M(d)=m$, which are
+
+denoted by?{\it d}1'{\it m}({\it d}) $=E[Y_{1}(1,\ m)-Y_{1}(0,\ m)|D=d,\ M(d)\ =m]$. These parameters
+
+are identified under weaker assumptions than strata-specific effects, but are also less
+
+straightforward to interpret, as they refer to mixtures of two strata. For instance,
+
+?11,0(1) $=E[Y_{1}(1,0)-Y_{1}(0,0)|D=1,\ M(1)=0]$ is the effect on a mixture of never-
+
+takers and defiers, as these two groups satisfy $M(1)=0$. Likewise, ?01 $0(0)$ refers to
+
+never-takers and compliers satisfying $M(0)=0$, ?011 (0) to always-takers and defiers
+
+satisfying $M(0)=1$, and ?11 1 (1) to always-takers and compliers satisfying $M(1)=1.$
+
+0.1 Quantile effects
+
+We denote by $F_{Y_{\mathrm{t}}(d,m)}(y) = \mathrm{P}\mathrm{r}(Y_{t}(d,\ m)\ \leq\ y)$ the cumulative distribution function
+
+of $Y_{t}(d,\ m)$ at outcome level $y$. Its inverse, $F_{Y_{\mathrm{t}}(d,m)}^{-1}(q) =\displaystyle \inf\{y\ :\ F_{Y_{\mathrm{t}}(d,m)}(y)\ \geq q\}$, is
+
+the quantile function of $Y_{t}(d,\ m)$ at rank $q$. The total QTE are denoted by
+\end{document}

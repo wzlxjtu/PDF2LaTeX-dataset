@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+Under Assumption 7 and 8,
+\begin{equation}  \begin{array}{rl} E[1\{Y_1(0,0) \leq y\}|D=1,M(1)=0]\stackrel{A7,A8}{=}E[1\{Y_1(0,0) \leq y\}|\tau=n]\\  = F_{Y_{1}(0,0)|\tau=n}(y),
+\end{array} \end{equation}
+which proves.
+\subsection{Average direct effect under $\mathbf{d = 0}$ on compliers}
+In the following, we show that
+\begin{align*}
+\displaystyle \theta_1^{c}(0) = E[Y_1(1,0)-Y_1(0,0)|\tau=c], \\ =
+\frac{p_{0|0}}{p_{0|0} - p_{0|1}}E[Q_{10}(Y_0)- Y_1|D=0,M=0] \\
+  - \frac{p_{0|1}}{p_{0|0} - p_{0|1}}E[Y_1 - Q_{00}(Y_0)|D=1,M=0].
+\end{align*}
+Plugging () in () under $T=1$, we obtain
+\begin{equation*}
+\begin{array}{rl}
+E[Y_1|D=0,M=0]  = \displaystyle  \frac{p_n}{p_n + p_c}E[Q_{00}(Y_0)|D=1,M=0] \\
+\displaystyle \quad +   \frac{p_c}{p_n + p_c}E[Y_1(0,0)|\tau=c].
+\end{array}
+\end{equation*}
+This allows identifying
+\begin{equation} 
+\begin{array}{rl}
+E[Y_1(0,0)|\tau=c] = \displaystyle \frac{p_{0|0}}{ p_{0|0} - p_{0|1}} E[Y_1|D=0,M=0] \\
+ \displaystyle \quad -\frac{p_{0|1}}{p_{0|0} - p_{0|1}}E[Q_{00}(Y_0)|D=1,M=0].
+\end{array}
+\end{equation}
+Accordingly, we have to show the identification of $E[Y_1(1,0)|c]$ to finish the proof. From () we have $E[Y_1(1,0)|D=0,M=0] = E[Q_{10}(Y_0)|D=0,M=0]$. Applying
+\end{document}

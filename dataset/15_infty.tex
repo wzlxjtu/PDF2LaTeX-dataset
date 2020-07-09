@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+The non-zero components of the Ricci tensor are
+$$
+R_{uu}=-5(f''+(f')^{2})
+$$
+while the Ricci scalar is given by
+
+$R_{mn}=-g_{mn}(f''+5(f')^{2})$ (1)
+\begin{center}
+$R=-10f''-30(f')^{2}$   (2)
+\end{center}
+Furthermore, we have that $G=e^{5f} g$, where $g$ is the determinant of the unit $S^{5}$ metric.
+
+Upon integration by parts, part of the Einstein-Hilbert term cancels with the Gibbons-
+
+Hawking term to give the following simple expression
+\begin{center}
+$S=\ du\ d^{5}x\ ge^{5f}[-5((f')^{2}+4W^{2})+2\mathcal{L}_{\mathrm{k}\mathrm{i}\mathrm{n}}]$   (3)
+\end{center}
+The restriction to the flat case was not strictly necessary so far, but it will be crucial in the
+
+next step. The gradient flow equations, together with the chain-rule, allows us to rewrite
+\begin{center}
+$\mathcal{L}_{\mathrm{k}\mathrm{i}\mathrm{n}}=-2W'$   (4)
+\end{center}
+Plugging this into and using the BPS equation of the warp factor, we find
+\begin{center}
+$S=-4\ d^{5_{X}}\ ge^{5f}W|_{0}^{\Lambda}$   (5)
+\end{center}
+where $\Lambda$ is the UV cutoff. Only the $\Lambda$ part of the action contributes, since $e^{5f}W|_{0}$ vanishes
+
+due to the close-0ff of the geometry. Removing the UV cutoff $\Lambda \rightarrow \infty$ is equivalent to
+
+removing the cutoff $\epsilon$ on our asymptotic coordinate $z$, i.e. $\epsilon\rightarrow 0$. From the UV asymptotics
+
+we find that in this limit the factor $e^{5f}$ diverges like
+\begin{center}
+$e^{5f}\displaystyle \sim\frac{1}{\epsilon^{5}}$   (6)
+\end{center}
+This is the reason for the previous claims that only the terms up to $O(z^{5})$ in the superpoten-
+
+tial are relevant for obtaining counterterms. All the higher-order terms vanish as the cuto
+
+is removed. We may thus legitimately insert the approximate superpotential into to get the
+
+counterterms,
+\begin{center}
+$S_{\mathrm{c}\mathrm{t}}^{(W)}=4\displaystyle \ d^{5}x\ \gamma\ [\frac{1}{2}+\frac{3}{4}\sigma^{2}+\frac{1}{16}(\phi^{0})^{2}-\frac{3}{16}(\phi^{3})^{2}+\frac{1}{192}(\phi^{0})^{4}-\frac{3}{16}(\phi^{0})^{2}\sigma]$   (7)
+\end{center}
+where $\gamma$ is the induced metric on the $ z=\epsilon$ boundary. All fields are evaluated at $ z=\epsilon$. This
+
+gives all finite and infinite counterterms for the flat domain wall solutions.
+
+1
+\end{document}

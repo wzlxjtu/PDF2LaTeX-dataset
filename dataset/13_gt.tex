@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+(located at some cutoff distance $u= \Lambda$), while ${\cal K}$ is the trace of the extrinsic curvature ${\cal K}_{ij}$ of the radial $S^5$ slices. The latter is defined as
+\begin{eqnarray}
+{\cal K}_{i}=\frac{d}{du} \gamma_{i}
+\end{eqnarray}
+In general, the on-shell action is divergent and requires renormalization. The addition of infinite counterterms is standard in holographic renormalization   , but in the current case we must also add finite counterterms in order to preserve supersymmetry .  We will begin our exploration of counterterms in this section by first considering the finite counterterms in the limit of a flat domain wall, after which we move onto infinite counterterms in the more general case of a curved domain wall. Finally, appropriate curved space finite counterterms will be fixed by demanding finiteness of the one-point functions of the dual operators.
+\subsection{Finite counterterms}
+In order to obtain finite counterterms, we will make use of the Bogomolnyi trick . To do so, we will first need to identify a superpotential $W$. Though we will find that no exact superpotential can be found for our solutions - in the sense that there is no superpotential which can recast all of the BPS equations in gradient flow form -  we will be able to identify an \textit{approximate} superpotential. By ``approximate" here, we mean that it does yield gradient flow equations up to terms of order $O(z^5)$, where the asymptotic coordinate $z$ was defined earlier as $z=e^{-u}$. This is useful since, as we will see later, we will only need terms up to $O(z^5)$ to obtain all divergent and finite counterterms. Terms of higher order will all vanish in the $\epsilon \rightarrow 0$ limit, i.e. when the UV cutoff is removed. Thus the approximate superpotential will yield  all finite counterterms. 
+\subsubsection{Approximate superpotential}
+In order to identify a candidate superpotential, we begin by recalling the form of the scalar potential $V$. With the choice of coset representative and consistent truncation outlined in Section , one finds that
+\begin{eqnarray}
+V(\sigma,\phi^i) = -9 m^2 e^{2 \sigma }-12m^2 e^{- 2 \sigma} \cosh \phi^0 \cos \phi^3 + m^2 e^{-6 \sigma} \cosh^2 \phi^0+m^2 e^{-6 \sigma} \cos 2 \phi^3 \sinh^2 \phi^0
+\nonumber
+\end{eqnarray}
+ This scalar potential can in fact be rewritten as
+\begin{eqnarray}
+V = 4 (N_0^2 + N_3^2) + {1 \over 4} (M_0^2 +M_3^2) - 20 (S_0^2 + S_3^2)
+\end{eqnarray}
+Then for BPS solutions, implies that 
+\begin{eqnarray}
+V = (\sigma')^2 + {1 \over 4}\left(-({\phi^3}')^2 + \cos^2 \phi^3 ({\phi^0}')^2\right)- 20 (S_0^2 + S_3^2)
+\end{eqnarray}
+\end{document}

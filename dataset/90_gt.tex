@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+ $y_1=(pq)^{-\frac12}t^{-2}AB^{-1}$ and $y_2=(pq)^{-\frac12}q^{-1}t^{-2}AB^{-1}$. For $y_1$ the integral over $w_1$ is pinched at $w_1=v^{\pm1}$ and we proceed exactly as in appendix B to get the same result up to some overall factors
+\begin{gather}
+\frac12 \frac{\Gamma_e\big(qt^{-2}\big)\Gamma_e\big(pq^2t^2A^{-2}B^2\big)\Gamma_e\big(t^{-2}B^{-2}\big)\Gamma_e\big(t^{-2}A^2\big) \Gamma_e\big((pq)^{-1}q^{-1}t^{-4}A^2 B^{-2}\big)} {\Gamma_e\big((pq)^{-1}t^{-4}A^2 B^{-2}\big)}\nonumber\\
+\quad{}\times\Gamma_e\big(t^{-2}AB^{-1}C^{\pm1}D^{\pm1}\big)
+\Gamma_e\big( AB^{-1} u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t BD^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A^{-1} C^{\pm1} v^{\pm1}\big)\nonumber\\
+\quad{}\times\Gamma_e\big((pq)^\frac12 t B C^{\pm1}u^{\pm1}\big)\Gamma_e\big((pq)^\frac12 t A^{-1}D^{\pm1}u^{\pm1}\big).
+\end{gather}
+Now we look at the pole $y_2$. the integral over $w_1$ is pinched at $w_1=q^{\pm\frac12}v^{\pm1}$. Substituting these values \eqref{c2} now becomes
+\begin{gather*}
+\frac12\frac{\Gamma_e\big(t^{-2}\big)\Gamma_e\big(pq^3t^2A^{-2}B^2\big)}
+{\Gamma_e\big(pq^3 t^4 A^{-2}B^2\big)}\frac{\Gamma_e\big(v^2\big)}{\Gamma_e\big(qv^2\big)}
+\Gamma_e\big( q^{-\frac12}AB^{-1}u^{\pm1}\big(q^\frac12 v\big)^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}q^\frac12 t B D^{\pm1}\big(q^\frac12 v\big)^{\pm1}\big)\\
+\quad{} \times\Gamma_e\big( ( q p)^{\frac12} q^\frac12 t A^{-1} C^{\pm1} \big(q^\frac12 v\big)^{\pm1}\big)
+\oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{1}{\Gamma_e\big(w_2^{\pm2}\big)} \Gamma_e\left(\frac{(p q)^{\frac12}}{t^2}q^\frac12 v w_2^{\pm1}\right)\\
+\quad{}\times \Gamma_e\big((q p)^{\frac12}q^\frac12 t^2 A^{-1} B w_2^{\pm1} u^{\pm1}\big) \Gamma_e \big(q^{-\frac12} t^{-1} B^{-1} D^{\pm1}w_2^{\pm1}\big)\\
+\quad{}\times \Gamma_e\big( ( q p )^{\frac12}q^\frac12 t^2 w_2^{\pm1} v^{-1}\big) \Gamma_e\big( q^{-\frac12}t^{-1} A w_2^{\pm1} C^{\pm1}\big)
++\big\{v \leftrightarrow v^{-1} \big\} .
+\end{gather*}
+The integral here can be interpreted as index of the ${\rm SU}(2)$ gauge theory with four flavors. Using the Intriligator--Pouliot duality transformation (that is $V(\underline{s})={\prod\limits_{1\leq j < k\leq 8} \Gamma_e(s_j s_k)V(\sqrt{pq}/\underline{s})}$ in the notations of) the expression becomes
+\begin{gather*}
+\frac12\frac{\Gamma_e\big(t^{-2}\big)\Gamma_e\big(pq^3t^2A^{-2}B^2\big)}
+{\Gamma_e\big(pq^3 t^4 A^{-2}B^2\big)}\frac{\Gamma_e\big(v^2\big)}{\Gamma_e\big(qv^2\big)}
+\Gamma_e\big( q^{-\frac12}AB^{-1}u^{\pm1}\big(q^\frac12 v\big)^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}q^\frac12 t B D^{\pm1}\big(q^\frac12 v\big)^{\pm1}\big)\\
+\quad{} \times\Gamma_e\big( ( q p)^{\frac12} q^\frac12 t A^{-1} C^{\pm1} \big(q^\frac12 v\big)^{\pm1}\big) \Gamma_e\big(pq^2A^{-1}Bvu^{\pm1}\big)\Gamma_e\big((pq)^\frac12 t^{-3}B^{-1}vD^{\pm1}\big)\\
+\quad{} \times\Gamma_e\big((pq)^\frac12 t^{-3}AvC^{\pm1}\big)\Gamma_e\big(pq^2t^4A^{-2}B^2\big)\Gamma_e\big((pq)^\frac12 t A^{-1}u^{\pm1}D^{\pm1}\big)\Gamma_e\big((pq)^\frac12 tBu^{\pm1}C^{\pm1}\big)\\
+\quad{} \times\Gamma_e\big(pq^2t^4A^{-1}B v^{-1}u^{\pm1}\big)\Gamma_e\big(q^{-1}t^{-2}B^{-2}\big)\Gamma_e\big(q^{-1}t^{-2}AB^{-1}C^{\pm1}D^{\pm1}\big)\\
+\quad{}\times\Gamma_e\big((pq)^\frac12 t B^{-1}v^{-1}D^{\pm1}\big) \Gamma_e\big(q^{-1}t^{-2}A^2\big)\Gamma_e\big((pq)^\frac12 t Av^{-1}C^{\pm1}\big)\Gamma_e\big(pq^2\big)\\
+\quad{}\times \oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{1}{\Gamma_e\big(w_2^{\pm2}\big)} \Gamma_e\big(q^{-\frac12}t^2 v^{-1} w_2^{\pm1}\big) \Gamma_e\big(q^{-\frac12} t^{-2} A B^{-1} w_2^{\pm1} u^{\pm1}\big)\\
+\quad{} \times\Gamma_e \big((pq)^{\frac12}q^\frac12 t B D^{\pm1}w_2^{\pm1}\big)
+\Gamma_e\big( ( q p )^{\frac12}q^\frac12 t A^{-1} w_2^{\pm1} C^{-1}\big) \Gamma_e\big( q^{-\frac12}t^{-2} v w_2^{\pm1} \big)
++\big\{v \leftrightarrow v^{-1} \big\} .
+\end{gather*}
+We have zero multiplying the integral but the integral is pinched at $w_2=\big(q^{\pm\frac12}t^{-2}v\big)^{\pm1}$ due to the colliding of poles of the first and last elliptic gamma functions in the last integral. We get different contribution for each choice
+\end{document} 

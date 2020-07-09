@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Let X be a $\mathbb{R}^{p}$-valued random variable with distribution function $F$. For
+
+a point $\mathrm{x}\in \mathbb{R}^{\mathrm{p}}$, we consider the statistical data depth of $\mathrm{x}$ with respect to
+
+$F$ be $d(\mathrm{x};\mathrm{F})$ such that $d$ satisfies the four properties given in ? and ? and
+
+reported in Appendix of the Supplementary Material. Given an indepˆendent
+
+and identically distributed sample X1, . . . , Xn of size {\it n}, we denote $F_{n}(\cdot)$ its
+
+empirical distribution function and by $d(\mathrm{x};\mathrm{F}_{\mathrm{n}})$ the sample depth. We assume
+
+that, $d$ ($\mathrm{x}$; Fˆ n) is a uniform consistent estimator of $d(\mathrm{x};\mathrm{F})$ , that is,
+\begin{center}
+$\displaystyle \sup_{\mathrm{x}}|d$ ($\mathrm{x}$; $\mathrm{F}$ˆ $\mathrm{n}$) $-\mathrm{d}(\mathrm{x};\mathrm{F})|\rightarrow 0 \mathrm{n}\rightarrow\infty,$
+\end{center}
+a property enjoined by many statistical data depth functions, e.g., among
+
+others simplicial depth (?) , half-space depth (?) . One important feature of
+
+the depth functions is the a-depth trimmed region given by {\it R}a({\it F}) $= \{\mathrm{x}\in$
+
+$\mathbb{R}^{\mathrm{p}}$ : $\mathrm{d}(\mathrm{x};\mathrm{F}) \geq\ovalbox{\tt\small REJECT}\};$ for any $\ovalbox{\tt\small REJECT}\in [0$, 1$]$, we will denote {\it R}ß({\it F}) the smallest
+
+region {\it R}a({\it F}) that has probability larger that or equal to ß according to $F.$
+
+Throughout, subscripts and superscripts for depth regions are used for depth
+
+levels and probability contents, respectively. Let {\it C}ß({\it F}) be the complement
+
+in $\mathbb{R}^{p}$ of the set {\it R}ß({\it F}). Let $m =$ maxx {\it d} $(\mathrm{x};\mathrm{F})$ , be the maximum of the
+
+depth, for simplicial depth $m\leq 2^{-p}$, for half-space depth $ m\leq 1/2$. Given a
+
+high order quantile ß, we define a filter of dimension $p$ based on
+\begin{center}
+$dn=\mathrm{x}\in \mathrm{C}\mathrm{u}$ß$\mathrm{p}$($\mathrm{F}$) $\{d(\mathrm{x};\ \mathrm{F}\ovalbox{\tt\small REJECT}\ \mathrm{n})-\mathrm{d}(\mathrm{x};\mathrm{F})\}^{+}$,   (1)
+\end{center}
+where $\{a\}^{+}$ represents the positive part of $a$, and we mark as outliers all
+
+the $\lfloor nd_{n}/m\rfloor$ observations with the smallest population depth (where $\lfloor a\rfloor$
+
+is the largest integer less then or equal to $a$). This define a filter in the
+
+general dimension $p$. We have the following result, with obvious proof. If
+
+$\displaystyle \sup_{\mathrm{x}}|d$ ($\mathrm{x}$; Fˆ $\mathrm{n}$) $-\mathrm{d}(\mathrm{x};\mathrm{F})|=\mathrm{o}(\mathrm{n})$ (a.s.) then $nd_{n}\rightarrow 0$ as $ n\rightarrow\infty$. If the above
+
+result holds, then the filter would be consistent. In the next subsection we
+
+are going to illustrate this approach using the half-space depth.
+
+0.1 Filters based on Half-space Depth
+
+Let X be a $\mathbb{R}^{p}$-valued random variable with distribution function $F$. For a
+
+point $\mathrm{x}\in \mathbb{R}^{\mathrm{p}}$, the half-space depth of $\mathrm{x}$ with respect to $F$ is defined as the
+
+minimum probability of all closed half-spaces including $\mathrm{x}$:
+$$
+d_{HS}(\mathrm{x};\mathrm{F})=\min_{\mathrm{H}\in \mathcal{H}(\mathrm{x})}\mathrm{P}_{\mathrm{F}}(\mathrm{X}\in \mathrm{H})\ .
+$$
+where $\mathcal{H}(\mathrm{x})$ indicates the set of all half-spaces in $\mathbb{R}^{p}$ containing $\mathrm{x}\in \mathbb{R}^{\mathrm{p}}. \mathrm{A}$
+
+random vector X $\in \mathbb{R}^{\mathrm{p}}$ is said elliptically symmetric distributed, denoted by
+
+1
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\subsection{Quantile direct effect under $\mathbf{d=0}$ conditional on $\mathbf{D=0}$ and $\mathbf{M(0)=0}$}
+In the following, we prove that
+\begin{align*}
+\theta_1^{0,0}(q,0) = F_{Y_{1}(1,0)|D=0,M(0)=0}^{-1}(q)-F_{Y_{1}(0,0)|D=0,M(0)=0}^{-1}(q),\\= F_{Q_{10}(Y_{0})|D=0,M=0}^{-1}(q)-F_{Y_{1}|D=0,M=0}^{-1}(q).
+\end{align*}
+For this purpose, we have to show that
+\begin{align}
+F_{Y_{1}(1,0)|D=0,M(0)=0}(y)   = F_{Q_{10}(Y_{0})|D=0,M=0}(y) \mbox{ and}  \\
+F_{Y_{1}(0,0)|D=0,M(0)=0}(y)  =F_{Y_{1}|D=0,M=0}(y) ,
+\end{align}
+which is sufficient to show that the quantiles are also identified. We can show () using the observational rule $F_{Y_{1}(0,0)|D=0,M(0)=0}(y)= F_{Y_{1}|D=0,M=0}(y)= E[1\{Y_1 \leq y\} |D=0,M=0]$.
+Using (), we obtain
+\begin{equation*} \begin{array}{rl}
+F_{Q_{10}(Y_{0})|D=0,M=0}(y) \\  \qquad = E[1\{Q_{10}(Y_0) \leq y \}|D=0,M=0],\\
+\qquad =E[1\{ F_{Y_1|D=1,M=0}^{-1} \circ F_{Y_0|D=1,M=0}(Y_0 ) \leq y \} |D=0,M=0],\\
+\qquad =E[1\{ Y_1(1,0)\leq y \}|D=0,M=0],\\
+\qquad =F_{Y_{1}(1,0)|D=0,M(0)=0}(y), \end{array}
+\end{equation*}
+which proves ().
+\end{document}

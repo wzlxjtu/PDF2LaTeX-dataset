@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}
+
+\begin{document}
+\section{Monte Carlo results}
+We performed a Monte Carlo simulation to assess the performance of the proposed filter based on halfspace depth. After the filter flags the outlying observations, the generalized S-estimator is applied to the data with added missing values. Our simulation study is based on the same setup described in \citet{Zamar2017} to compare significantly the performance of our filter with respect to the filter introduced in their work.
+We considered samples from a $N_p(\bf{0}, \bf{\Sigma}_0)$, where all values in  $diag(\bf{\Sigma}_0)$ are equal to $1$, $p = 10, 20, 30, 40, 50$ and the sample size is $n = 10p$. We consider the following scenarios:
+\begin{itemize}
+\item Clean data: data without changes.
+\item Cell-Wise contamination: a proportion $\epsilon$ of cells in the data is replaced by $X_{ij} \sim N(k,0.1^2)$, where $k = 1, \ldots, 10$.
+\item Case-Wise contamination: a proportion $\epsilon$ of cases in the data matrix is replaced by $\bf{X}_i \sim 0.5N(c\bf{v},0.1^2\bf{I}) + 0.5N(-c\bf{v},0.1^2\bf{I})$, where $c = \sqrt{k(\chi^2_p)^{-1}(0.99)}$, $k = 1, 2, \ldots,20$ and $\bf{v}$ is the eigenvector corresponding to the smallest eigenvalue of $\bf{\Sigma}_0$ with length such that $(\bf{v}-\bf{\mu}_0)^\top\bf{\Sigma}_0^{-1}(\bf{v}-\bf{\mu}_0) = 1$.
+\end{itemize}
+The proportions of contaminated rows chosen for case-wise contamination are $\epsilon = 0.1, 0.2$, and $\epsilon = 0.02,0.05$ for cell-wise contamination. The number of replicates in our simulation study is $N=200$.
+We measure the performance of a given pair of location and scatter estimators $\hat{\bf{\mu}}$ and $\hat{\bf{\Sigma}}$ using the mean squared error (MSE) and the likelihood ratio test distance (LRT), as in:
+\begin{align*}
+ MSE = \frac{1}{N}\sum_{i=1}^N (\hat{\bf{\mu}}_i - \bf{\mu}_0)^\top (\hat{\bf{\mu}}_i - \bf{\mu}_0) \\  
+ LRT(\hat{\bf{\Sigma}},\bf{\Sigma}_0) = \frac{1}{N}\sum_{i=1}^N D(\hat{\bf{\Sigma}}_i,\bf{\Sigma}_0)
+\end{align*}
+\section{Statistical data depth properties}
+A \textbf{depth function} $d(\cdot; F)$ measures the centrality of a point w.r.t. a probability distribution $F$. 
+\begin{equation*}
+d = \mathbb{R}^{p} \rightarrow \mathbb{R}^+ \cup \{ 0 \}, \qquad \bf{x} \rightarrow d(\bf{x}; F)
+\end{equation*}
+A statistical depth function should satisfy the following Properties
+\end{document}

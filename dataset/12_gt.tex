@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+allows us to conclude that this is always the case for real initial conditions $\phi^0_0$. Thus we have a one parameter family of real smooth solutions, labeled by the IR parameter $\phi^0_0$.
+With this in mind, we may choose any value of $\phi^0_0$ and solve the BPS equations in numerically. In Figure , we plot the solutions obtained for the following choices of initial condition: $\phi^0_0=\{0.25,\,0.5,\,1,\,1.5,\,2 \}$. In order to get smooth solutions for $u>0$, we must take $\eta = -1$. It is straighforward to verify that  the resulting solutions are completely smooth and have the expected vanishing of $e^{2f}$ at the origin, implying that the spacetime smoothly pinches off. Furthermore, $e^{2f}/e^{2u}$ is seen to asymptote to a constant, which we denote by $e^{2 f_k}$.
+\subsection{UV asymptotic expansions}
+As in the holographic Janus solutions in Lorentzian signature , the BPS equations may also be used to obtain the UV asymptotic behavior of the solutions. To do so, we begin by defining an asymptotic coordinate $z = e^{- u}$, where the asymptotic $S^5$  boundary is reached by taking $u\to \infty$. Consequently, an asymptotic expansion is an expansion around $z=0$. The coefficients in the UV expansions of the non-zero fields may now be solved for order-by-order using the BPS equations. One finds explicitly that all coefficients are determined in terms of only three independent parameters $\alpha$, $\beta$, and $f_k$, in accord with the fact that there are three independent first-order differential equations. The first few terms in the expansions are
+\begin{eqnarray}
+f(z) = -\log z +f_k -  \left({1\over 4}e^{-2f_k} + {1\over 16}\alpha^2\right)  \,z^2 + O(z^4) \nonumber\\
+\sigma(z) = {3\over 8} \alpha^2 \,z^2 +  {1\over 4} e^{f_k} \alpha \beta \,z^3 + O(z^4) 
+\nonumber\\
+\phi^0(z) = \alpha \, z - \left({5\over 4}\alpha \,e^{-2f_k} + {23\over 48} \alpha^3\right) \,z^3 + O(z^4)
+\nonumber\\
+\phi^3(z) = e^{-f_k} \alpha  z^2 + \beta \, z^3 + O(z^4) 
+\end{eqnarray}
+We have obtained the expansions up to $O(z^8)$, but we display only the first few terms here.
+\section{Holographic sphere free energy}
+\setcounter{equation}{0}
+The goal of this section is to obtain the holographic free energy, i.e. the renormalized on-shell action. We begin by writing the full action, 
+\begin{eqnarray}
+\vphantom{.} \hspace{1.7 in} S = S_{\mathrm{6D}} + S_{\mathrm{GH}}
+\nonumber\\\nonumber\\
+\vphantom{.} S_{\mathrm{6D}} = \int du~d^5 x ~\sqrt{G}\, {\cal L} \hspace{1 in}S_{\mathrm{GH}}=- {1 \over 2} \int d^5 x \sqrt{\gamma}\, {\cal K}
+\end{eqnarray}
+where $S_{\mathrm{6D}}$ is the six-dimensional Euclidean action given in and $S_{\mathrm{GH}}$ is the Gibbons-Hawking term. The $\gamma$ appearing in $S_{\mathrm{GH}}$ is the determinant of the induced metric on the boundary 
+\end{document}

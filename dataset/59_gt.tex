@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+the law of iterative expectations, gives
+\begin{align*}
+E[Y_1(1,0)|D=0,M=0] = \frac{p_n}{p_n+p_c} E[Y_1(1,0)|D=0,M=0, \tau=n] \\+ \frac{p_c}{p_n+p_c}E[Y_1(1,0)|D=0,M=0,\tau= c], \\
+\stackrel{A7}{=} \frac{p_n}{p_n+ p_c} E[Y_1(1,0)|\tau=n] + \frac{p_c}{p_n+p_c}E[Y_1(1,0)|\tau= c].
+\end{align*}
+After some rearrangements and using (), we obtain
+\begin{equation*}
+E[Y_1(1,0)|\tau= c]  = \frac{p_n+p_c}{p_c} E[Q_{10}(Y_0)|D=0,M=0] -   \frac{p_n}{p_c} E[Y_1|D=1,M=0].
+\end{equation*}
+This gives
+\begin{equation} 
+\begin{array}{rl}
+E[Y_1(1,0)|\tau=c] =  \displaystyle \frac{p_{0|0}}{p_{0|0} - p_{0|1}}E[Q_{10}(Y_0)|D=0,M=0] \\  \displaystyle \quad  - \frac{p_{0|1}}{p_{0|0} - p_{0|1}}E[Y_1|D=1,M=0],
+\end{array}
+\end{equation}
+using $p_n = p_{0|1}$, and $p_c +p_n = p_{0|0}$.
+\subsection{Quantile direct effect under $\mathbf{d = 0}$ on compliers}
+We show that
+\begin{align*}
+ F_{Y_{1}(1,0)|\tau=c}(y) = \frac{p_{0|0}}{p_{0|0} - p_{0|1}}  F_{Q_{10}(Y_{0})|D=0,M=0}(y) - \frac{p_{0|1}}{ p_{0|0} - p_{0|1}c}  F_{Y_1|D=1,M=0}(y) \mbox{ and} \\
+F_{Y_{1}(0,0)|\tau=c}(y) = \frac{p_{0|0}}{p_{0|0} - p_{0|1}} F_{Y_{1}|D=0,M=0}(y) - \frac{p_{0|1} }{p_{0|0} - p_{0|1}}F_{Q_{00}(Y_{0})|D=1,M=0}(y)  ,
+\end{align*}
+which proves that $\theta_1^{c}(q,0) = F_{Y_{1}(1,0)|c}^{-1}(q)-F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified.
+From (), we have $F_{Y_{1}(1,0)|D=0,M(0)=0}(y)   = F_{Q_{10}(Y_{0})|D=0,M=0}(y)$.
+Applying the law of iterative gives
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\section{Proof of Theorem 2 }
+\subsection{Average direct effect under $\mathbf{d=0}$ conditional on $\mathbf{D=0}$ and $\mathbf{M(0)=1}$}
+In the following, we show that $\theta_1^{0,1}(0)= E[Y_1(1,1)-Y_1(0,1)|D=0,M(0)=1]=  E[Q_{11}(Y_0)-Y_1|D=0,M=1]$. Using the observational rule, we obtain $E[Y_1(0,1)|D=0,M(0)=1]=E[Y_1|D=0,M=1]$. Accordingly, we have to show that $E[Y_1(1,1)|D=0,M(0)=1]=E[Q_{11}(Y_0)|D=0,M=1]$ to finish the proof.
+Under Assumptions 1 and 5a, the conditional potential outcome distribution function equals
+\begin{equation} 
+\begin{array}{rl}
+ F_{Y_t(d,0)|D=1,M=0}(y)  \stackrel{A1}{=} \Pr(h(d,m,t,U) \leq y|D=0,M=1,T=t) ,\\
+= \Pr(U \leq h^{-1}(d,m,t;y)|D=0,M=1,T=t) ,\\
+\stackrel{A5a}{=} \Pr(U \leq h^{-1}(d,m,t;y)|D=0,M=1) ,\\
+= F_{U|01} ( h^{-1}(d,m,t;y)),
+\end{array}
+\end{equation}
+for $d,d' \in \{0,1\}$. We use these quantities in the following.
+First, evaluating $F_{Y_1(1,1)|D=0,M=1}(y)$ at $h(1,1,1,u)$ gives
+\begin{equation*}
+F_{Y_1(1,1)|D=0,M=1}(h(1,1,1,u)) = F_{U|01} ( h^{-1}(1,1,1;h(1,1,1,u)))  =F_{U|01} ( u).
+\end{equation*}
+Applying $F_{Y_1(1,1)|D=0,M=1}^{-1}(q)$ to both sides, we have
+\begin{equation} 
+h(1,1,1,u)  =F_{Y_1(1,1)|D=0,M=1}^{-1}(F_{U|01} ( u)).
+\end{equation}
+Second, for $F_{Y_0(1,1)|D=0,M=1}(y)$ we have
+\begin{equation}
+F_{U|01}^{-1} ( F_{Y_0(1,1)|D=0,M=1}(y)) =   h^{-1}(1,1,0;y).
+\end{equation}
+\end{document}

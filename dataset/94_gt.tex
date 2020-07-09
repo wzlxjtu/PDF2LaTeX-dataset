@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+From the second term of we get
+\begin{gather*}
+\frac{\theta_p\big(pq^2t^2A^{-2}B^2\big)\theta_p\big((pq)^{-1}q^{-1}t^{-4}A^2B^{-2}\big)}
+{\theta_p\big(t^{-2}\big)\theta_p\big(q^{-1}t^{-2}B^{-2}\big)\theta_p\big(q^{-1}t^{-2}A^2\big)\theta_p\big(pq^2t^4A^{-2}B^2\big)
+\theta_p\big(q^{-1}t^{-2}AB^{-1}C^{\pm1}D^{\pm1}\big)}\\
+{}\times\oint\frac{{\rm d}u}{4\pi i u} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} C^{\pm1}u^{\pm1}\big)}{\Gamma\big(u^{\pm2}\big)}\\
+{}\times\Gamma_e\big((pq)^\frac12 t B^{-1} C^{\pm1}u^{\pm1}\big) \Gamma_e\big((pq)^\frac12 t A D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}t A^{-1}u^{\pm1}D^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}t B u^{\pm1}C^{\pm1}\big)\\
+{}\times\Gamma_e\big(AB^{-1}u^{\pm1}z^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}q^\frac{1}{2}t B D^{\pm1}\big(q^\frac{1}{2}z\big)^{\pm1}\big)
+\Gamma_e\big((pq)^{\frac{1}{2}}q^\frac{1}{2}tA^{-1}C^{\pm1}\big(q^\frac{1}{2}z\big)^{\pm1}\big)\\
+{}\times\oint\frac{{\rm d}v}{4\pi i v} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} C^{\pm1}v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} D^{\pm1}v^{\pm1}\big)}{\Gamma\big(v^{\pm2}\big)}\\
+{}\times\frac{\theta_p\big((pq)^\frac{1}{2}q^{-1}t^{-3}B^{-1}z D^{\pm1}\big)
+\theta_p\big((pq)^\frac{1}{2}q^{-1}t^{-3}A z C^{\pm1}\big)}
+{\theta_p\big(z^2\big)\theta_p\big(t^4z^{-2}\big)}\\
+{}\times\Gamma_e\big( A^{-1}B u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t B^{-1}D^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A C^{\pm1} v^{\pm1}\big)T_{{\mathfrak J}_D}(v) + \big\{z\leftrightarrow z^{-1}\big\} .
+\end{gather*}
+Terms cancel in the integral over $u$ and what is left can be evaluated using the inversion formula as before which sets $v=z$, after some cancelations we get
+\begin{gather*}
+\frac{\Gamma_e\big(\big(AB^{-1}\big)^2\big)	\theta_p\big(pq^2t^2A^{-2}B^2\big)
+\theta_p\big((pq)^{-1}q^{-1}t^{-4}A^2B^{-2}\big)}
+{\theta_p\big(t^{-2}\big)\theta_p\big(q^{-1}t^{-2}B^{-2}\big)\theta_p\big(q^{-1}t^{-2}A^2\big)\theta_p\big(pq^2t^4A^{-2}B^2\big)
+\theta_p\big(q^{-1}t^{-2}AB^{-1}C^{\pm1}D^{\pm1}\big)}\\
+{}\!\times\!\frac{\theta_p\big((q p)^{\frac12 }t A^{-1} C^{\pm1}z\big)
+\theta_p\big((q p)^{\frac12 }t B D^{\pm1}z\big)
+\theta_p\big((pq)^\frac{1}{2}q^{-1}t^{-3}B^{-1}z D^{\pm1}\big)
+\theta_p\big((pq)^\frac{1}{2}q^{-1}t^{-3}A z C^{\pm1}\big)}{\theta_p\big(z^2\big)\theta_p\big(t^4z^{-2}\big)}\\
+{}\!\times\! T_{{\mathfrak J}_D}(z)+ \big\{z\leftrightarrow z^{-1}\big\} .
+\end{gather*}
+We compute the contribution from the last term in \eqref{c7}
+\begin{gather*}
+\oint\frac{{\rm d}u}{4\pi i u} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} C^{\pm1}u^{\pm1}\big)}{\Gamma\big(u^{\pm2}\big)}\\
+{}\times\Gamma_e\big((pq)^\frac12 t B^{-1} C^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t A D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}tA^{-1}u^{\pm1}D^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}t B u^{\pm1}C^{\pm1}\big)\\
+{}\times\Gamma_e\big(A B^{-1}u^{\pm1}z^{\pm1}\big)
+\Gamma_e\big((pq)^{\frac{1}{2}}t B D^{\pm1}z^{\pm1}\big)
+\Gamma_e\big((pq)^{\frac{1}{2}}t A^{-1}C^{\pm1}z^{\pm1}\big)\\
+{}\times\oint\frac{{\rm d}v}{4\pi i v} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} C^{\pm1}v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} D^{\pm1}v^{\pm1}\big)}{\Gamma\big(v^{\pm2}\big)}\\
+{}\times\Gamma_e\big( A^{-1}B u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t B^{-1}D^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A C^{\pm1} v^{\pm1}\big)T_{{\mathfrak J}_D}(v) .
+\end{gather*}
+Integrals can be evaluated using the inversion formula which sets $v=z$ almost everything cancel and we get
+\begin{gather*}
+\Gamma_e\big(\big(AB^{-1}\big)^2\big)T_{{\mathfrak J}_D}(z) .
+\end{gather*}
+\end{document} 

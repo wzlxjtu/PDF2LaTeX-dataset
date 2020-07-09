@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}
+
+\begin{document}
+$\Delta_x = (\bf{x} - \bf{T}_{0n})^\top \bf{C}_{0n}^{-1}(\bf{x} - \bf{T}_{0n})$ the squared Mahalanobis distance of $\bf{x}$ using the initial location and dispersion estimates, the set can be rewritten as $C^\beta(F) = \{ \bf{x} \in \mathbb{R}^p | \Delta_x > (\chi^2_p)^{-1}(\beta) \}$, where $(\chi^2_p)^{-1}(\beta)$ is a large quantile of a chi-squared distribution with $p$ degrees of freedom.  
+Now we want to show that the result given by Proposition  holds for this particular case. 
+Consider a random vector $(\bf{X}_1, \ldots , \bf{X}_n) \sim F_0(\bf{\mu}_0, \bf{\Sigma}_0)$ and suppose that $F_0$ is an elliptically symmetric distribution. Also consider a pair of location and dispersion estimators $\bf{T}_{0n}$ and $\bf{C}_{0n}$ such that $\bf{T}_{0n} \rightarrow \bf{\mu}_0$ and $\bf{C}_{0n} \rightarrow \bf{\Sigma}_0$ a.s.. Let $F$ be a chosen reference distribution and $\hat{F}_n$ the empirical distribution function. If the reference distribution satisfies
+\begin{equation*}
+\sup_{\bf{x} \in C^\beta(F_0)} [d_{HS}(\bf{x}; F) - d_{HS}(\bf{x}; F_0)] < 0 
+\end{equation*}
+where $\beta$ is some large quantile of $F_0$, then   
+\begin{equation*}
+n d_n \rightarrow 0 \mbox{ as } n \rightarrow \infty
+\end{equation*}
+\begin{proof}
+In \citet{Donoho1992}, it is proved that for i.i.d. $\bf{X}_1, \bf{X}_2, ... , \bf{X}_n$ with distribution $F_0$, as $n \rightarrow \infty$
+\begin{equation*}
+\sup_{\bf{t} \in \mathbb{R}^d} |d_{HS}(\bf{t},F_0) - d_{HS}(\bf{t},\hat{F}_n)| \rightarrow 0   \mbox{   a.s.}
+\end{equation*}
+Note that, by the continuity of $F$, $F(\bf{T}_{0n}, \bf{C}_{0n}) \rightarrow F(\bf{\mu}_0, \bf{\Sigma}_0)$ a.s..
+Hence, for each $\varepsilon > 0$ there exists $n_0$ such that for all $n > n_0$ we have
+\begin{align*}
+  \sup_{\bf{x} \in C^\beta(F_0)} \{ d_{HS}(\bf{x};  \hat{F}_n) - d_{HS}(\bf{x}; F(\bf{T}_{0n}, \bf{C}_{0n})) \} \le \\
+   \sup_{\bf{x} \in C^\beta(F_0)} \{ d_{HS}(\bf{x}; \hat{F}_n) - d_{HS}(\bf{x}; F_0(\bf{\mu}_0, \bf{\Sigma}_0)) \} + \\
+															 \sup_{\bf{x} \in C^\beta(F_0)} \{ d_{HS}(\bf{x}; F_0(\bf{\mu}_0, \bf{\Sigma}_0)) - d_{HS}(\bf{x}; F(\bf{\mu}_0, \bf{\Sigma}_0)) \} + \\
+															 \sup_{\bf{x} \in C^\beta(F_0)} \{ d_{HS}(\bf{x}; F(\bf{\mu}_0, \bf{\Sigma}_0)) - d_{HS}(\bf{x}; F(\bf{T}_{0n}, \bf{C}_{0n})) \}  \\
+															\le     \frac{\varepsilon}{2} + 0 + \frac{\varepsilon}{2} = \varepsilon
+\end{align*}
+\end{proof}
+In the next example, we illustrate a univariate filter based on half-space depth that controls independently the left and the right tail of the distribution.
+In the univariate case, given a point $x$ there exist only two halfspaces including it, hence the half-space depth assumes the explicit form
+\begin{align*}
+d_{HS}(x;F)  =  \min (P_F((-\infty,x]),P_F([x,\infty))) \\
+		    = \min (F(x) , 1 - F(x) + P_F(X = x)),
+\end{align*}
+\end{document}

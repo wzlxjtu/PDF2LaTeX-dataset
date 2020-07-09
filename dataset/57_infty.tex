@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+1 Proof of Theorem 3
+
+1.1 Average direct effect on the never-takers
+
+In the following, we show that $ё n1=E[Y_{1}(1,0)-Y_{1}(0,\ 0)|Д\ =n]=E[Y_{1}-Q_{00}(Y_{0})|D=$
+
+$1, M = 0]$. From $()$ , we obtain the first ingredient $E[Y_{1}(1,\ 0)|Д\ =\ n] = E[Y_{1}|D =$
+
+$1, M=0]$. Furthermore, from $()$ we have $E[Q_{00}(Y_{0})|D=1,\ M=0]=E[Y_{1}(0,0)|D=$
+
+$1, M(1)=0]$. Under Assumption7and 8,
+$$
+E[Y_{1}(0,0)|D=1,\ M(1)=0]^{A7}=E[Y_{1}(0,0)|D=1,\ Д\ =n]
+$$
+(1)
+$$
+A8=E[Y_{1}\ (0,\ 0)|Д\ =n].
+$$
+1.2 Quantile direct effect on the never-takers
+
+We prove that
+\begin{center}
+?$n$1 ($q$) $= F_{Y_{1}(1,0)|Д=n}^{-1}(q) - F_{Y_{1}(0,0)|Д=n}^{-1}(q)$ ,
+$$
+=\ F_{Y_{1}|D=1,M=0}^{-1}(q)\ -\ F_{Q_{00}(Y_{0})|D=1,M=0}^{-1}(q)
+$$
+\end{center}
+This requires showing that
+\begin{center}
+$F_{Y_{1}(1,0)|Д=n}(y)=F_{Y_{1}|D=1,M=0}(y)$ and   (2)
+
+$F_{Y_{1}}$ (0,0)$|$t $=n(y) = F_{Q_{00}(Y_{0})|D=1,M=0}(y)$   (3)
+\end{center}
+Under Assumptions 7 and 8,
+$$
+F_{Y_{\mathrm{t}}|D=1,M=0}(y)=E[1\{Y_{t}\leq y\}|D=1,\ M=0]
+$$
+\begin{center}
+$A7,A8=E[1\{Y_{t}(1,0)\ \leq\ y\}|Д\ =n]$   (4)
+
+$= F_{Y_{\mathrm{t}}}$ (1,0)$|$t $=n(y)$ ,
+\end{center}
+which proves $()$ . From $()$ , we have
+
+$F_{Q_{00}(Y_{0})|D=1,M=0}(y)=F_{Y_{1}(0,0)|D=1,M(1)=0}(y)=E[1\{Y_{1}(0,0)\ \leq y\}|D=1,\ M(1)=0].$
+\end{document}

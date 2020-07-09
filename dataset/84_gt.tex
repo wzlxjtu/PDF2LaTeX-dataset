@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+We can write
+\begin{gather*}
+{\mathfrak O}_{{\mathfrak J}_D}^{{\mathfrak J}_B,\big(1,0;(\widetilde A \widetilde B/ \widetilde D \widetilde C)^{\frac12}\big)} {\mathfrak F}(u)=
+\frac{\prod\limits_{l=1}^4(1- a_l u)}{\big(1-u^2\big)\big(1-q u^2\big)}({\mathfrak F}(q u)-{\mathfrak F}(u))\\
+\qquad{}
++\frac{\prod\limits_{j=1}^4\big(1- a_j u^{-1}\big)}{\big(1-u^{-2}\big)\big(1-q u^{-2}\big)}\big({\mathfrak F}\big(q u^{-1}\big)-{\mathfrak F}(u)\big)
+ +E_{{\mathfrak J}_D}^{{\mathfrak J}_B,\big(1,0;(\widetilde A \widetilde B / \widetilde D \widetilde C)^{\frac12}\big)} {\mathfrak F}(u) ,\\
+a_1=q^{\frac12}t \widetilde A^{-1} ,\qquad
+a_2=q^{\frac12}t \widetilde C^{-1} ,\qquad
+a_3=q^{\frac12}t^{-1} \widetilde A^{-1} ,\qquad
+a_4=q^{\frac12}t^{-1} \widetilde C^{-1}.
+\end{gather*} The first two terms define the rank one Koornwinder operator  and we have an additional constant term. The eigenfunctions are the Askey--Wilson polynomials. In general these polynomials have four independent parameters $a_l$ but in our case they are restricted to $a_1 a_4 =a_2 a_3$. The constant term is
+\begin{gather*}
+E_{{\mathfrak J}_D}^{{\mathfrak J}_B,(1,0;\big(\widetilde A \widetilde B / \widetilde D
+\widetilde C)^{\frac12}\big)}=\left[-\frac{q^3t^2}{ (\widetilde A \widetilde C)^2}-q^2t^2\left(1-\frac{\widetilde B}{\widetilde C\widetilde D\widetilde A}-\frac1{\widetilde C^2}-\frac{1+t^{-2}}{\widetilde A\widetilde C}\right)\right. \\
+\left.\hphantom{E_{{\mathfrak J}_D}^{{\mathfrak J}_B,(1,0;\big(\widetilde A \widetilde B / \widetilde D \widetilde C)^{\frac12}\big)}=}{}
+ - q\left(-\frac{\widetilde B}{\widetilde C^3\widetilde A\widetilde D}+\frac{\widetilde B}{\widetilde C^2\widetilde D}+\frac{\widetilde B}{\widetilde A\widetilde D\widetilde C}+\frac1{\widetilde C^2}+\frac{\widetilde B t^2}{\widetilde C^2 \widetilde D}\right)+\frac{\widetilde B\widetilde A}{\widetilde D \widetilde C}\right].
+\end{gather*}
+Let us take the limit of the three punctured sphere. We give details of the computation in Appendix with the final result given here (taking $\lim\limits_{p\to 0}$ of the right-hand side as in~\eqref{limpfuj})
+\begin{gather}
+ T_{{\mathfrak J}_B,{\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)= \frac1{\big(q p\frac1{ABC D}t^{-2};q\big)} \left(q p t^2 \frac1{A BC D};q\right)^2\left(q p \frac1{B A C D};q\right) \\
+{} \times \frac1{\big(\sqrt{ q p} \frac{t}{AC} v^{\pm1},\sqrt{q p}\frac{t}{D B}v^{\pm1};q\big)}
+\frac1{\big(\sqrt{q p} \frac{t}{AB}w^{\pm1},\sqrt{ q p} \frac{t}{D C} w^{\pm1};q\big)}\frac1{
+\big(\sqrt{q p } \frac{t}{B C} u^{\pm1},\sqrt {q p } \frac{ t}{ A D } u^{\pm1};q\big)} . \nonumber
+\end{gather} The index factorizes. In particular on general grounds  we expect the index of the three punctured sphere to be
+\begin{gather*}
+\frac1{\big(\sqrt{ q p} \frac{t}{AC} v^{\pm1},\sqrt{q p}\frac{t}{D B}v^{\pm1};q\big)}
+\frac1{\big(\sqrt{q p} \frac{t}{AB}w^{\pm1},\sqrt{ q p} \frac{t}{D C} w^{\pm1};q\big)}\\
+\qquad{}\times \frac1{\big(\sqrt{q p } \frac{t}{B C} u^{\pm1},\sqrt {q p }\frac{ t}{ A D } u^{\pm1};q\big)}
+ \sum_{\lambda} C_\lambda \psi_\lambda(u)\psi_\lambda(w)\psi_\lambda(v) ,
+\end{gather*} where the sum is over all the eigenvalues of the Koornwinder operator and $\psi_\lambda(z)$ are Askey--Wilson polynomials. What we have shown above is that
+\end{document} 

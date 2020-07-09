@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+0.0.1 Summary of first-order equations
+
+To summarize, the first-order equations for the warp factor $f$ and the scalars $\sigma, \phi^{0}, \phi^{3}$ are
+
+found to be
+$$
+f'=2(G_{0}S_{0}+G_{3}S_{3})
+$$
+$$
+\sigma'=2\eta\sqrt{N_{0}^{2}+N_{3}^{2}}
+$$
+$$
+\cos\phi^{3}(\phi^{0})'=-(G_{0}M_{0}+G_{3}M_{3})
+$$
+\begin{center}
+$(\phi^{3})'=i(G_{3}M_{0}-G_{0}M_{3})$   (1)
+\end{center}
+Furthermore, for consistency these were required to satisfy the algebraic constraint
+\begin{center}
+$e^{-2f}=4(G_{0}S_{0}+G_{3}S_{3})^{2}-4(S_{0}^{2}+S_{3}^{2})$   (2)
+\end{center}
+The various functions featured in these equations were defined in and
+
+0.1 Numeric solutions
+
+In order to get acceptable numerical solutions from these equations, we must choose ap-
+
+propriate initial conditions. It is easy to check that the following initial conditions ensure
+
+smoothness of all three scalars, as well as the vanishing of $e^{2f}$ at the origin,
+
+$\phi_{0}^{3}=\sin^{-1} [_{\overline{8}}$tanlh $\phi_{0}^{0}$ ($-3+\sqrt{9+16}$tanh2 $\phi_{0}^{0}$)]
+\begin{center}
+$\displaystyle \sigma_{0}=\frac{1}{4}\log\ [\frac{\cosh\phi_{0}^{0}(5+\sqrt{9+16\tanh^{2}\phi_{0}^{0}})}{6\sqrt{8+\coth^{2}\phi_{0}^{0}(-3+\sqrt{9+16\tanh^{2}\phi_{0}^{0}})}}]$   (3)
+\end{center}
+We have defined for notational convenience $\phi_{0}^{\alpha} \equiv \phi^{\alpha}(0)$ and $\sigma_{0} \equiv \sigma(0)$ . For these initial
+
+conditions to be real, we must ensure that
+\begin{center}
+$|f(\phi_{0}^{0})| \leq 1 f(\phi_{0}^{0})\equiv_{\overline{8}}$tanlh $\phi_{0}^{0}$ ($-3+\sqrt{9+16}$tanh2 $\phi_{0}^{0}$)   (4)
+\end{center}
+Noting that
+
+$\displaystyle \lim f(\displaystyle \phi_{0}^{0})=-\frac{1}{4}$
+
+$\phi_{0}^{0}\rightarrow-\infty$
+
+$\displaystyle \lim f(\displaystyle \phi_{0}^{0})=\frac{1}{4}$ (5)
+
+$\phi_{0}^{0}\rightarrow+\infty$
+
+and also that $f(\phi_{0}^{0})$ is monotonically increasing, i.e.
+\begin{center}
+$\displaystyle \frac{df}{d\phi_{0}^{0}}>0\ \forall\phi_{0}^{0}\in \mathbb{R}$   (6)
+\end{center}
+1
+\end{document}

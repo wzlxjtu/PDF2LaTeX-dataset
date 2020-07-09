@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+
+This motivates us to define a superpotential $W$ as 
+\begin{eqnarray}
+W = \sqrt{S_0^2 + S_3^2}
+\end{eqnarray}
+\iffalse
+This can also be motivated from the integrability of the gravitino equation. Namely, one would usually expect integrability to give something proportional to $W^2$, i.e.
+\begin{eqnarray}
+[D_m , D_n] \epsilon_A = 2 W^2 \,\gamma_{mn} \epsilon_A
+\end{eqnarray}
+and indeed one finds.
+Requiring that the warp factor BPS equation may be re-expressed as an equation linear in the superpotential, i.e.
+\begin{eqnarray}
+f' = 2 (G_0 S_0 + G_3 S_3)
+\nonumber\\
+= 2 \, \gamma \,W
+\end{eqnarray}
+gives us a factor $\gamma$ defined as
+\begin{eqnarray}
+\gamma = {G_0 S_0 + G_3 S_3 \over \sqrt{S_0^2 + S_3^2}}
+\end{eqnarray}
+We now make the non-trivial check that, with these definitions of $W$ and $\gamma$, the BPS equation for $\sigma$ takes the expected gradient flow form, 
+\begin{eqnarray}
+\sigma ' =2 \eta \, \sqrt{N_0^2 + N_3^2}
+\nonumber\\
+= -2 \left({- S_0 N_0 + S_3 N_3 \over G_0 S_0 + G_3 S_3}\right)
+\nonumber\\
+= -2\, \gamma^{-1} \,\partial_\sigma W
+\end{eqnarray}
+exactly as expected.
+\fi
+Unfortunately, this superpotential does \textit{not} allow one to write the BPS equations for both $\phi^0$ and $\phi^3$ as gradient flow equations. The reason for this failure is that the integrability condition required to convert the BPS equation into a gradient flow form is not satisfied; see e.g. Appendix C.2.1 of . We thus follow the strategy of  to construct an approximate superpotential. Our model consists of two consistent truncations that admit flat domain walls and an exact superpotential. These are the $\phi^3=0,\phi^0\ne0$ truncation and the $\phi^0=0,\phi^3\ne0$ truncation. The corresponding flow equations are (we set $\eta=-1$ henceforth)
+\begin{eqnarray}
+{\phi^0}' = -8 \, \partial_{\phi^0} W|_{\phi^3=0} \hspace{1 in} {\phi^3}' =8 \, \partial_{\phi^3} W|_{\phi^0=0}
+\end{eqnarray}
+respectively. In either truncation, the BPS equations for the warp factor and dilaton $\sigma$ can be put in the following form,
+\begin{eqnarray}
+f'=2\,W\hspace{1 in} \sigma'=2 \,\partial_\sigma W
+\end{eqnarray}
+An important fact is that, though the gradient flow equations of do not hold exactly in the full model with $\phi^0\ne0,\phi^3\ne0$, they \textit{do} hold up to and including $O(z^5)$. Looking at the form of the UV asymptotics of the scalar fields, one may expand the superpotential of keeping only terms contributing up to this order. This gives 
+\begin{eqnarray}
+W =  {1\over 2} + {3 \over 4} \sigma^2 + {1 \over 16} (\phi^0)^2 -{3 \over 16} (\phi^3)^2 + {1 \over 192} (\phi^0)^4 -{3 \over 16} (\phi^0)^2 \sigma + \dots
+\end{eqnarray}
+where the dots represent terms of order $O(z^6)$. This is the approximate superpotential we will use in what follows.
+\subsubsection{Bogomolnyi trick}
+We now use the Bogomolnyi trick  to get the finite counterterms needed to preserve supersymmetry in the case of a flat domain wall. The central idea of the Bogomolnyi trick is that for a BPS solution, the renormalized on-shell action must vanish. In order to make use of this fact, we will first want to recast the on-shell action in a simpler form.
+To do so, we begin by inserting. We find that 
+\begin{eqnarray}
+{\cal L} =- {1 \over 4}R -20 W^2 + 2 {\cal L}_{\mathrm{kin}}
+\end{eqnarray}
+where we've defined 
+\begin{eqnarray}
+{\cal L}_{\mathrm{kin}} = (\sigma')^2 + {1 \over 4}\left[-({\phi^3}')^2 + \cos^2 \phi^3 ({\phi^0}')^2\right]
+\end{eqnarray}
+\end{document}

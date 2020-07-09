@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+where $N_{AB}$, $S_{AB}$, and $M^I_{AB}$ are again given by, but now with the appropriate redefinition of the coset representative as per. It should be noted that while the FDA analysis presented in Appendix  is a strong motivation for the form of the supersymmetry variations presented above, it is not a proof. To actually derive the form of these variations, one must first introduce curvature terms representing deviations from zero of each line in the free differential algebra. An application of the exterior derivative to the resulting expressions then gives rise to Bianchi identities, which must be solved before obtaining the explicit form of the fermion variations. This is a rather involved process, and so for the moment we will content ourselves with the motivating comments provided by the FDA. We will take the eventual presence of smooth supersymmetric solutions consistent with the equations of motion as \textit{a posteriori} evidence for the legitimacy of these variations.
+A nice property of the variations above is the fact that they are consistent with the following $SO(6)$-invariant symplectic Majorana condition, 
+\begin{eqnarray}
+\bar \psi_A = \epsilon^{AB} \psi_B^T {\cal C}
+\end{eqnarray}
+The consistency of such a condition allows us to work with symplectic Majorana spinors just as in the Lorentzian case, though the symplectic Majorana condition utilized here is different than that of the Lorentzian case.
+As mentioned before, we will be concerned with only the simplest case of a single non-zero $SU(2)_R$-charged vector multiplet scalar $\phi^3$, i.e. we take $\phi^1=\phi^2=0$. It can be easily verified that this is a
+consistent truncation, and is in fact the most general choice of non-vanishing fields that can preserve $SO(4, 2) \times U(1)_R$. With this consistent truncation, the functions $N_{AB}$, $S_{AB}$, and $M^I_{AB}$ appearing in the supersymmetry variations reduce to 
+\begin{eqnarray}
+S_{AB} = i S_0 \epsilon_{AB} + i S_3 \gamma^7 \sigma^3_{AB}
+\nonumber\\
+N_{AB}= -N_0 \epsilon_{AB} -N_3 \gamma^7 \sigma^3_{AB}
+\nonumber\\
+M^I_{AB}= M_0 \gamma^7 \epsilon_{AB} + M_3  \sigma^3_{AB}
+\end{eqnarray}
+where we have defined 
+\begin{eqnarray}
+S_0=\frac14 \left(g\cos \phi^3 e^\sigma+m e^{-3\sigma}\cosh \phi^0\right)
+\nonumber\\
+S_3=\frac14 i \,m ~e^{-3\sigma}\sinh \phi^0 \sin \phi^3
+\nonumber\\
+N_0=-\frac14 \left(g\cos \phi^3 e^\sigma-3m e^{-3\sigma}\cosh \phi^0\right)
+\nonumber\\
+N_3=-\frac34 i\, m e^{-3\sigma}\sinh \phi^0 \sin \phi^3
+\nonumber\\
+M_0=2m ~e^{-3\sigma}\cos \phi^3\sinh \phi^0
+\nonumber\\
+M_3=-2 i\, g ~e^{\sigma}\sin \phi^3
+\end{eqnarray}
+Importantly, note that $S_3$, $N_3$, and $M_3$ are now purely imaginary, in contrast to the Lorentzian case . In all that follows we will set $m=-1/2\, \eta$ such that the radius of AdS$_6$ is one.
+\end{document}

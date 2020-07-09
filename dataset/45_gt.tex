@@ -1,0 +1,29 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\subsection{Estimation}
+-in estimates. Taking $\theta_1^{1,0}$ (see Theorem 1) as an example, an estimate thereof is
+ \begin{eqnarray*}
+\hat{\theta}_1^{1,0}(1)=\frac{1}{\sum_{i=1}^{n}I\{D_i=1,M_i=0,T_i=1\}}\sum_{i:D_i=1,M_i=0,T_i=1}Y_i\\ -\frac{1}{\sum_{i=1}^{n}I\{D_i=1,M_i=0,T_i=0\}}\sum_{i:D_i=1,M_i=0,T_i=0}\hat{Q}_{00}(Y_i).
+ \end{eqnarray*}
+Likewhise, quantile effects are estimated based on the empirical quantiles.
+For the estimation of total ATE and QTE,  show that the resulting estimators are $\sqrt{N}$-consistent and asymptotically normal, see their Theorems 5.1 and 5.3. These properties also apply to our context when splitting the sample into subgroups based on the values of a binary treatment and mediator (rather than the treatment only). For instance, the implications of Theorem 1 in  when considering subsamples with $D=1$ and $D=0$ carry over to considering subsamples with $D=1, M=0$ and $D=0, M=0$ for estimating the average direct effect on never-takers. In contrast to , however, some of our identification results include the conditional mediator probabilities $\Pr(M=m|D=d)$. As the latter are estimated with $\sqrt{N}$-consistency, too, it follows that the resulting effect estimators are again $\sqrt{N}$-consistent and asymptotically normal. %which can be shown in a two step GMM framework in the spirit of .
+We use a non-parametric bootstrap approach to calculate the standard errors.  show the validity of the bootstrap approach for such kind of estimators, which follows from their asymptotic normality.
+For the case that identifying assumptions to only hold conditional on observed covariates, denoted by $X$, estimation must be adapted to allow for control variables. Following a suggestion by  in their Section 5.1, basing estimation on outcome residuals in which the association of $X$ and $Y$ has been purged by means of a regression is consistent under the additional assumption that the effects of $D$ and $M$ are homogeneous across covariates. As an alternative,  propose a flexible semiparametric estimator that does not impose such a homogeneity-in-covariates assumption and show $\sqrt{N}$-consistency and asymptotic normality.
+\end{document}

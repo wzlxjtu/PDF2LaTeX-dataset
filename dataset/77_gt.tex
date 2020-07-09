@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}
+
+\begin{document}
+\begin{enumerate}[label=\textbf{P\arabic*}]
+\item  Affine invariance: $d(\bf{x}; F)=d(\bf{A} \bf{x}+ \bf{b}; F_{\bf{A},\bf{b}})$;
+\item  Maximality at center: if $F$ is ``symmetric'' around $\bf{\mu}$ then $d(\bf{x}; F) \leq d(\bf{\mu}; F)$ for all $\bf{x}$; for a more detailed discussion on symmetry see \citet{Serfling2006}. 
+\item  Monotonicity: if () holds, then 
+\begin{equation*}
+d(\bf{x}; F) \le d(\bf{\mu} + \alpha (\bf{x} - \bf{\mu}); F) \qquad \alpha \in [0,1] \ ;
+\end{equation*}
+\item  Approaching zero: $\parallel \bf{x} \parallel \rightarrow \infty \Rightarrow d(\bf{x}; F) \rightarrow 0$.
+\end{enumerate}
+\section{Gervini-Yohai depth}
+Here we want to show that the Gervini-Yohai depth, defined as $d_{GY}(\bf{t}, F, G) = 1 - G(\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F)))$, is a proper statistical depth function, i.e., it satisfies the four properties introduced above.
+\begin{enumerate}
+\item Affine invariance: it follows directly from the affine invariance property of the Mahalanobis distance;
+\item  Maximality at center: if $F$ is elliptically symmetric around $\bf{\mu}(F)$, 
+\begin{equation*}
+d_{GY}(\bf{\mu}(F), F, G) = 1 - G(\Delta(\bf{\mu}(F),\bf{\mu}(F),\bf{\Sigma}(F))) = 1 - G(0) . 
+\end{equation*}
+For any $\bf{t} \not= \bf{\mu}(F)$ we have
+\begin{align*}
+\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F))  > 0 \\
+G(\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F)))  \ge G(0) \\
+1-G(\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F)))  \le 1- G(0) \\
+d_{GY}(\bf{t}, F, G)   \le d_{GY}(\bf{\mu}(F), F, G) , 
+\end{align*}
+when $G$ is strictly monotone then strict inequality holds, and $\bf{\mu}(F)$ is the unique maximizer of the Gervini-Yohai depth. 
+\item  Monotonicity: 
+\begin{align*}
+\Delta(\bf{\mu}(F) + \alpha(\bf{t}-\bf{\mu}(F)),\bf{\mu}(F),\bf{\Sigma}(F))  = (\alpha(\bf{t} - \bf{\mu}(F)))^\top \bf{\Sigma}(F)^{-1}(\alpha(\bf{t} - \bf{\mu}(F))) \\
+														 = \alpha^2 (\bf{t} - \bf{\mu}(F))^\top \bf{\Sigma}(F)^{-1}(\bf{t} - \bf{\mu}(F)) \\ 
+														 = \alpha^2 \Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F)) \\
+														 \le \Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F))
+\end{align*}
+Then  $d_{GY}(\bf{\mu}(F) + \alpha(\bf{t}-\bf{\mu}(F)), F, G) \ge d_{GY}(\bf{t}, F, G)$.
+\item Approaching zero: if $\parallel \bf{t} \parallel \rightarrow \infty $ we have that $\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F)) \rightarrow \infty$ and consequently  $G(\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F))) \rightarrow 1$.
+Then 
+\begin{equation*}
+d_{GY}(\bf{t}, F, G) = 1 - G(\Delta(\bf{t},\bf{\mu}(F),\bf{\Sigma}(F))) \rightarrow 0
+\end{equation*}
+\end{enumerate}
+\end{document}

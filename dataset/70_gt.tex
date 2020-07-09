@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}
+
+\begin{document}
+$\bf{X} \sim E_p(h, \bf{\mu}, \bf{\Sigma})$, if it has a density function given by
+\begin{equation*}
+f_0(\bf{x}) \propto |\bf{\Sigma}^{-1/2}| h((\bf{x}-\bf{\mu})^\top\bf{\Sigma}^{-1}(\bf{x}-\bf{\mu})) .
+\end{equation*}
+where $h$ is a non-negative scalar function, $\bf{\mu}$ is the location parameter and $\bf{\Sigma}$ is a $p \times p$ positive definite matrix.
+Denote by $F_0$ the corresponding distribution function and by $\Delta_{\bf{x}} = (\bf{x} - \bf{\mu})^\top \bf{\Sigma}^{-1} (\bf{x} - \bf{\mu})$ the squared Mahalanobis distance of a $p$-dimensional point $\bf{x}$. By Theorem 3.3 of \citet{Zuo2000b} if a depth is affine equivariant () and has maximum at $\bf{\mu}$ () (see Appendix ) then a depth is such that $d(\bf{x}; F_0) = g(\Delta_{\bf{x}})$ for some non increasing function $g$ and we can restrict ourselves without loss of generality, to the case $\bf{\mu} = \bf{0}$ and $\bf{\Sigma} = \bf{I}$ where $\bf{I}$ is the identity matrix of dimension $p$. Under this setting, it is easy to see that the half-space depth of a given point $\bf{x}$ is given by $d_{HS}(\bf{x}; F_0) = 1 - F_{0,1}(\sqrt{\Delta_{\bf{x}}})$, where $F_{0,1}$ is a marginal distribution of $\bf{X}$.
+If the function $h$ is such that
+\begin{equation*}
+\frac{\exp(-\frac{1}{2} \Delta)}{h(\Delta)} \rightarrow 0 , \qquad \Delta \rightarrow \infty ,
+\end{equation*}
+then, there exists a $\Delta^\ast$ such that for all $\bf{x}$ so that $\Delta_{\bf{x}} > \Delta^\ast$, $d_{HS}(\bf{x}; F_0) \ge d_{HS}(\bf{x}; \Phi)$, where $\Phi$ is the distribution function of the standard normal. Hence,
+\begin{equation*}
+\sup_{\{\bf{x}: \Delta_{\bf{x}} > \Delta^\ast\}} [d_{HS}(\bf{x}; \Phi) - d_{HS}(\bf{x}; F_0)] < 0
+\end{equation*}
+and therefore, for all $\beta > 1 - 2 F_{0,1}(-\sqrt(\Delta^{\ast}))$,  
+\begin{equation*}
+\sup_{C^\beta(F_0)} [d_{HS}(\bf{x}; \Phi) - d_{HS}(\bf{x}; F_0)] < 0 \ .
+\end{equation*}
+Given an independent and identically distributed sample $\bf{X}_1, \ldots, \bf{X}_n$, we define the filter in general dimension $p$ introduced previously, where here we use the half-space depth
+\begin{equation*}
+d_n = \sup_{\bf{x} \in C^\beta(F)} \{ d_{HS}(\bf{x}; \hat{F}_n) - d_{HS}(\bf{x}; F(\bf{T}_{0n}, \bf{C}_{0n})) \}^+ ,
+\end{equation*}
+where $\beta$ is a high order quantile, $\hat{F}_n(\cdot)$ is the empirical distribution function and $F(\bf{T}_{0n}, \bf{C}_{0n})$ is a chosen reference distribution which depends on a pair of initial location and dispersion estimators, $\bf{T}_{0n}$ and $\bf{C}_{0n}$. Hereafter, we are going to use the normal distribution $F = N(\bf{T}_{0n}, \bf{C}_{0n})$. For $\bf{T}_{0n}$ and $\bf{C}_{0n}$ one might use, e.g., the coordinate-wise median and the coordinate-wise MAD for a univariate filter as in \citet{Zamar2017}. In order to compute the value $d_n$, we have to identify the set $C^\beta(F) = \{ \bf{x} \in \mathbb{R}^p | d_{HS}(\bf{x},F) \le d_{HS}(\eta_\beta,F) \}$ where $\eta_\beta$ is a large quantile of $F$. By Corollary 4.3 in  and denoting with
+\end{document}

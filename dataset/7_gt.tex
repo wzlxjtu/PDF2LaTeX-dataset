@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+ R-symmetry. As argued in , the field $\phi^0$ is the top component of the global current supermultiplet. Therefore a deformation by ${\cal O}_{\phi^0}$ will break superconformal symmetry but preserve all Poincare supersymmetry . However, deformation by ${\cal O}_{\phi^0}$ alone is inconsistent. Poincare supersymmetry demands that we also turn on the scalar masses ${\cal O}_{\sigma}$. Moreover, supersymmetry on $S^5$ requires an additional operator in the action that breaks the superconformal $SU(2)_R$ symmetry to $U(1)_R$ symmetry . Without loss of generality, we may choose this operator to be ${\cal O}_{\phi^3}$.
+\section{Euclidean theory and BPS solutions}
+\setcounter{equation}{0}
+In this section we will obtain the six-dimensional holographic dual of a mass deformation of a 5D SCFT on $S^5$. Such a dual is given by $S^5$-sliced domain wall solutions of matter-coupled Euclidean $F(4)$ gauged supergravity. In order to obtain such solutions, we must first continue the Lorentzian signature gauged supergravity outlined above to Euclidean signature, which has subtleties for both the scalar and fermionic sectors. Once the Euclidean theory is obtained, we turn on relevant scalars necessary to support the domain wall. As discussed in the previous section, at least three scalars must be turned on to obtain supersymmetric solutions. The ansatz for the domain wall solutions takes the following form
+\begin{eqnarray}
+ds^2 = du^2 + e^{2f(u)} ds_{S^5}^2,\hspace{0.4in} \sigma=\sigma(u),\hspace{0.4in}  \phi^i=\phi^i(u), \hspace{0.1 in}i=0 ,3
+\end{eqnarray}
+with the remaining fields set to zero. Next we will obtain a consistent set of BPS equations on  the above ansatz, and then solve them numerically. When solving them, we will demand as an initial condition that for some finite $u$ the metric factor $e^{2f}$ vanishes, so that the geometry closes off smoothly.
+\subsection{Euclidean action}
+The Euclidean action may be obtained from the Lorentzian one by first performing a simple Wick rotation of Lorentzian time $t\rightarrow-ix^6$. This makes the spacetime metric negative definite, since the metric in the Lorentzian theory was taken to be of mostly negative signature. However, we will choose to work with the Euclidean theory with positive definite metric. Making this modification involves a change in the sign of the Ricci scalar. Then noting that the Euclidean action is related to the Lorentzian action by $\exp \left(i S^{Lor}\right)=\exp \left(-S^{Euc}\right)$, the final result of the Wick rotation is the following Euclidean action,
+\begin{eqnarray}
+S_{6D}=\frac{1}{4\pi G_6}\int d^6x ~\sqrt{G} {\cal L} ~,~~~~ {\cal L}= \left(-{1 \over 4} R +\partial_\mu\sigma\partial^\mu\sigma+{1\over 4}G_{ij}(\phi)\partial_\mu \phi^i \partial^\mu \phi^j + V(\sigma,\phi^i)\right)
+\end{eqnarray}
+where the spacetime metric $G$ is positive definite and $G_6$ is the six-dimensional Newton's constant. By abuse of notation, $G_{ij}(\phi)$ with indices refers to the metric on the scalar manifold
+\end{document}

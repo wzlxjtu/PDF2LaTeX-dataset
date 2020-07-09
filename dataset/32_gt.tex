@@ -1,0 +1,88 @@
+\documentclass[prd,superscriptaddress,twocolumn,10pt]{revtex4}
+\usepackage{amsmath,amssymb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color} 
+\DeclareFontFamily{OT1}{rsfs}{}
+\DeclareFontShape{OT1}{rsfs}{m}{n}{ <-7> rsfs5 <7-10> rsfs7 <10->rsfs10}{} 
+\DeclareMathAlphabet{\mycal}{OT1}{rsfs}{m}{n} 
+\begin{document}
+for $C^s_{-(s-n)}$ an arbitrary component of the master field $C$.
+Taking $m\rightarrow -m$ in the set of equations (), (20), () and $s=m+1$ in (), we can iteratively determine the dependence of the $C^{m+1}_m$ on the $C_0^1$. From the equation () we obtain
+\begin{equation}
+\partial_z C_{-m}^{m+1}+\frac{e^{\rho}}{2}g_3^{2(m+2)}(1,-m-1)C^{m+2}_{-m-1}=0
+\end{equation}
+taking into consideration that for certain components $C_n^s$ it is required $|n|\leq s-1$ this iteratively leads to relation of $C_m^{m+1}$ and $C_0^1$, and from  
+the () analogously for $C^{m+1}_{-m}$ and $C_0^1$.
+The general form of the $C^s_{\pm}$ is
+then given in terms of $C^{m+1}_{\pm m}$ and coefficients $g_u^{ts}(m,n)$.
+Knowing $C^s_{\pm}$ and $C^{m+1}_{\pm m}$ allows to obtain  
+\begin{align} 
+(\delta C)^1_0&=\sum_{n=1}^sf_{\pm}^{s,n}(\lambda)\partial_z^{n-1}\Lambda^{(s)}\partial_z^{s-n}\phi 
+\end{align}
+for $\phi\equiv C_0^1$ and $f^{s,n}_{\pm}(\lambda)$ expressed in terms  of coefficients $g_u^{st}(m,n)$
+Using the replacement $\partial_{\rho}\rightarrow-(1\pm\lambda)$ 
+and 
+ writing explicitly first few n values for $f_{\pm}^{s,n}(\lambda)$, allows to determine its general expression 
+\begin{align}
+f_{\pm}^{s,n}(\lambda)&=(-1)^s\frac{\Gamma(s+\lambda)}{\Gamma(s-n+1\pm\lambda)}\frac{1}{2^{n-1}(2(\frac{n}{2}-1))!!\left(\frac{n-1}{2}\right)!}\nonumber\\
+&\times\prod_{j=1}^{\frac{n-1}{2}}\frac{s+1-n}{2s-2j-1} .
+\end{align}
+\noindent Substituting () in () one obtains the variation of the scalar field 
+\small
+\begin{align}
+\displaystyle{(\delta C)_0^1}&\displaystyle{=\sum_{n=1}^{s}(-1)^s\frac{\Gamma(s\pm\lambda)}{\Gamma(s-n+1\pm\lambda)}\frac{1}{2^{n-1}\left(2\left(\frac{n}{2}\right)-1\right)!!\left(\frac{n-1}{2}\right)!} \nonumber}\\ & \times\prod_{j=1}^{\left( \frac{n-1}{2} \right)}\frac{s+j-n}{2s-2j-1}\partial_z^{n-1}\Lambda^{(s)}\partial_z^{s-n}C_0^1. 
+\end{align}
+\normalsize
+To consider the coefficient in front, we focus on the term with the lowest number of $\partial_z$ derivatives on the gauge field $\Lambda^{(s)}$,  obtained for n=1. Then, () becomes
+\begin{equation}
+(\delta C)_0^1|_{n=1}=(-1)^s\Lambda^{(s)}\partial^{s-1}C_0^1 .
+\end{equation}
+To obtain the linearised equation of motion for the scalar field we act on () with KG operator ().
+This can be written as
+\begin{equation}
+\Box_{KG}\tilde{C}^1_0=\Box_{KG}C_0^1+\Box_{KG}\delta C_0^1 .
+\end{equation}
+Taking   $\partial_{\rho}\rightarrow(1\pm\lambda)$ in $f_{\pm}^{s,n}(\lambda)$ we have taken and considering the term with highest number of derivatives on $C_0^1$  leads to
+\begin{align}
+&\Box_{KG}|_{\text{highest number of derivatives}}(\delta C)_0^1=\\& = (-1)^s4e^{-2\rho}\partial(\bar{\partial}\Lambda^{(s)}\partial^{(s-1)}C_0^1)\\&=(-1)^s4e^{-2\rho}[ \partial\bar{\partial}\bar{\Lambda}^{(s)}\partial^{(s-1)}C_0^1+\bar{\partial}\Lambda^{(s)}\partial^{s}C_0^1\nonumber\\&+\partial\Lambda^{(s)}\bar{\partial}\partial^{(s-1)}C_0^1+\Lambda^{(s)}\bar{\partial}\partial^sC_0^1 ].
+\end{align}
+The term in () that is of further interest is the one multiplying $4e^{-2\rho}\partial\bar{\partial}$ acting on $\delta C_0^1$ which is convenient to compute in the metric formulation.
+\section{Metric formulation}
+In the metric formulation we can express the higher spin field of arbitrary spin $s$ with
+\begin{equation}
+\phi_{\mu_1.....\mu_s}=tr\left( \tilde{e}_{(\mu_1}...\tilde{e}_{\mu_{s-1}}\tilde{E}_{\mu_s)} \right)
+\end{equation}
+where $\tilde{E}_{\mu s}=\tilde{A}_{\mu}-\tilde{\bar{A}}_{\mu}$ and $\tilde{A}_{\mu}$ and $\tilde{\bar{A}}_{\mu}$ we define below. 
+The  dreibein is determined from the background AdS metric ()
+\begin{align}
+e_{z}&=\frac{1}{2}e^{\rho}(L_1+L_{-1})=\frac{1}{2}e^{\rho}(V_1^2+V_{-1}^{2}) \\
+e_{\bar{z}}&=\frac{1}{2}e^{\rho}(L_1-L_{-1})=\frac{1}{2}e^{\rho}(V_1^2-V_{-1}^2) \\
+e_{\rho}&=L_0=V_0^2.
+\end{align}
+The invariance of the equation () under the gauge transformation for $hs[\lambda]\oplus hs[\lambda]$ for the fields A means 
+\begin{align}
+A&\rightarrow A+d \Lambda +\left[A,\Lambda \right]_{\star}\equiv \tilde{A}\\
+\bar{A}&\rightarrow \bar{A}+d \bar{\Lambda} +\left[\bar{A},\bar{\Lambda} \right]_{\star}\equiv \tilde{\bar{A}}.
+\end{align}
+Since $\Lambda$ parameter is chiral it means $\bar{\Lambda}=0$ and the field $\tilde{\bar{A}}$ is essentially unchanged. The field $\tilde{A}_{\mu}$ is then  
+\begin{equation}
+\tilde{A}=A_{AdS}+d\Lambda+\left[A_{AdS},\Lambda\right]_{\star}.
+\end{equation}
+ $d\Lambda$  reads
+\small
+\begin{align}
+d\Lambda&=\sum_{n=1}^{2s-1}\frac{1}{(n-1)!}V_{s-n}^se^{(s-n)\rho}[ (-\partial)^{n-1}\partial\Lambda^{(s)}(z,\bar{z}) dz\\&+(-\partial)^{n-1}\bar{\partial}\Lambda^{(s)}(z,\bar{z})d\bar{z}+(-\partial)^{n-1}\Lambda^{(s)}(z,\bar{z})(s-n)d\rho ] 
+\end{align}
+\normalsize
+and 
+\begin{align}
+\left[A_{AdS},\Lambda\right]_{\star}&= [ e^{\rho}V_1^2dz+V_0^2d\rho,\nonumber\\ &\sum_{n=1}^{2s-1}\frac{1}{(n-1)!}(-\partial)^{n-1}\Lambda^{(s)}(z,\bar{z})e^{(s-n)\rho}V^s_{s-n} ]
+\end{align}
+To read out the coupling we focus on $\bar{z}....\bar{z}$ component of the field $C_0^1$ with lowest number of derivatives on gauge field $\Lambda^{(s)}$. The $\star$ multiplication of the dreibeins in () in that case contributes only with first $g_{u}^{st}(m,n;\lambda)$  coefficient with the each following dreibein that is being multiplied. More explicitly 
+\begin{align}
+e_{\bar{z}}\star e_{\bar{z}}&=\frac{1}{2^2}e^{2\rho}\left(V_1^2-V_{-1}^2\right)\star(V_{1}^2-V_{-1}^2)
+\end{align}
+From () we notice that the lowest number of derivatives on $\Lambda$ will appear for lowest n, i.e.  for $n=1$ in summation (). Knowing the relation for the trace of higher spin generators, the required generator $V^s_{s-n}$ will than
+\end{document}

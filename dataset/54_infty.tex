@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+0.1 Quantile direct effect under $\mathrm{d}=0$ conditional on $\mathrm{D}=0$
+
+and $\mathrm{M}(0)=0$
+
+In the following, we prove that
+\begin{center}
+?01'0 $(q,\ 0) = F_{Y_{1}(1,0)|D=0,M(0)=0}^{-1}(q) - F_{Y_{1}(0,0)|D=0,M(0)=0}^{-1}(q)$ ,
+$$
+=\ F_{Q_{10}}^{-1}(Y_{0})|D=0,M=0(q)\ -\ F_{Y_{1}|D=0,M=0}^{-1}(q)
+$$
+\end{center}
+For this purpose, we have to show that
+\begin{center}
+$F_{Y_{1}(1,0)|D=0,M(0)=0}(y)=F_{Q_{10}(Y_{0})|D=0,M=0}(y)$ and   (1)
+
+$F_{Y_{1}(0,0)|D=0,M(0)=0}(y)=F_{Y_{1}|D=0,M=0}(y)$ ,   (2)
+\end{center}
+which is sufficient to show that the quantiles are also identified. We can show $()$ using
+
+the observational rule $F_{Y_{1}(0,0)|D=0,M(0)=0}(y) = F_{Y_{1}|D=0,M=0}(y) = E[1\{Y_{1}\ \leq\ y\}|D =$
+
+$0, M=0]$. Using $()$ , we obtain
+$$
+F_{Q_{10}(Y_{0})|D=0,M=0}(y)
+$$
+$$
+=E[1\{Q_{10}(Y_{0})\leq y\}|D=0,\ M=0],
+$$
+$$
+=E[1\{F_{Y_{1}|D=1,M=0}^{-1}\ \ovalbox{\tt\small REJECT}\ F_{Y_{0}|D=1,M=0}(Y_{0})\leq y\}|D=0,\ M=0],
+$$
+$$
+=E[1\{Y_{1}(1,0)\leq y\}|D=0,\ M=0],
+$$
+$$
+=F_{Y_{1}(1,0)|D=0,M(0)=0}(y)\ ,
+$$
+which proves $()$ .
+\end{document}

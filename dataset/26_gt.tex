@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+\section{Gamma matrix and spinor conventions }
+\setcounter{equation}{0}
+For concreteness, we take the following basis of gamma matrices
+\begin{eqnarray}
+\gamma_1 =\sigma_2 \otimes \mathds{1}_2 \otimes \sigma_3
+\nonumber\\
+\gamma_2 =\sigma_2 \otimes \mathds{1}_2 \otimes \sigma_1
+\nonumber\\
+\gamma_3 = \mathds{1}_2  \otimes \sigma_1  \otimes \sigma_2
+\nonumber\\
+\gamma_4 = \mathds{1}_2 \otimes \sigma_3  \otimes \sigma_2
+\nonumber\\
+\gamma_5 =\sigma_1 \otimes \sigma_2 \otimes \mathds{1}_2
+\nonumber\\
+\gamma_6 = \sigma_3 \otimes \sigma_2 \otimes \mathds{1}_2
+\end{eqnarray}
+These gamma matrices satisfy the Clifford algebra
+\begin{eqnarray}
+\{ \gamma_\mu, \gamma_\nu\} = 2 \delta_{\mu \nu} 
+\end{eqnarray}
+as appropriate for a positive definite Euclidean spacetime. All matrices are purely imaginary and satisfy 
+\begin{eqnarray}
+(\gamma_\mu)^\dagger = \gamma_\mu \hspace{1 in} \left(\gamma_\mu \right)^2 =  \mathds{1}
+\end{eqnarray}
+We will now be interested in a seven-dimensional Clifford algebra, which will require the introduction of a new matrix $\gamma_7$. The reason we are interested in this is that we would like to represent hyperbolic space $\mathbb{H}_6$ as a hypersurface in a seven-dimensional ambient space. This allows us to determine properties of the Dirac spinors in the Euclidean-continued $F(4)$ gauged supergravity theory with $\mathbb{H}_6$ background by first considering Dirac spinors in seven dimensions and then performing a timelike reduction. In particular, we will choose a 7D metric of signature $(+,+,+,+,+,+,-)$ for the ambient space. Then hyperbolic space $\mathbb{H}_6$ is given by the following quadratic form
+\begin{eqnarray}
+x_1^2 + \dots +x_6^2 - x_7^2 = - L^2 
+\end{eqnarray} 
+The seven-dimensional Clifford algebra is made up of the set of matrices $\{ \gamma_1, \dots, \gamma_6, \gamma_7\}$, with $\gamma_7$ satisfying 
+\begin{eqnarray}
+(\gamma_7)^2 = - \mathds{1} \hspace{1 in} \{ \gamma_\mu, \gamma_7\} = 0 \,\,\,\forall \mu \neq 7
+\end{eqnarray}
+As usual, we use the notation $\gamma^7 = (\gamma_7)^{-1}$, so that by the above we have $\gamma^7 = - \gamma_7$. 
+We now discuss Dirac spinors in $d=7$. We define the Dirac conjugate of $\psi_A$ to be 
+\begin{eqnarray}
+\bar \psi_A = \psi_A^\dagger G^{-1} 
+\end{eqnarray}
+for some matrix $G$. There are two possible choices for $G$ , which in the particular case of the ambient space above are 
+\begin{eqnarray}
+G_1 = \gamma^7 \hspace{1 in} G_2 = \gamma^1 \dots \gamma^6
+\end{eqnarray}
+\end{document}

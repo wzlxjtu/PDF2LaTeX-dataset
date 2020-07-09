@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+0.1 Estimation
+
+As in Assumption 5.1 of , we assume standard regularity conditions, namely that
+
+conditional on $T = t, D = d$, and $M = m, Y$ is arandom draw from that sub-
+
+population defined in terms of $t, d, m \in \{1,\ 0\}$. Furthermore, the outcome in the
+
+subpopulations required for the identification results of interest must have compact
+
+support and a density that is bounded from above and below as well as continu-
+
+ously differentiable. Denote by{\it N}the total sample size across both periods and all
+
+treatment-mediator combinations and by $i \in \{1,\ N\}$ an index for the sampled
+
+subject, such that $(Y_{i},\ D_{i},\ M_{i},\ T_{i})$ correspond to sample realizations of the random
+
+variables $(Y,\ D,\ M,\ T)$ . The total, direct, and indirect effects may be estimated
+
+using the sample analogy principle, which replaces population moments with sam-
+
+ple moments. For instance, any conditional mediator probability given the treat-
+
+ment, $\mathrm{P}\mathrm{r} (M=m|D\ =\ d)$ , is to be replaced by an estimate thereof in the sample,
+
+$I\{M_{i}=m,D_{i}=d\}\Sigma_{i=1}^{N}^{\Sigma_{i=1}^{N}}I\{D_{i}=d\}$. A crucial step is the estimation of the quantile-quantile trans-
+
+forms. The application of such quantile transformations dates at least back to ,
+
+see also , , and for recent applications. First, it requires estimating the condi-
+
+tional outcome distribution, $F_{Y_{t}|D=d,M=m}(y)$ , by the conditional empirical distribu-
+
+tion $F_{Y_{t}|D=d,M=m}(y)\ovalbox{\tt\small REJECT} = \displaystyle \frac{1}{\Sigma_{i=1}^{n}I\{D_{i}=d,M_{i}=m,T_{i}=t\}}\sum_{i:D_{i}=d,M_{i}=m,T_{i}=t}I\{Y_{i}\ \leq\ y\}$. Second,
+
+inverting the latter yields the empirical quantile function $F_{t}^{-1}|D=d,M=m(q)$ . The em-
+
+pirical quantile-quantile transform is then obtained by
+\begin{center}
+$\hat{Q}_{dm}(y) = F$ˆ$Y$-11$|D =d,M=m($ ˆ$Y$0$|D =d,M=m(y))$
+\end{center}
+This permits estimating the average and quantile effects of interest. Average effects
+
+are estimated by replacing any (conditional) expectations with the corresponding
+
+sample averages in which the estimated quantile-quantile transforms enter as plug-
+\end{document}

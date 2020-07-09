@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+\subsection{BPS Equations}
+We now use the vanishing of the fermionic variations to obtain BPS equations for the warp factor and the three non-zero scalars. 
+\subsubsection{Dilatino equation and projector}
+We begin by imposing the vanishing of the dilatino variation, $\delta\chi_A = 0$, which implies
+\begin{eqnarray}
+{1\over 2} \gamma^5 \sigma' \varepsilon_A = N_0 \varepsilon_A + N_3 \gamma^7 {(\sigma^3)^B}_A \varepsilon_B
+\end{eqnarray}
+This equation can be interpreted as a projection condition on the spinors $\varepsilon_A$. Consistency of this projection condition then requires that 
+\begin{eqnarray}
+ \sigma' = 2 \eta \sqrt{N_0^2 + N_3^2}
+\end{eqnarray}
+where $\eta = \pm1$. Plugging this BPS equation back into then yields a second form of the projection condition,
+\begin{eqnarray}
+\gamma^5 \varepsilon_A = G_0 \varepsilon_A - G_3 \gamma^7 {(\sigma^3)^B}_A \varepsilon_B
+\end{eqnarray}
+which is more useful in the derivation of the other BPS equations. In the above, we have defined 
+\begin{eqnarray}
+G_0 = \eta {N_0 \over \sqrt{N_0^2 + N_3^2}}\hspace{1 in} G_3 = -\eta {N_3 \over \sqrt{N_0^2 + N_3^2}}
+\end{eqnarray}
+\subsubsection{Gravitino equation}
+The analysis of the gravitino equation  $\delta \psi_{A \mu}=0$ proceeds in exactly the same way as for the Lorentzian case studied in . The procedure gives rise to a first-order equation for the warp factor $f$ and an algebraic constraint. To avoid excessive overlap with that paper, we simply cite the result,
+\begin{eqnarray}
+f^{\prime }=2(G_{0}S_{0}+G_{3}S_{3})\hspace {.5in}e^{-2f}=4(G_{0}S_{0}+G_{3}S_{3})^{2}-4(S_{0}^{2}+S_{3}^{2})\hspace {.5in}(5)
+\end{eqnarray}
+\subsubsection{Gaugino equations}
+Finally, we turn toward the gaugino equation $\delta \lambda^I_A=0$. Again the analysis of this equation proceeds in an exactly analogous manner to the Lorentzian case . The result is
+\begin{eqnarray}
+\cos \phi^3 (\phi^0)' = - (G_0 M_0 + G_3 M_3) \hspace{0.5 in} (\phi^3)' = i (G_3 M_0 - G_0 M_3)
+\end{eqnarray}
+The right-hand sides of both equations are real, and thus give rise to real solutions when appropriate initial conditions are imposed.
+\end{document}

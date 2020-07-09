@@ -1,0 +1,27 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\subsection{Estimation}
+ As in Assumption 5.1 of , we assume standard regularity conditions, namely that conditional on $T=t$, $D=d$, and $M=m$, $Y$ is a random draw from that subpopulation defined in terms of $t,d,m$ $\in$ $\{1,0\}$. Furthermore, the outcome in the subpopulations required for the identification results of interest must have compact support and a density that is bounded from above and below as well as continuously differentiable. Denote by $N$ the total sample size across both periods and all treatment-mediator combinations and by $i$ $\in$ $\{1,...,N\}$ an index for the sampled subject, such that $(Y_i,D_i,M_i,T_i$) correspond to sample realizations of the random variables $(Y,D,M,T$).
+ The total, direct, and indirect effects may be estimated using the sample analogy principle, which replaces population moments with sample moments. For instance, any conditional mediator probability given the treatment, $\Pr(M=m|D=d)$, is to be replaced by an estimate thereof in the sample, $ \frac{\sum_{i=1}^{N} I\{M_i=m,D_i=d\}}{\sum_{i=1}^{N} I\{D_i=d\}}$. A crucial step is the estimation of the quantile-quantile transforms. The application of such quantile transformations dates at least back to , see also , , and  for recent applications. First, it requires estimating the conditional outcome distribution, $F_{Y_t|D=d,M=m}(y)$, by the conditional empirical distribution $\hat{F}_{Y_t|D=d,M=m}(y)=\frac{1}{\sum_{i=1}^{n}I\{D_i=d, M_i=m, T_i=t\}}\sum_{i:D_i=d,M_i=m,T_i=t}I\{Y_i\leq y\}$. Second, inverting the latter yields the empirical quantile function $\hat{F}_{Y_t|D=d,M=m}^{-1}(q)$. The empirical quantile-quantile transform is then obtained by
+  \begin{eqnarray*}
+ \hat{Q}_{dm}(y) = \hat{F}_{Y_{1}|D=d,M=m}^{-1}(\hat{F}_{Y_{0}|D=d,M=m}(y)).
+  \end{eqnarray*}
+ This permits estimating the average and quantile effects of interest. Average effects are estimated by replacing any (conditional) expectations with the corresponding sample averages in which the estimated quantile-quantile transforms enter as plug-
+\end{document}

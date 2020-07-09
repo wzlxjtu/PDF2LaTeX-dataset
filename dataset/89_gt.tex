@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+we discuss it in detail. We compute
+\begin{gather*}
+T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)\times_w C^{(1,0;AB^{-1})}_{{\mathfrak J}_B}(w)\\
+=(q;q)(p;p)\oint\frac{{\rm d}w}{4\pi i w} \frac{\prod\limits_{j=1}^8\Gamma_e\big((q p)^{\frac12 }\frac1t a_j^{-1} w^{\pm1}\big)}{\Gamma\big(w^{\pm2}\big)} C^{(1,0;AB^{-1})}_{{\mathfrak J}_B}(w)T_{{\mathfrak J}_B,{\mathfrak J}_C,{\mathfrak J}_D}(w,u,v) \\
+\sim\oint\frac{{\rm d}w}{4\pi i w} \frac{\prod\limits_{j=1}^8\Gamma_e\big((q p)^{\frac12 }\frac1t a_j^{-1} w^{\pm1}\big)}{\Gamma\big(w^{\pm2}\big)}
+\prod_{j=1}^8\Gamma_e\big((pq)^{\frac{1}{2}}ta_jw^{\pm1}\big)
+\Gamma_e\left(\frac{(pq)^\frac12 q w^{\pm1}}{tAB^{-1}}\right)\\
+\quad{} \times\Gamma_e\left(\frac{AB^{-1}w^{\pm1}}{(pq)^{\frac{1}{2}} q t^3}\right)
+ \Gamma_e\big((q p)^{\frac12} t\big(B^{-1}A\big)^{\pm1} w^{\pm1}\big)\Gamma_e\left(\frac{q p}{t^2}\right)
+\oint \frac{{\rm d}y}{4\pi i y} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}\big(A B^{-1}\big)^{\pm1}y^{\pm1}\big)}{\Gamma_e\big(y^{\pm2}\big)}\\
+\quad{}\times\Gamma_e\big(t y^{\pm1} w^{\pm1}\big)\oint\frac{{\rm d}w_1}{4\pi i w_1}\oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}w_1^{\pm1}w_2^{\pm1}\big)}{\Gamma_e\big(w_2^{\pm2}\big)\Gamma_e\big(w_1^{\pm2}\big)} \Gamma_e\big( (q p)^{\frac14}t A^{\frac12}B^{-\frac12}y^{\frac12} w_1^{\pm1}u^{\pm1}\big)\\
+\quad{}\times\Gamma_e\big((qp)^{\frac14} A^{\frac12} B^{\frac12}y^{-\frac12} w_1^{\pm1}D^{\pm1}\big)\Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^{\frac12} y^{-\frac12} w_2^{\pm1} u^{\pm1}\big)\\
+\quad{} \times \Gamma_e \big((q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{\frac12} D^{\pm1}w_2^{\pm1}\big)\Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^\frac12 y^\frac12 w_1^{\pm1} v^{\pm1}\big)\\
+\quad{} \times \Gamma_e\big( ( q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{-\frac12} C^{\pm1} w_1^{\pm1}\big) \Gamma_e\big( ( q p )^{\frac14} t A^{\frac12} B^{-\frac12} y^{-\frac12} w_2^{\pm1} v^{\pm1}\big)\\
+\quad{}\times\Gamma_e\big( ( q p )^{\frac14} A^{\frac12} B^\frac12 y^\frac12 w_2^{\pm1} C^{\pm1}\big),
+\end{gather*}
+where $\sim$ means equality up to overall factors independent of $w$, $u$, $v$. Using the identity $\Gamma_e\big(\frac{pq}{z}\big)\Gamma_e(z)=1$ and the elliptic beta integral formula we evaluate the integral over~$w$ and up to overall factors we get
+\begin{gather}
+\Gamma_e\big(pq^2\big)\oint \frac{{\rm d}y}{4\pi i y} \frac{\Gamma_e\big((pq)^\frac12 q A^{-1} B y^{\pm1}\big)\Gamma_e\big((pq)^{-\frac12}q^{-1}t^{-2}AB^{-1}y^{\pm1}\big)}{\Gamma_e\big(y^{\pm2}\big)}\oint\frac{{\rm d}w_1}{4\pi i w_1}\oint \frac{{\rm d}w_2}{4\pi i w_2}\nonumber\\
+\quad{} \times \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}w_1^{\pm1}w_2^{\pm1}\big)}{\Gamma_e\big(w_2^{\pm2}\big)\Gamma_e\big(w_1^{\pm2}\big)}\Gamma_e\big( (q p)^{\frac14}t A^{\frac12}B^{-\frac12} y^{\frac12} w_1^{\pm1}u^{\pm1}\big)\Gamma_e\big((qp)^{\frac14} A^{\frac12} B^{\frac12} y^{-\frac12} w_1^{\pm1}D^{\pm1}\big)
+\nonumber\\
+ \quad{} \times \Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^{\frac12} y^{-\frac12} w_2^{\pm1} u^{\pm1}\big) \Gamma_e \big((q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{\frac12} D^{\pm1}w_2^{\pm1}\big)\nonumber\\
+ \quad{}\times \Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^\frac12 y^\frac12 w_1^{\pm1} v^{\pm1}\big)
+ \Gamma_e\big( ( q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{-\frac12} C^{\pm1} w_1^{\pm1}\big)\nonumber\\
+\quad{}\times \Gamma_e\big( ( q p )^{\frac14} t A^{\frac12} B^{-\frac12} y^{-\frac12} w_2^{\pm1} v^{\pm1}\big) \Gamma_e\big( ( q p )^{\frac14} A^{\frac12} B^\frac12 y^\frac12 w_2^{\pm1} C^{\pm1}\big) .
+\end{gather}
+We got a zero multiplying the integral, but we will see next that some of the integrals are pinched giving finite result. We start by evaluating the integral over $y$ using the residue theorem and we get that the integral over $w_1$ is pinched due to $\Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^\frac12 y^\frac12 w_1^{\pm1} v^{\pm1}\big)$ term for the poles
+\end{document} 

@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+X $\sim \mathrm{E}_{\mathrm{p}} (\mathrm{h}$, µ, $\Sigma)$ , if it has a density function given by
+\begin{center}
+$f_{0}(\mathrm{x})\propto|\Sigma^{-1/2}|\mathrm{h}$( ($\mathrm{x}$--µ)$\mathrm{T} \Sigma^{-1}(\mathrm{x}$--µ)).
+\end{center}
+where $h$ is a non-negative scalar function, µ is the location parameter and
+
+$\Sigma$ is a $p\times p$ positive definite matrix. Denote by $F_{0}$ the corresponding distri-
+
+bution function and by $\Delta_{\mathrm{x}}=$ ($\mathrm{x}$--µ)T$\Sigma$-1 ($\mathrm{x}$--µ) the squared Mahalanobis
+
+distance of a $p$-dimensional point $\mathrm{x}$. By Theorem 3.3 of ? if a depth is affine
+
+equivariant $()$ and has maximum at µ $()$ (see Appendix ) then a depth is such
+
+that $d(\mathrm{x};\mathrm{F}_{0})=\mathrm{g}(\Delta_{\mathrm{x}})$ for some non increasing function $g$ and we can restrict
+
+ourselves without loss of generality, to the case $\ovalbox{\tt\small REJECT}=0$ and $\Sigma=$ I where I is the
+
+identity matrix of dimension $p$. Under this setting, it is easy to see that the
+
+half-space depth of a given point $\mathrm{x}$ is given by $d_{HS}(\mathrm{x};\mathrm{F}_{0})=1-\mathrm{F}_{0,1}(\sqrt{\Delta_{\mathrm{x}}})$ ,
+
+where $F_{0,1}$ is a marginal distribution of X. If the function{\it h} is such that
+$$
+\frac{\exp(-\frac{1}{2}\Delta)}{h(\Delta)}\rightarrow 0,\ \Delta\rightarrow\infty,
+$$
+then, there exists a $\Delta^{*}$ such that for all $\mathrm{x}$ so that $\Delta_{\mathrm{x}} > \Delta^{*}, d_{HS}(\mathrm{x};\mathrm{F}_{0}) \geq$
+
+$\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\Phi)$ , where $\Phi$ is the distribution function of the standard normal.
+
+Hence,
+$$
+\sup_{\{\mathrm{x}:\Delta_{\mathrm{x}}>\Delta^{*}\}}[d_{HS}(\mathrm{x};\Phi)-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}_{0})]<0
+$$
+and therefore, for all $\ovalbox{\tt\small REJECT}> 1-2F_{0,1}(-\sqrt{}\overline{(}\Delta^{*})$),
+
+{\it C}ßu({\it F}p0) $[d_{HS}(\mathrm{x};\Phi)-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}_{0})] <0$ .
+
+Given an independent and identically distributed sample $\mathrm{X}_{1}$, . . . , $\mathrm{X}_{\mathrm{n}}$, we
+
+define the filter in general dimension $p$ introduced previously, where here we
+
+use the half-space depth
+
+{\it dn}$=$x$\in$Cußp(F) $\{${\it dHS} $(\mathrm{x}$; Fˆ $\mathrm{n})-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}(\mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}}))\}^{+},$
+
+where ß is a high order quantile, $\hat{F}_{n}(\cdot)$ is the empirical distribution function
+
+and $F(\mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}})$ is a chosen reference distribution which depends on a pair
+
+of initial location and dispersion estimators, $\mathrm{T}_{0\mathrm{n}}$ and $\mathrm{C}_{0\mathrm{n}}$. Hereafter, we
+
+are going to use the normal distribution $F = N(\mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}})$ . For $\mathrm{T}_{0\mathrm{n}}$ and
+
+$\mathrm{C}_{0\mathrm{n}}$ one might use, e.g., the coordinate-wise median and the coordinate-wise
+
+MAD for a univariate filter as in ?. In order to compute the value $d_{n}$, we
+
+have to identify the set {\it C}ß({\it F}) $= \{\mathrm{x}\ \in\ \mathbb{R}^{\mathrm{p}}|\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x},\ \mathrm{F})\ \leq\ \mathrm{d}_{\mathrm{H}\mathrm{S}}\ (\ovalbox{\tt\small REJECT}\ovalbox{\tt\small REJECT},\ \mathrm{F})\}$ where
+
+?ß is a large quantile of $F$. By Corollary4.3 in and denoting with
+
+1
+\end{document}

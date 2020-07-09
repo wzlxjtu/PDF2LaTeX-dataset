@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+\subsubsection{Summary of first-order equations}
+To summarize, the first-order equations for the warp factor $f$ and the scalars $\sigma,\phi^0,\phi^3$ are found to be
+\begin{eqnarray}
+f'=2\left(G_0S_0+ G_3S_3\right)
+\nonumber \\%
+ \sigma'=2 \eta \sqrt{N_0^2 + N_3^2}
+\nonumber \\%
+\cos \phi^3 \left(\phi^0\right)'=-\left(G_0M_0+G_3M_3\right)
+\nonumber\\%
+ \left(\phi^3\right)'=i \left(G_3 M_0-G_0M_3\right)
+\end{eqnarray}
+Furthermore, for consistency these were required to satisfy the algebraic constraint
+\begin{eqnarray}
+e^{-2f}=4\left(G_0S_0+G_3S_3\right)^2-4 \left(S_0^2+S_3^2\right)
+\end{eqnarray}
+The various functions featured in these equations were defined in and .
+\subsection{Numeric solutions}
+In order to get acceptable numerical solutions from these equations, we must choose appropriate initial conditions. It is easy to check that the following initial conditions ensure smoothness of all three scalars, as well as the vanishing of $e^{2f}$ at the origin,
+\begin{eqnarray}
+ \phi^3_0 = \sin^{-1} \left[{1 \over 8 \tanh\phi^0_0}\left(-3 + \sqrt{9 + 16 \tanh^2 \phi^0_0}\right) \right]
+\nonumber\\
+\sigma_0 = {1 \over 4} \log \left[{\cosh \phi^0_0 \left(5 + \sqrt{9 + 16 \tanh^2 \phi^0_0} \right) \over \sqrt{6}\sqrt{8 + \coth^2 \phi^0_0 \left(-3 + \sqrt{9 + 16 \tanh^2 \phi^0_0} \right)}}\right]
+\end{eqnarray}
+We have defined for notational convenience $\phi^\alpha_0 \equiv \phi^\alpha(0)$ and $\sigma_0 \equiv \sigma(0)$. For these initial conditions to be real, we must ensure that
+\begin{eqnarray}
+|f(\phi^0_0)| \leq 1 \hspace{0.7 in} f(\phi^0_0) \equiv {1 \over 8 \tanh\phi^0_0}\left(-3 + \sqrt{9 + 16 \tanh^2 \phi^0_0}\right) 
+\end{eqnarray}
+Noting that 
+\begin{eqnarray}
+\lim_{\phi^0_0 \rightarrow - \infty} f(\phi^0_0) = - {1 \over 4} \hspace{0.8 in} \lim_{\phi^0_0 \rightarrow + \infty} f(\phi^0_0) ={1 \over 4}
+\end{eqnarray}
+and also that $f(\phi^0_0)$ is monotonically increasing, i.e.
+\begin{eqnarray}
+{d f \over d \phi^0_0} >0\hspace{0.3in} \forall \phi^0_0 \in \mathbb R
+\end{eqnarray}
+\end{document}

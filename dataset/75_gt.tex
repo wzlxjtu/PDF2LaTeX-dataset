@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}
+
+\begin{document}
+Here $A = \{ \bf{t} \in \mathbb{R}^d: d_{GY}(\bf{t}, F, G) \leq d_{GY}(\bf{\zeta}, F, G) \}$, where $\bf{\zeta}$ is any point in $\mathbb{R}^d$ such that $\Delta(\bf{\zeta}, F)  = \eta$ and $\eta = G^{-1}(\alpha)$ is a large quantile of $G$. Then, we flag $\lfloor nd_{n} \rfloor$ observations. It is easy to see that,
+\begin{align*}
+d_n  = \sup_{\bf{t} \in A} \{ [1 - \hat{H}_n(\Delta(\bf{t}, \hat{F}_n))] - [1 - G(\Delta(\bf{t}, \hat{F}_n))] \}^+ \\
+ =  \sup_{\bf{t} \in A} \{ G(\Delta(\bf{t}, \hat{F}_n)) - \hat{H}_n(\Delta(\bf{t}, \hat{F}_n)) \}^+ \\
+ = \sup_{\Delta \ge \eta} \{ G(\Delta) - \hat{H}_n(\Delta) \}^+
+\end{align*}
+since $d_{GY}$ is a non increasing function of the squared Mahalanobis distance of the point $\bf{t}$.
+We can rephrase Proposition 2. in \citet{Zamar2017}, that states the consistency property of the filter as follows.
+Consider a random vector $\bf{Y} = (X_{1}, \ldots, X_{d}) \sim F_0$ and a pair of location and scatter estimators $\bf{T}_{0n}$ and $\bf{C}_{0n}$ such that $\bf{T}_{0n} \rightarrow \bf{\mu}_0 = \bf{\mu}(F_0) \in \mathbb{R}^d$ and $\bf{C}_{0n} \rightarrow \bf{\Sigma}_0 = \bf{\Sigma}(F_0)$ a.s.. Consider any continuous distribution function $G$ and let $\hat{H}_n$ be the empirical distribution function of $\Delta_i$ and $H_0(t) = \Pr ((\bf{Y} - \bf{\mu}_0)^t \bf{\Sigma}_0^{-1}(\bf{Y} - \bf{\mu}_0) \le t )$. If the distribution $G$ satisfies: 
+\begin{equation}
+\max_{\bf{t} \in A} \{ d_{GY}(\bf{t},F_0,H_0) - d_{GY}(\bf{t},F_0,G) \} \le 0 ,
+\end{equation}
+where $A = \{ \bf{t} \in \mathbb{R}^d: d_{GY}(\bf{t}, F_0, G) \leq d_{GY}(\bf{\zeta}, F_0, G) \}$, where $\bf{\zeta}$ is any point in $\mathbb{R}^d$ such that $\Delta(\bf{\zeta}, F_0)  = \eta$ and $\eta = G^{-1}(\alpha)$ is a large quantile of $G$, then
+\begin{equation*}
+\frac{n_0}{n} \rightarrow 0 \qquad \text{a.s.}
+\end{equation*}
+where
+\begin{equation*}
+n_0 = \lfloor nd_{n} \rfloor .
+\end{equation*}
+\begin{proof}
+Note that
+\begin{equation*}
+d_{GY}(\bf{t},\hat{F}_n,\hat{H}_n) - d_{GY}(\bf{t},\hat{F}_n, G) = G(\Delta(\bf{t},\bf{T}_{0n},\bf{C}_{0n})) - \hat{H}_n(\Delta(\bf{t},\bf{T}_{0n},\bf{C}_{0n})) 
+\end{equation*}		
+and condition in equation () is equivalent to 
+\begin{equation*}
+\max_{\Delta \ge \eta} \{G(\Delta) - H_0(\Delta) \} \le 0 ,
+\end{equation*}
+The rest of the proof is the same as in Proposition 2. of \citet{Zamar2017}.
+\end{proof}
+Figure  shows the bivariate scatter plot of WTS versus HTLD, HTLD versus WSBC and WSBC versus SUR where the GY-UBF and HS-UBF filters are applied, respectively. The bivariate observations with at least one component flagged as outlier are in blue, and outliers detected by the bivariate filter are in orange. We see that the HS-UBF identifies less outliers with respect to the GY-UBF.
+\end{document}

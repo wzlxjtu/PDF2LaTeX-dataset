@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+Using () and rearranging the equation gives
+\begin{equation}
+F_{Y_{1}(1,1)|\tau=c}(y)= \frac{p_{1|1}}{p_{1|1} - p_{1|0}} F_{Y_{1}|D=1,M=1}(y) - \frac{p_{1|0} }{p_{1|1} - p_{1|0}}F_{Q_{11}(Y_0)|D=0,M=1}(y) . 
+\end{equation}
+From (), we have $F_{Y_{1}(0,1)|D=1,M(1)=1}(y)  =F_{Q_{01}(Y_{0})|D=1,M=1}(y)$. Applying the law of iterative expectations gives
+\begin{align*}
+F_{Y_{1}(0,1)|D=1,M(1)=1}(y)   =\frac{p_a}{p_a + p_c} F_{Y_{1}(0,1)|D=1,M(1)=1,\tau=a}(y)
+\\  +\frac{p_c}{p_a + p_c} F_{Y_{1}(0,1)|D=1,M(1)=1,\tau=c}(y),\\
+ \stackrel{A7}{=} \frac{p_a}{p_a + p_c} F_{Y_{1}(0,1)|\tau=a}(y) +\frac{p_c}{p_a + p_c} F_{Y_{1}(0,1)|\tau=c}(y).
+\end{align*}
+Using () and rearranging the equation gives,
+\begin{equation} 
+F_{Y_{1}(0,1)|\tau=c}(y) = \frac{p_{1|1}}{p_{1|1} - p_{1|0}}  F_{Q_{01}(Y_{0})|D=1,M=1}(y) - \frac{p_{1|0}}{ p_{1|1} - p_{1|0}}  F_{Y_1|D=0,M=1}(y).
+\end{equation}
+\section{Proof of Theorem 5 }
+\subsection{Average treatment effect on the compliers}
+In () and (), we show that
+\begin{align*}
+\theta_1^c=  E[Y_1(1,1) -Y_1(0,0)|\tau=c], \\ = \frac{p_{1|1}}{ p_{1|1} - p_{1|0}} E[Y_1|D=1,M=1] -\frac{p_{1|0}}{p_{1|1} - p_{1|0}}E[Q_{11}(Y_0)|D=0,M=1] \\
+ − \frac{p_{0|0}}{ p_{0|0} - p_{0|1}} E[Y_1|D=0,M=0] +\frac{p_{0|1}}{p_{0|0} - p_{0|1}}E[Q_{00}(Y_0)|D=1,M=0] .
+\end{align*}
+\subsection{Quantile treatment effect on the compliers}
+In () and (), we show that $F_{Y_{1}(1,1)|c}(y)$ and $F_{Y_{1}(0,0)|c}(y)$ are identified. Accordingly, $\Delta_1^{c}(q) = F_{Y_{1}(1,1)|c}^{-1}(q)-F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified.
+\end{document}

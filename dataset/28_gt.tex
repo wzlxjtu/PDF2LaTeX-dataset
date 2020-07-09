@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+ the supergravity context, a nice introduction to the MCEs, as well as to the free differential algebras to be introduced shortly, may be found in . In the current case, the MCEs are 
+\begin{eqnarray}
+0 ={\cal D} V^a + {1\over 2} \bar \psi_A \gamma^a \gamma^7 \psi^A 
+\nonumber\\
+0= R^{ab} - 4 m^2 V^a V^b + m \bar \psi_A \gamma^{a b} \psi^A 
+\nonumber\\
+0= d A^r - {1\over 2} g \epsilon^{rst} A_s A_t - i \bar \psi_A \psi_B \sigma^{r\,\,AB}
+\nonumber\\
+0= D \psi_a + m \gamma_a \gamma_7 \psi_A V^a
+\end{eqnarray}
+Here $a = 1,\dots,6$ and $V^a$ are the six-dimensional frame fields, given in terms of the seven-dimensional spin-connection as $V^a= {1 \over 2m}\omega^{a7}$. These may be compared to the analogous expressions in the dS/AdS cases of . 
+As a simple check, the second equation of  tells us that when $\psi^A =0$, 
+\begin{eqnarray}
+R_{\mu \nu} = - 20 m^2 g_{\mu \nu}
+\end{eqnarray}
+which is precisely as expected for an $\mathbb{H}_6$ background.
+The next step is to enlarge the MCEs to a free differential algebra (FDA) by adding the following equations for the additional vector and 2-form fields of the full $d=6$ $F(4)$ supergravity theory, 
+\begin{eqnarray}
+dA - m B + \alpha \bar \psi_A \gamma_7 \psi^A = 0 \hspace{1 in} d B + \beta \bar \psi_A \gamma_a \psi^A V^a = 0
+\end{eqnarray}
+Above, $\alpha$ and $\beta$ are two coefficients, which can be shown  to satisfy 
+\begin{eqnarray}
+\beta = - 2 \alpha
+\end{eqnarray}
+for our metric conventions. For the ambient space signature $(t,s) = (1,6)$, it is furthermore found that $\beta = 2i$, and thus we have $\alpha = -i$. 
+We would now like to compare the FDA above to the results of . To do so, we must first shift our notations by shifting 
+\begin{eqnarray}
+\gamma^a \rightarrow \gamma^7 \gamma^a \hspace{0.7 in} \gamma_a \rightarrow - \gamma_7 \gamma_a
+\end{eqnarray}
+This preserves the square of the gamma matrices, and hence the signature of the metric. The definition of the Dirac conjugate spinor  remains the same under this change. So the FDA for the $\mathbb{H}_6$ theory in these conventions is, 
+\begin{eqnarray}
+0 ={\cal D} V^a + {1\over 2} \bar \psi_A \gamma^a \psi^A 
+\nonumber\\
+0= R^{ab} - 4 m^2 V^a V^b + m \bar \psi_A \gamma^{a b} \psi^A 
+\nonumber\\
+0= d A^r - {1\over 2} g \epsilon^{rst} A_s A_t - i \bar \psi_A \psi_B \sigma^{r\,\,AB}
+\nonumber\\
+0= D \psi_a - m \gamma_a \psi_A V^a
+\nonumber\\
+0=dA - m B - i \bar \psi_A \gamma_7 \psi^A 
+\nonumber\\
+0=d B -2 i \bar \psi_A \gamma_7 \gamma_a \psi^A V^a
+\end{eqnarray}
+\end{document}

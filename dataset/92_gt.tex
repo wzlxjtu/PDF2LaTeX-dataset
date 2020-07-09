@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+Now we glue this as indicated in Fig.
+\begin{gather*}
+T_{{\mathfrak J}_D}(v)\times_v \big(\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)\times_w C^{(0,0;A^{-1}B)}_{{\mathfrak J}_B}(w)\big)\\
+\quad{}\times_u\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(h,u,z)\times_h C^{(1,0;AB^{-1})}_{{\mathfrak J}_B}(h)\big)\big)\\
+\sim \oint\frac{{\rm d}u}{4\pi i u} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} C^{\pm1}u^{\pm1}\big)}{\Gamma\big(u^{\pm2}\big)}\\
+\quad{}\times\Gamma_e\big((pq)^\frac12 t B^{-1} C^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t A D^{\pm1}u^{\pm1}\big) \\
+\quad{}\times\oint\frac{{\rm d}v}{4\pi i v} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} C^{\pm1}v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} D^{\pm1}v^{\pm1}\big)}{\Gamma(v^{\pm2})}\\
+\quad{}\times\Gamma_e\big( A^{-1}B u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t B^{-1}D^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A C^{\pm1} v^{\pm1}\big)T_{{\mathfrak J}_D}(v)\\
+\quad{}\times T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(h,u,z)\times_h C^{(1,0;AB^{-1})}_{{\mathfrak J}_B}(h) .
+\end{gather*}
+Let's perform the computation for each term in \eqref{c7} separately. From the first term we get
+\begin{gather*}
+\frac{\theta_p\big(pq^2t^2A^{-2}B^2\big)
+\theta_p\big((pq)^{-1}q^{-1}t^{-4}A^2B^{-2}\big)}
+{\theta_p\big(t^{-2}\big)\theta_p\big(q^{-1}t^{-2}B^{-2}\big)\theta_p\big(q^{-1}t^{-2}A^2\big)\theta_p\big(pq^2t^4A^{-2}B^2\big)
+\theta_p\big(q^{-1}t^{-2}AB^{-1}C^{\pm1}D^{\pm1}\big)}\\
+\quad{}\times\oint\frac{{\rm d}u}{4\pi i u} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} C^{\pm1}u^{\pm1}\big)}{\Gamma\big(u^{\pm2}\big)}\\
+\quad{}\times\Gamma_e\big((pq)^\frac12 t B^{-1} C^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t A D^{\pm1}u^{\pm1}\big)\nonumber\\
+\quad{}\times\oint\frac{{\rm d}v}{4\pi i v} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} C^{\pm1}v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} D^{\pm1}v^{\pm1}\big)}{\Gamma\big(v^{\pm2}\big)}\\
+\quad{}\times\Gamma_e\big( A^{-1}B u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t B^{-1}D^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A C^{\pm1} v^{\pm1}\big)T_{{\mathfrak J}_D}(v)\\
+\quad{}\times\frac{\theta_p\big((pq)^\frac{1}{2}q^{-1}tB^{-1}z^{-1}D^{\pm1}\big)
+\theta_p((pq)^\frac{1}{2}q^{-1}tAz^{-1}C^{\pm1})}
+{\theta_p\big(t^{-4}z^2\big)\theta\big(z^2\big)}\\
+\quad{}\times\Gamma_e\big(q^{-\frac{1}{2}}A B^{-1}u^{\pm1}\big(q^\frac{1}{2}z\big)^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}q^\frac{1}{2}t B D^{\pm1}\big(q^\frac{1}{2}z\big)^{\pm1}\big)
+\Gamma_e\big((pq)^{\frac{1}{2}}q^\frac{1}{2}tA^{-1}C^{\pm1}\big(q^\frac{1}{2}z\big)^{\pm1}\big)\\
+\quad{}\times\Gamma_e\big(t^{-4}AB^{-1}zu^{\pm1}\big)\Gamma_e\big(pq^2 t^4 A^{-1}B z^{-1}u^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}tA^{-1}u^{\pm1}D^{\pm1}\big)
+\Gamma_e\big((pq)^\frac{1}{2}t B u^{\pm1}C^{\pm1}\big)\\
+\quad{}+\big\{z\leftrightarrow z^{-1}\big\} .
+\end{gather*}
+Terms cancel and the integral over $u$ reduces to an integral over 6 gamma functions which can be evaluated as before using the elliptic beta integral
+\end{document} 

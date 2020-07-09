@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+\begin{gather}
+{\mathfrak D}_{{\mathfrak J}_D}^{{\mathfrak J}_B,(1,0;AB^{-1})} T_{{\mathfrak J}_D}(z) \sim
+\frac{\theta_p\big((pq)^\frac{1}{2}t^{-1}A^{\pm1}C^{\pm1}z\big)\theta_p\big((pq)^\frac{1}{2}t^{-1}B^{\pm1}D^{\pm1}z\big)}{\theta_p\big(q z^2\big)\theta_p\big(z^2\big)} T_{{\mathfrak J}_D}(qz)\nonumber\\
+\hphantom{{\mathfrak D}_{{\mathfrak J}_D}^{{\mathfrak J}_B,(1,0;AB^{-1})} T_{{\mathfrak J}_D}(z) \sim}{}
+ +\frac{\theta_p\big((pq)^\frac{1}{2}t^{-1}A^{\pm1}C^{\pm1}z^{-1}\big)\theta_p((pq)^\frac{1}{2}t^{-1}B^{\pm1}D^{\pm1}z^{-1})}{\theta_p\big(q z^{-2}\big)\theta_p\big(z^{-2}\big)} T_{{\mathfrak J}_D}\big(qz^{-1}\big)\nonumber\\
+\hphantom{{\mathfrak D}_{{\mathfrak J}_D}^{{\mathfrak J}_B,(1,0;AB^{-1})} T_{{\mathfrak J}_D}(z) \sim}{}
++ W^{{\mathfrak J}_B}_{{\mathfrak J}_D,\big(1,0;AB^{-1}\big)}(z) T_{{\mathfrak J}_D}(z) ,
+\end{gather}
+where $\sim$ means equal up to an overall factor which is independent of~$z$. We have denoted
+\begin{gather*}
+W^{{\mathfrak J}_B}_{{\mathfrak J}_D, (1,0; AB^{-1})}(z)
+\\=\frac{\theta_p\big(q^{-1}t^{-4}\big)\theta_p\big(q^{-1}t^{-4}A^2B^{-2}z^2\big)\theta_p\big((pq)^\frac{1}{2}t^{\pm1}A C^{\pm1}(qz)^{-1}\big)\theta_p\big((pq)^\frac{1}{2}t^{\pm1}B^{-1}D^{\pm1}(qz)^{-1}\big)}
+{\theta_p\big(q^{-2}t^{-4}A^2B^{-2}\big)\theta_p\big(z^2\big)\theta_p\big(q^{-1}z^{-2}\big)\theta_p\big(t^{-4}z^2\big)}\\
+\quad{} +\frac{\theta_p\big(q^{-1}t^{-4}\big)\theta_p\big(q^{-1}t^{-4}A^2B^{-2}z^{-2}\big)\theta_p\big((pq)^\frac{1}{2}t^{\pm1}A^{-1} C^{\pm1}z^{-1}\big)\theta_p\big((pq)^\frac{1}{2}t^{\pm1}BD^{\pm1}z^{-1}\big)}
+{\theta_p\big(q^{-2}t^{-4}A^2B^{-2}\big)\theta_p\big(z^{-2}\big)\theta_p\big(q^{-1}z^{2}\big)\theta_p\big(t^{-4}z^{-2}\big)}\\
+\quad{} +\frac{\theta_p\big(q^{-1}A^2B^{-2}\big)\theta_p\big((pq)^\frac{1}{2}t^{2}B D^{\pm1}\big(t^{-1}z\big)^{\pm1}\big)
+\theta_p\big((pq)^\frac{1}{2}t^{2}A^{-1} C^{\pm1} \big(t^{-1} z\big)^{\pm1}\big)}
+{\theta_p\big(q^{-2}t^{-4}A^2B^{-2}\big)\theta_p\big(z^2\big)\theta_p\big(t^4z^{-2}\big)} \\
+\quad{}+\frac{\theta_p\big(q^{-1}A^2B^{-2}\big)\theta_p\big((pq)^\frac{1}{2}t^{2}B D^{\pm1}\big(t^{-1}z^{-1}\big)^{\pm1}\big)
+\theta_p\big((pq)^\frac{1}{2}t^{2}A^{-1} C^{\pm1} \big(t^{-1} z^{-1}\big)^{\pm1}\big)}
+{\theta_p\big(q^{-2}t^{-4}A^2B^{-2}\big)\theta_p\big(z^{-2}\big)\theta_p\big(t^4z^2\big)}\\
+\quad{} +\frac{\theta_p\big(t^{-2}\big)\theta_p\big(q^{-1}t^{-2}A^2\big)\theta_p\big(q^{-1}A^2B^{-2}\big)\theta_p\big(q^{-1}t^{-2}B^{-2}\big) \theta_p\big(q^{-1}t^{-2}A B^{-1} C^{\pm1} D^{\pm1}\big)}{\theta_p\big(p^{-1}q^{-2}t^{-4}A^2 B^{-2}\big)\theta_p\big(q^{-2}t^{-2}A^2B^{-2}\big)}.
+\end{gather*}
+In Appendix we give details of the computation leading to this operator. One could consider more general residues by gluing the cap $C^{(L,M;\overline i)}_{{\mathfrak J}}(v)$ and general~$L$ and~$M$. We leave this as an exercise to the interested reader.
+\section{Relation to van Diejen model}
+The difference operator of the previous section is the van Diejen difference operator. Using the notations of  and the definitions of Appendix the van Diejen operator is given as
+\begin{gather*}
+A_D(h;z)T(z)\equiv V(h;z)T(qz)+V\big(h;z^{-1}\big)T\big(q^{-1}z\big)+V_b(h;z) ,
+\end{gather*}
+where
+\begin{gather*}
+ V(h;z) \equiv \frac{\prod\limits_{n=1}^8\theta\big((pq)^{\frac12}h_n z\big)}{\theta(z^2)\theta\big(qz^2\big)},\qquad
+ V_b(h;z) \equiv \frac{\sum\limits_{k=0}^3p_k(h)[\mathcal{E}_k(\xi;z)-\mathcal{E}_k(\xi;\omega_k)]}{2\theta(\xi)\theta\big(q^{-1}\xi\big)} ,
+\end{gather*}
+\end{document} 

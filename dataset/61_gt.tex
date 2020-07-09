@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+ \subsection{Quantile direct effect on the
+always-takers}
+We prove that
+\begin{align*}
+\theta_1^a (q) = F_{Y_1(1,1)|\tau=a}^{-1}(q)- F_{Y_1(0,1)|\tau=a}^{-1}(q), \\
+= F_{Q_{11}(Y_0)|D=0,M=1}^{-1}(q)-F_{Y_1|D=0,M=1}^{-1}(q).
+\end{align*}
+This requires showing that
+\begin{align}
+F_{Y_1(1,1)|\tau=a}(y) =F_{Q_{11}(Y_0)|D=0,M=1}(y) \mbox{ and} \\
+F_{Y_1(0,1)|\tau=a}(y)  = F_{Y_1|D=0,M=1}(y). 
+\end{align}
+Under Assumptions 7 and 8,
+\begin{equation} 
+\begin{array}{rl}
+F_{Y_t|D=0,M=1} (y) = E[1\{Y_t\leq y\}|D=0,M=1] \\ \stackrel{A7,A8}{=}E[1\{Y_t(0,1)\leq y\}|\tau=a] \\ = F_{Y_{t}(0,1)|\tau=a}, (y). \end{array}
+\end{equation}
+which proves (). From (), we have
+\begin{equation*}
+F_{Q_{11}(Y_{0})|D=0,M=1}(y) = F_{Y_{1}(1,1)|D=0,M(0)=1}(y)=E[1\{Y_1(1,1) \leq y\}|D=0,M(0)=1].
+\end{equation*}
+Under Assumption 7 and 8,
+\begin{equation}  \begin{array}{rl} E[1\{Y_1(1,1) \leq y\}|D=0,M(0)=1]\stackrel{A7,A8}{=}E[1\{Y_1(1,1) \leq y\}|\tau=a]\\  = F_{Y_1(1,1)|\tau=a}(y),
+\end{array} \end{equation}
+which proves.
+\end{document}

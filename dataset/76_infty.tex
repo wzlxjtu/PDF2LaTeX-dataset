@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+1 Monte Carlo results
+
+We performed a Monte Carlo simulation to assess the performance of the
+
+proposed filter based on halfspace depth. After the filter flags the outlying
+
+observations, the generalized $\mathrm{S}$-estimator is applied to the data with added
+
+missing values. Our simulation study is based on the same setup described
+
+in ? to compare significantly the performance of our filter with respect to
+
+the filter introduced in their work. We considered samples from a $N_{p}(0,\ \Sigma_{0})$ ,
+
+where all values in {\it diag} $(\Sigma_{0})$ are equal to 1, $p = 10$, 20, 30, 40, 50 and the
+
+sample size is $n=10p$. We consider the following scenarios:
+
+$\bullet$ Clean data: data without changes.
+
+$\bullet$ Cell-Wise contamination: a proportion $\epsilon$ of cells in the data is replaced
+
+by $X_{ij}\sim N(k,\ 0.1^{2})$ , where $k=1$, . . . , 10.
+
+$\bullet$ Case-Wise contamination: aproportion $\epsilon$ of cases in the data matrix
+
+is replaced by $\mathrm{X}_{\mathrm{i}} \sim 0.5\mathrm{N}(\mathrm{c}\mathrm{v},\ 0.1^{2}\mathrm{I})+0.5\mathrm{N}(-\mathrm{c}\mathrm{v},\ 0.1^{2}\mathrm{I})$ , where $c=$
+
+$\ovalbox{\tt\small REJECT}$ {\it k}(?{\it p}2)-1(0.99), $k=1$, 2, . . . , 20 and $\mathrm{v}$ is the eigenvector corresponding
+
+to the smallest eigenvalue of $\Sigma_{0}$ with length such that (v-µ0)T $\Sigma_{0}^{-1}(\mathrm{v}-$
+$$
+\ovalbox{\tt\small REJECT} 0)=1.
+$$
+The proportions of contaminated rows chosen for case-wise contamination are
+
+$\epsilon= 0.1$, 0.2, and $\epsilon= 0.02$, 0.05 for cell-wise contamination. The number of
+
+replicates in our simulation study is $N=200$. We measure the performance
+
+of a given pair of location and scatter estimators µˆ and $\Sigma^{}$ using the mean
+
+squared error (MSE) and the likelihood ratio test distance (LRT), as in:
+\begin{center}
+$MSE=\displaystyle \frac{1}{N}\sum_{i=1}^{N}$ (µˆ$i$ --µ0)T (µˆi --µ0)
+
+$LRT$ ( $\Sigma^{},\ \Sigma_{0}$) $=\displaystyle \frac{1}{\mathrm{N}}\sum_{\mathrm{i}=1}^{\mathrm{N}}\mathrm{D} (\Sigma^{} \mathrm{i}, \Sigma_{0})$
+\end{center}
+2 Statistical data depth properties
+
+A depth function $d(\cdot;F)$ measures the centrality of a point w.r. $\mathrm{t}$. aprob-
+
+ability distribution $F.$
+$$
+d=\mathbb{R}^{p}\rightarrow \mathbb{R}^{+}\cup\{0\},\ \mathrm{x}\rightarrow \mathrm{d}(\mathrm{x};\mathrm{F})
+$$
+A statistical depth function should satisfy the following Properties
+
+1
+\end{document}

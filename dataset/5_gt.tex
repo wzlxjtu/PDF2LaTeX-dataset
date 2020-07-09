@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+
+with the so-called ``boosted structure constants" $K$ given by,
+\begin{eqnarray}
+K_{r s \alpha} = g \,\epsilon_{\ell m n} L^{\ell}_{\,\,\,\, r} (L^{-1})_s^{\,\,\,\, m} L^n_{\,\,\,\,\alpha} + \lambda \,C_{I J K} L^I_{\,\,\,\,r} (L^{-1})_s^{\,\,\,\,J}L^K_{\,\,\,\,\,\alpha}
+\nonumber\\
+K_{\alpha I t} = g\, \epsilon_{\ell m n} L^{\ell}_{\,\,\,\, \alpha} (L^{-1})_I^{\,\,\,\, m} L^n_{\,\,\,\,t} + \lambda \,C_{M J K} L^M_{\,\,\,\,\,\alpha} (L^{-1})_I^{\,\,\,\,J}L^K_{\,\,\,\,\,t}
+\end{eqnarray}
+We remind the reader that $r,s,t = 1, 2, 3$ are obtained from splitting the index $\alpha$ into a 0 index and an $SU(2)_R$ adjoint index.  Also appearing in the Lagrangian is ${\cal N}_{00}$, which is the $00$ component of the matrix 
+\begin{eqnarray}
+{\cal N}_{\Lambda \Sigma} = L_\Lambda^{\,\,\,\,\alpha}\left( L^{-1}\right)_{\alpha \Sigma} -  L_\Lambda^{\,\,\,\,I}\left( L^{-1}\right)_{I \Sigma} 
+\end{eqnarray}
+\subsection{Supersymmetry variations}
+We now review the supersymmetry variations for the fermionic fields in the Lorentzian theory. In the following section, we will discuss the continuation of this theory to Euclidean signature, which is complicated by the necessary modification of the symplectic Majorana condition imposed on the spinor fields.
+In order to write the fermionic variations, it is first necessary to introduce a matrix $\gamma^7$ defined as 
+\begin{eqnarray}
+\gamma^7=i\gamma^0\gamma^1\gamma^2\gamma^3\gamma^4\gamma^5
+\end{eqnarray}
+and satisfying $(\gamma^7)^2=-\mathds{1}$. With this, the supersymmetry transformations of the fermions in the Lorentzian case can be given as
+\begin{eqnarray}
+\delta \chi_A = {i \over 2} \gamma^\mu \partial_\mu \sigma \varepsilon_A + N_{AB} \varepsilon^B 
+\nonumber\\\nonumber\\
+\delta \psi_{A \mu} = {\cal D}_\mu \varepsilon_A + S_{AB} \gamma_\mu \varepsilon^B
+\nonumber\\\nonumber\\
+\delta \lambda^I_A = i \hat P^I_{r i} \sigma^r_{AB} \partial_\mu \phi^i \gamma^\mu \varepsilon^B -i \hat P^I_{0 i} \epsilon_{AB} \partial_\mu \phi^i \gamma^7 \gamma^\mu \varepsilon^B + M^I_{AB} \varepsilon^B
+\end{eqnarray}
+where we have defined
+\begin{eqnarray}
+S_{AB}=\!\frac{i}{24}[Ae^{\sigma}\! +\!
+6me^{-3\sigma}(L^{-1})_{00}]\varepsilon_{AB}\! -\!
+\frac{i}{8}[B_te^{\sigma}-2me^{-3\sigma}(L^{-1})_{t0}]\gamma^7\sigma^t_{AB}\nonumber
+\\\nonumber\\
+N_{AB}=\!\frac{1}{24}[Ae^{\sigma}\! -\!
+18me^{-3\sigma}(L^{-1})_{00}]\varepsilon_{AB}\! +\!
+\frac{1}{8}[B_te^{\sigma}\! +\! 6me^{-3\sigma}(L^{-1})_{t0}]\gamma^7\sigma^t_{AB}\nonumber\\
+\nonumber\\
+M^I_{AB}=\!(-C^I_{~t}+2i\gamma^7D^I_{~t})e^{\sigma}\sigma^t_{AB}-
+2me^{-3\sigma}(L^{-1})^I_{\ \ 0}\gamma^7\varepsilon_{AB}, 
+\end{eqnarray}
+In the above, the matrix $\sigma^r_{AB}$ defined as $\sigma^r_{AB}\equiv\sigma^{rC}_{~~B}\varepsilon_{CA}$ is symmetric in $A,B$. For more details, see our previous paper.
+\end{document}

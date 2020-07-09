@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+0.1 Estimation
+
+-in estimates. Taking ?11 0 (see Theorem 1) as an example, an estimate thereof is
+\begin{center}
+?11,0 (1) $=\displaystyle \frac{1}{\sum_{i=1}^{n}I\{D_{i}=1,M_{i}=0,T_{i}=1\}}\sum_{i:D_{i}=1,M_{i=}0,T_{i=}1}Y_{i}$
+$$
+-\frac{1}{\sum_{i=1}^{n}I\{D_{i}=1,M_{i}=0,T_{i}=0\}}\sum_{i:D_{i}=1,M_{i=}0,T_{i=}0}\hat{Q}_{00}(Y_{i})\ .
+$$
+\end{center}
+Likewhise, quantile effects are estimated based on the empirical quantiles. For the
+
+estimation of total ATE and QTE, show that the resulting estimators are $\sqrt{N}$-
+
+consistent and asymptotically normal, see their Theorems 5.1 and 5.3. These prop-
+
+erties also apply to our context when splitting the sample into subgroups based on
+
+the values of a binary treatment and mediator (rather than the treatment only).
+
+For instance, the implications of Theorem 1 in when considering subsamples with
+
+$D = 1$ and $D = 0$ carry over to considering subsamples with $D = 1, M = 0$ and
+
+$D=0, M=0$ for estimating the average direct effect on never-takers. In contrast to
+
+, however, some of our identification results include the conditional mediator prob-
+
+abilities $\mathrm{P}\mathrm{r}(M=m|D=d)$ . As the latter are estimated with $\sqrt{N}$-consistency, too,
+
+it follows that the resulting effect estimators are again $\sqrt{N}$-consistent and asymp-
+
+totically normal. We use a non-parametric bootstrap approach to calculate the
+
+standard errors. show the validity of the bootstrap approach for such kind of esti-
+
+mators, which follows from their asymptotic normality. For the case that identifying
+
+assumptions to only hold conditional on observed covariates, denoted by $X$, estima-
+
+tion must be adapted to allow for control variables. Followinga suggestion by in
+
+their Section 5.1, basing estimation on outcome residuals in which the association of
+
+$X$ and $Y$ has been purged by means of a regression is consistent under the additional
+
+assumption that the effects of $D$ and $M$ are homogeneous across covariates. As an
+
+alternative, propose a flexible semiparametric estimator that does not impose such
+
+a homogeneity-in-covariates assumption and show $\sqrt{N}$-consistency and asymptotic
+
+normality.
+\end{document}

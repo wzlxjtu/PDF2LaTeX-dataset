@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+We may now compare the FDA written above to that obtained in the AdS$_6$ case, which for convenience we reproduce below, 
+\begin{eqnarray}
+0 ={\cal D} V^a - {i \over 2} \bar \psi_A \gamma^a \psi^A 
+\nonumber\\
+0= R^{ab} + 4 m^2 V^a V^b + m \bar \psi_A \gamma^{a b} \psi^A 
+\nonumber\\
+0= d A^r - {1\over 2} g \epsilon^{rst} A_s A_t - i \bar \psi_A \psi_B \sigma^{r\,\,AB}
+\nonumber\\
+0= D \psi_a - i m \gamma_a \psi_A V^a
+\nonumber\\
+0=dA - m B - i \bar \psi_A \gamma_7 \psi^A 
+\nonumber\\
+0=d B +2  \bar \psi_A \gamma_7 \gamma_a \psi^A V^a
+\end{eqnarray}
+We see that formally, we may obtain the $\mathbb{H}_6$ FDA from the AdS$_6$ FDA by exchanging
+\begin{align}
+m \rightarrow - i m \qquad \psi_A \rightarrow \psi_A \qquad \bar \psi_A \rightarrow i \bar \psi_A \qquad A^r \rightarrow i A^r \qquad g \rightarrow - i g \qquad B \rightarrow - B \qquad A \rightarrow i A\nonumber
+\end{align}
+These exchanges are compatible with the relation $g = 3m$. 
+Finally, we will check that the $\mathbb{H}_6$ FDA is compatible with the symplectic Majorana condition. This is a statement about the fourth equation of . We begin by defining 
+\begin{eqnarray}
+\nabla \psi_A \equiv D \psi_A - q \gamma_a \psi_A V^a
+\end{eqnarray}
+where $q = m$ for $\mathbb{H}_6$ and $q=im$ for AdS$_6$. We then find that 
+\begin{eqnarray}
+\overline{\nabla \psi_A} = D \psi_A^\dagger G^{-1} - q^* \psi_A^\dagger G^{-1} G \gamma_a^\dagger G^{-1} V^a = D \bar \psi_A - q^* \eta \,\bar \psi_A \gamma_a V^a
+\nonumber\\
+\epsilon^{AB} \nabla \psi_B^T {\cal C} = \epsilon^{AB} D\psi_B^T {\cal C} - q \epsilon^{AB} \psi_B^T {\cal C} {\cal C}^{-1} \gamma_a^T {\cal C} V^a = D \bar \psi_A+q \bar \psi_A \gamma_a V^a
+\end{eqnarray}
+where $\eta$ is defined implicitly in . We thus find that the symplectic Majorana condition is consistent only when 
+\begin{eqnarray}
+-q^* \eta = q
+\end{eqnarray}
+For $\mathbb{H}_6$, the consistency of the symplectic Majorana condition thus requires $\eta=-1$, which we have already seen to be the case in . On the other hand, in the AdS$_6$ case, one would instead have required $\eta=1$. Checking the results of  confirms that this was so. 
+\end{document}

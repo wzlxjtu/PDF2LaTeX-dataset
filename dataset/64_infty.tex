@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Using $()$ and rearranging the equation gives
+
+$F_{Y_{1}(1,1)|Д=c}(y)=\displaystyle \frac{p_{1|1}}{p_{1|1}-p_{1|0}}F_{Y_{1}|D=1,M=1}(y)-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}F_{Q_{11}(Y_{0})|D=0,M=1}(y)$ . (1)
+
+From $()$ , we have $F_{Y_{1}(0,1)|D=1,M(1)=1}(y) = F_{Q_{01}(Y_{0})|D=1,M=1}(y)$ . Applying the law of
+
+iterative expectations gives
+$$
+F_{Y_{1}}(0,1)|D=1,M(1)=1(y)\ =\ \frac{p_{a}}{p_{a}+p_{c}}F_{Y_{1}}(0,1)|D=1,M(1)=1,Д=a(y)
+$$
+$$
++\frac{p_{c}}{p_{a}+p_{c}}F_{Y_{1}}(0,1)|D=1,M(1)=1,Д=c(y)\ ,
+$$
+\begin{center}
+$A7= \displaystyle \frac{p_{a}}{p_{a}+p_{c}}F_{Y_{1}}$ (0,1)$|$t $=a(y) + \displaystyle \frac{p_{c}}{p_{a}+p_{c}}F_{Y_{1}}$ (0,1)$|$t $=c(y)$
+\end{center}
+Using $()$ and rearranging the equation gives,
+
+$F_{Y_{1}(0,1)|Д=c}(y)=\displaystyle \frac{p_{1|1}}{p_{1|1}-p_{1|0}}F_{Q_{01}(Y_{0})|D=1,M=1}(y)-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}F_{Y_{1}|D=0,M=1}(y)$ . (2)
+
+1 Proof of Theorem 5
+
+1.1 Average treatment effect on the compliers
+
+In $()$ and $()$ , we show that
+$$
+ё 1=E[Y_{1}(1,1)-Y_{1}(0,\ 0)|Д\ =c],
+$$
+$$
+=\frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=1,\ M=1]-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})|D=0,\ M=1]
+$$
+$$
+-\frac{p_{0|0}}{p_{0|0}-p_{0|1}}E[Y_{1}|D=0,\ M=0]+\frac{p_{0|1}}{p_{0|0}-p_{0|1}}E[Q_{00}(Y_{0})|D=1,\ M=0].
+$$
+1.2 Quantile treatment effect on the compliers
+
+In $()$ and $()$ , we show that $F_{Y_{1}(1,1)|c}(y)$ and $F_{Y_{1}(0,0)|c}(y)$ are identified. Accordingly,
+
+$\Delta_{1}^{c}(q)=F^{-1}Y_{1}(1,1)|c(q)-F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified.
+\end{document}

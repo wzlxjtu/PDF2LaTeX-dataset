@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+ and taking
+\begin{gather*}
+C^{(0,0;AB^{-1})}_{{\mathfrak J}_B}(w)\times_w T_{{\mathfrak J}_B,{\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)
+\\
+=(q;q)(p;p)\oint\frac{{\rm d}w}{4\pi i w} \frac{\prod\limits_{j=1}^8\Gamma_e\big((q p)^{\frac12 }\frac1t a_j^{-1} w^{\pm1}\big)}{\Gamma\big(w^{\pm2}\big)} C^{(0,0;AB^{-1})}_{{\mathfrak J}_B}(w)T_{{\mathfrak J}_B,{\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)
+\\
+=(q;q)^4(p;p)^4\!\oint\!\frac{{\rm d}w}{4\pi i w} \frac{\prod\limits_{j=1}^8\Gamma_e\big((q p)^{\frac12 }\frac1t a_j^{-1} w^{\pm1}\big)}{\Gamma\big(w^{\pm2}\big)}
+\Gamma_e\big(pqt^4\big)\prod_{j\neq i}\Gamma_e\left(\frac{pqt^2}{a_ia_j}\right)0
+\prod_{j=1}^8\Gamma_e\big((pq)^{\frac{1}{2}}ta_jw^{\pm1}\big)\\
+\quad{}\times\Gamma_e\left(\frac{(pq)^{\frac{1}{2}}w^{\pm1}}{ta_i}\right)\Gamma_e\left(\frac{a_iw^{\pm1}}{(pq)^{\frac{1}{2}}t^3}\right)
+ \Gamma_e\big((q p)^{\frac12} t\big(B^{-1}A\big)^{\pm1} w^{\pm1}\big)\Gamma_e\left(\frac{q p}{t^2}\right) \\
+\quad{}\times\oint \frac{{\rm d}y}{4\pi i y} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}\big(A B^{-1}\big)^{\pm1}y^{\pm1}\big)}{\Gamma_e(y^{\pm2})}
+\Gamma_e\big(t y^{\pm1} w^{\pm1}\big)\oint\frac{{\rm d}w_1}{4\pi i w_1}\oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}w_1^{\pm1}w_2^{\pm1}\big)}{\Gamma_e\big(w_2^{\pm2}\big)\Gamma_e\big(w_1^{\pm2}\big)} \\
+\quad{}\times\Gamma_e\big( (q p)^{\frac14}t A^{\frac12}B^{-\frac12} y^{\frac12} w_1^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((qp)^{\frac14} A^{\frac12} B^{\frac12} y^{-\frac12} w_1^{\pm1}D^{\pm1}\big)\\
+\quad{}\times \Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^{\frac12} y^{-\frac12} w_2^{\pm1} u^{\pm1}\big)
+\Gamma_e \big((q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{\frac12} D^{\pm1}w_2^{\pm1}\big)\\
+\quad{}\times
+\Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^\frac12 y^\frac12 w_1^{\pm1} v^{\pm1}\big)\Gamma_e\big( ( q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{-\frac12} C^{\pm1} w_1^{\pm1}\big) \\
+\quad{} \times\Gamma_e\big( ( q p )^{\frac14} t A^{\frac12} B^{-\frac12} y^{-\frac12} w_2^{\pm1} v^{\pm1}\big)\Gamma_e\big( ( q p )^{\frac14} A^{\frac12} B^\frac12 y^\frac12 w_2^{\pm1} C^{\pm1}\big) .
+\end{gather*}
+Plugging in the values of $a_j$ from where $a_i=AB^{-1}$ and using the identity $\Gamma_e\big(\frac{pq}{z}\big)\Gamma_e(z)=1$ we get
+\begin{gather*}
+(q;q)^4(p;p)^4\oint\frac{{\rm d}w}{4\pi i w} \frac{1}{\Gamma\big(w^{\pm2}\big)}
+\Gamma_e\big(pqt^4\big)\Gamma_e\big(pqt^2\big)\Gamma_e\big(pqt^2B^2\big)\Gamma_e\big(pqt^2A^{-2}\big)\\
+\quad{} \times\Gamma_e\big(pqt^2A^{-1}BC^{\pm1}D^{\pm1}\big) \Gamma_e\left(\frac{AB^{-1}w^{\pm1}}{(pq)^{\frac{1}{2}}t^3}\right)
+ \Gamma_e\big((q p)^{\frac12} tA^{-1}B w^{\pm1}\big)\Gamma_e\left(\frac{q p}{t^2}\right)\\
+ \quad{}\times \oint \frac{{\rm d}y}{4\pi i y} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}\big(A B^{-1}\big)^{\pm1}y^{\pm1}\big)}{\Gamma_e\big(y^{\pm2}\big)}\Gamma_e\big(t y^{\pm1} w^{\pm1}\big)\\
+\quad{} \times\oint\frac{{\rm d}w_1}{4\pi i w_1}\oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}w_1^{\pm1}w_2^{\pm1}\big)}{\Gamma_e\big(w_2^{\pm2}\big)\Gamma_e\big(w_1^{\pm2}\big)} \Gamma_e\big( (q p)^{\frac14}t A^{\frac12}B^{-\frac12} y^{\frac12} w_1^{\pm1}u^{\pm1}\big)\\
+\quad{} \times \Gamma_e\big((qp)^{\frac14} A^{\frac12} B^{\frac12} y^{-\frac12} w_1^{\pm1}D^{\pm1}\big)\Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^{\frac12} y^{-\frac12} w_2^{\pm1} u^{\pm1}\big) \\
+\quad{} \times \Gamma_e \big((q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{\frac12} D^{\pm1}w_2^{\pm1}\big)
+ \Gamma_e\big((q p)^{\frac14} t A^{-\frac12} B^\frac12 y^\frac12 w_1^{\pm1} v^{\pm1}\big)\\
+\quad{} \times \Gamma_e\big( ( q p)^{\frac14} A^{-\frac12} B^{-\frac12} y^{-\frac12} C^{\pm1} w_1^{\pm1}\big) \Gamma_e\big( ( q p )^{\frac14} t A^{\frac12} B^{-\frac12} y^{-\frac12} w_2^{\pm1} v^{\pm1}\big) \\
+\quad{} \times \Gamma_e\big( ( q p )^{\frac14} A^{\frac12} B^\frac12 y^\frac12 w_2^{\pm1} C^{\pm1}\big) .
+\end{gather*}
+\end{document} 

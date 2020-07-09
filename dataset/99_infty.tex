@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+where the units of $H$ are in bits. A {\it feature} $X$ is adiscrete random variable
+
+defined on $\Omega$. Assume that{\it X} hasa finite number of values {\it x}1, $x_{2}, x_{k}$. Set
+
+$q_{i}=\mathbb{P}(X=x_{i})$ . The {\it Shannon entropy H}({\it X}) of the feature $X$ is given by
+$$
+H(X)=-\sum_{i}q_{i}\log_{2}q_{i}.
+$$
+In particular, the values of $X$ define a partition of $\mathrm{S}$ into disjoint subsets $\mathrm{S}_{i} =$
+
+$\{s\ \in\ \mathrm{S}\ :\ X(s)\ =\ x_{i}\}$, for $1 \leq i \leq k$. This further induces $k$ spaces $\Omega_{i} =$
+
+$(\mathrm{S}_{i},\ \mathrm{P}(\mathrm{S}_{i}),p_{i})$ , where the induced distribution is given by
+
+$p_{i}(s)=\displaystyle \frac{p(s)}{q_{i}}$ for $s\in \mathrm{S}_{i},$
+
+and $q_{i}$ denotes the probability of $X$ having value $x_{i}$ and is given by
+$$
+q_{i}=\mathbb{P}(X=x_{i})=\sum_{s\in \mathrm{S}_{\mathrm{i}}}p(s)\ .
+$$
+Let $H(\Omega|X)$ denote the {\it conditional entropy} of $\Omega$ given the value of feature $X.$
+
+The entropy $H(\Omega|X)$ gives the expected value of the entropies of the condi-
+
+tional distributions on $\Omega$, averaged over the conditioning feature $X$ and can be
+
+computed by
+$$
+H(\Omega|X)=\sum_{i}q_{i}H(\Omega_{i})\ .
+$$
+Then the {\it entropy reduction} $R(\Omega,\ X)$ of $\Omega$ for feature $X$ is the difference between
+
+the {\it a priori} Shannon entropy $H(\Omega)$ and the conditional entropy $H(\Omega|X)$ , i.e.
+$$
+R(\Omega,\ X)=H(\Omega)-H(\Omega|X)\ .
+$$
+The entropy reduction indicates the change on average in information entropy
+
+from a prior state to a state that takes some information as given. Now we
+
+prove Propositions and. Given two features $X_{1}$ and $X_{2}$, we can partition $\Omega$
+
+either first by $X_{1}$ and subsequently by $X_{2}$, or first by $X_{2}$ and then by $X_{1}$, or
+
+just by a pair of features $(X_{1},\ X_{2})$ . In the following, we will show that all three
+
+approaches provide the same entropy reduction of $\Omega$. Before the proof, we define
+
+some notations. The joint probability distribution ofa pair of features $(X_{1},\ X_{2})$
+
+is given by $q_{i_{1},i_{2}} = \mathbb{P} (X_{1}\ =\ x_{1}^{(1)},\ X_{2}\ =\ x_{i_{2}}^{(2)})$ , and the marginal probability
+
+distributions are given by $q_{1}^{(1)} =\mathbb{P}(X_{1}=x_{1}^{(1)})$ and $q_{2}^{(2)} =\mathbb{P}(X_{2}=x_{i_{2}}^{(2)})$ . Clearly,
+
+$\displaystyle \sum_{i_{1}}q_{i_{1},i_{2}} =q_{2}^{(2)}$ and $\displaystyle \sum_{i_{2}}q_{i_{1},i_{2}} =q_{i_{1}}^{(1)}$. The {\it joint entropy} $H(X_{1},\ X_{2})$ ofapair
+
+$(X_{1},\ X_{2})$ is defined as
+$$
+H(X_{1},\ X_{2})=-\sum_{i_{1}}\sum_{i_{2}}q_{i_{1},i_{2}}\log_{2}q_{i_{1},i_{2}}.
+$$
+The {\it conditional entropy} $H(X_{2}|X_{1})$ ofa feature {\it X}2 given $X_{1}$ is defined as the
+
+expected value of the entropies of the conditional distributions $X_{2}$, averaged
+
+1
+\end{document}

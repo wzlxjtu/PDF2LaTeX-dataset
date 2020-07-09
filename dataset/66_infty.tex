@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+At each simulation step $t$ and for each ?, the path length reflected by
+
+the ?-th scatter {\it lt}(?) $= |(x_{t},\ y_{t})-(0,0)| + |(x_{t}^{*}\ ,\ y_{t}^{*}\ ) -(x_{t},\ y_{t})|$ and its deriva-
+
+tive with respect to time $\displaystyle \frac{d}{dt}$ {\it l}(?) are computed. The corresponding transmis-
+
+sion delay time s(?) , the constant phase offset ?(?) , and the Doppler frequency
+
+{\it f}(?t) caused by the ?-th scatterer following the rules s(?) $=$ {\it l}(?)/{\it c}0, ?(?) $=$
+
+((-{\it l}(?){\it f}carrier/{\it c}0) $\mathrm{m}\mathrm{o}\mathrm{d}\ 1$).2p, and $f_{D_{\mathrm{t}}}^{(\ovalbox{\tt\small REJECT})} =-\displaystyle \frac{d}{dt}$ {\it l}(?){\it f}carrier/{\it c}0, respectively, as well
+
+as the received signal amplitude {\it at}(?) computed using the free-space propagation
+
+model {\it at}(?) $=$ {\it c}0/(4p{\it f}carrier{\it l}(?)) (cf.) are recorded for each scatterer ?. (Here,
+
+$c_{0}$ refers to the speed of light in vacuum.) In asetting without line of sight,
+
+using linearisation of the phase offset with respect to the Doppler frequency,
+
+the time-variant channel impulse response evaluated at time $ t+Д$ for each sim-
+
+ulation step $t$ and small t resulting from the multipath transmission simulated
+
+using the above parameters can be approximated by
+
+255
+
+$h (\cdot,\ t+Д)= \displaystyle \frac{1}{\sqrt{\sum_{\ovalbox{\tt\small REJECT}--0}^{255}(a_{t}^{(\ovalbox{\tt\small REJECT})})^{2}}}\sum_{\ovalbox{\tt\small REJECT}=0}$ {\it at}(?) exp({\it i}?{\it t}(?)$+${\it i}2p{\it fD}(?t)t)ds(?) $(\cdot)$ .
+
+For any signal $\{S_{Д}\}_{0\leqД<T}$ being transmitted in the block beginning at time
+
+step $t$ through the simulated channel, this consideration leads to a received
+
+signal $\{R_{Д}\}_{0\leqД<T}$ in the form of
+\begin{center}
+$R$t $= (h\ (\cdot,\ t\ +\ Д)\ *\ S.)(Д)$
+\end{center}
+255
+\begin{center}
+$= \displaystyle \frac{1}{\sqrt{\sum_{\ovalbox{\tt\small REJECT}--0}^{255}(a_{t}^{(\ovalbox{\tt\small REJECT})})^{2}}}\sum_{\ovalbox{\tt\small REJECT}=0}$ {\it at}(?) exp({\it i}?{\it t}(?)$+${\it i}2p{\it fD}(?t)t)(dst(?) $(\cdot)*S.$) $(Д)$ .   (1)
+\end{center}
+This parametrisation is used in and delivers a realistic approximation of real-
+
+world scenarios for numbers of summands greater than 100 . In order to allow
+
+continuous time delays to be applied to discrete time signals, the impulse func-
+
+tion d st(?) $(\cdot)$ in $()$ is convolved with a windowed sinc $(\cdot)$ function scaled with
+
+a given bandwidth. Overall, the channel transmission including pulse shaping
+
+with bandwidth restricted to half the sample rate
+
+and additive noise is approximated by replacing the d s(?) $(\cdot)$ in $()$ by
+
+sin(p($\cdot$/2))/ $(A(\cdot/2))1_{[-8,8]}$ and adding independent and identically distributed
+
+Gaussian white noise $\sim \mathcal{N}$ ($0$, s2) to the transmitted signal with powers2 re-
+
+sulting in a signal-to-noise ratio of $12\mathrm{d}\mathrm{B}.$
+
+1 Channel Estimation
+
+The time-variant channel transfer functions $\mathcal{F}h(\cdot,\ t+Д)$ for $t = 0$, . . . , $4095T$
+
+and $0 \leqД < T$ simulated in Section are approximated by a time series of
+
+block wise time-invariant transfer functions $\{\mathcal{F}h^{t}\}_{t=0,\ldots,4095}$ based on which
+
+the estimation and prediction of the channel transmission are conducted. For
+
+each transmission block beginning at time step $t$, in order to estimate the
+
+corresponding channel transfer function $\mathcal{F}h^{t}$, a complex-valued (white noise)
+
+test signal $\{\overline{S}_{Д}^{t}\}_{Д=0,\ldots,N-1}$ whose Fourier transform has constant amplitude
+
+and random phases $\sim \mathcal{U}$(-p, p) is generated and then transmitted through the
+
+channel simulated in Section resulting in a received signal $\{R_{Д}^{t}\}_{Д=0,\ldots,N-1}.$
+
+1
+\end{document}

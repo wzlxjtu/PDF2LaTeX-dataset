@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+
+since $I_0$ is $O(z^6)$ and hence vanishes in the $\epsilon \rightarrow 0$ limit. However, some of the one-point functions \textit{will} depend on $\Omega$. It may be the case that only certain choices of $\Omega$ correspond to supersymmetric schemes, but since the final free energy will be independent of $\Omega$ we will not worry about this choice.
+While in principle  gives us the free energy, its evaluation on our numerical solutions is complicated by the integration over $u$ in $S_{6D}$. As such, we will take a slightly roundabout approach to the calculation of the free energy, first calculating its derivative $dF/d\alpha$ and then integrating over the UV parameter $\alpha$. This will allow us to circumvent the integration over $u$. In order to get $dF/d\alpha$, it will first be necessary to calculate the one-point functions of the dual field theory operators. This is the topic of the following subsection. 
+\subsubsection{One-point functions}
+By the usual AdS/CFT dictionary, the one-point functions of the operators dual to the three scalar fields and the metric are given by 
+\begin{align}
+\langle {\cal O}_{\sigma} \rangle = \lim_{\epsilon \rightarrow 0}  \frac{1}{\epsilon^3} {1 \over \sqrt{\gamma}} {\delta S_{ren} \over \delta \sigma}~~~~~~~~~~
+\langle {\cal O}_{\phi^0} \rangle = \lim_{\epsilon \rightarrow 0}  \frac{1}{\epsilon^4} {1 \over \sqrt{\gamma}} {\delta S_{ren} \over \delta \phi^0} 
+\nonumber\\
+ \langle {\cal O}_{\phi^3} \rangle = \lim_{\epsilon \rightarrow 0}  \frac{1}{\epsilon^3} {1 \over \sqrt{\gamma}} {\delta S_{ren} \over \delta \phi^3}~~~~~~~~~~
+ \langle {T^i}_j \rangle  = \lim_{\epsilon \rightarrow 0}  \frac{1}{\epsilon^5} {1 \over \sqrt{\gamma}} \gamma_{jk}{\delta S_{ren} \over \delta\gamma_{ik}}
+\end{align}
+We may obtain the explicit values of these vacuum expectation values by varying the on-shell action . The variation of the counterterm action $S_{ct}$ is straightforward. The variation of $S_{6D}$ gives rise to one piece which vanishes on the equations of motion, as well as a boundary term which must be accounted for. We find
+\begin{align}
+\langle {\cal O}_{\sigma} \rangle = \lim_{\epsilon \rightarrow 0} {1 \over \epsilon^3}  \left[- 2 z \partial_z \sigma + 6\sigma - {3 \over 4}( \varphi^0)^2 +\Omega\left(10\sigma-\frac{15}{4} \left(\phi^0\right)^2\right)  \right]\nonumber \\
+\langle {\cal O}_{\phi^0} \rangle = \lim_{\epsilon \rightarrow 0} {1 \over \epsilon^4}  \bigg[- \frac12 \cos^2\phi^3 z \partial_z \phi^0 +\frac12 \phi^0 +\frac{1}{12} \left(\phi^0\right)^3-\frac32 \phi^0\sigma-\frac{1}{16}R\phi^0 \nonumber\\
+~~~~~~~~~~~~~~~~~~~~+\Omega\left(\frac{45}{16}\left(\phi^0\right)^3-\frac{15}{2}\phi^0\sigma\right)\bigg]\nonumber \\
+\langle {\cal O}_{\phi^3} \rangle = \lim_{\epsilon \rightarrow 0} {1 \over \epsilon^3}  \left[ \frac12 z \partial_z \phi^3-\phi^3\right]\nonumber  \\
+\langle {T^i}_j\rangle = \lim_{\epsilon \rightarrow 0} {1 \over \epsilon^5}\left[\frac12 \left(\cal K \gamma^{ij}-\cal K^{ij}\right)+\frac{2}{\sqrt{\gamma}}\frac{\delta S_{ct}}{\delta \gamma_{ij}}\right]
+\end{align}
+Evaluating the limits, we get the following one-point functions
+\begin{align}
+\langle {\cal O}_{\sigma} \rangle = \frac52 e^{f_k}\alpha\beta\,\Omega ~~~~~~~~~~~
+\langle {\cal O}_{\phi^0} \rangle = \frac32 e^{-f_k} \beta -\frac{15}{8} e^{f_k}\alpha^2\beta\, \Omega
+\nonumber\\
+ \langle {\cal O}_{\phi^3} \rangle = \frac12 \beta~~~~~~~~~~~~~~~~~~~ \langle {T^i}_i \rangle  =  -\frac52 e^{-f_k} \alpha\beta
+\end{align}
+\end{document}

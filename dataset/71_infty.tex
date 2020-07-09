@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+$\Delta_{x} = (\mathrm{x}-\mathrm{T}_{0\mathrm{n}})^{\mathrm{T}}\mathrm{C}_{0\mathrm{n}}^{-1}(\mathrm{x}-\mathrm{T}_{0\mathrm{n}})$ the squared Mahalanobis distance of $\mathrm{x}$
+
+using the initial location and dispersion estimates, the set can be rewritten
+
+as {\it C}ß({\it F}) $= \{\mathrm{x}\ \in\ \mathbb{R}^{\mathrm{p}}|\Delta_{\mathrm{x}}\ >\ (З \mathrm{p}2)- 1(\ovalbox{\tt\small REJECT})\}$, where (?{\it p}2)-1(ß) is a large quan-
+
+tile of a chi-squared distribution with $p$ degrees of freedom. Now we want
+
+to show that the result given by Proposition holds for this particular case.
+
+Consider a random vector $(\mathrm{X}_{1},\ .\ .\ .\ ,\ \mathrm{X}_{\mathrm{n}}) \sim$ F0(µ0, $\Sigma_{0}$) and suppose that $F_{0}$
+
+is an elliptically symmetric distribution. Also consider apair of location and
+
+dispersion estimators $\mathrm{T}_{0\mathrm{n}}$ and $\mathrm{C}_{0\mathrm{n}}$ such that Tˆn $\rightarrow$µ0 and $\mathrm{C}_{0\mathrm{n}}\rightarrow\Sigma_{0}$ a.s..
+
+Let {\it F}beachosen reference distribution and $F_{n}$ the empirical distribution
+
+function. If the reference distribution satisfies
+
+x$\in$Csußp(F0) $[d_{HS}(\mathrm{x};\mathrm{F})-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}_{0})] <0$
+
+where ß is some large quantile of $F_{0}$, then
+
+$nd_{n}\rightarrow 0$ as $ n\rightarrow\infty$
+
+{\it Proof}. In ?, it is proved that for i.i. $\mathrm{d}. \mathrm{X}_{1}, \mathrm{X}_{2}, \mathrm{X}_{\mathrm{n}}$ with distribution $F_{0},$
+
+as $ n\rightarrow\infty$
+\begin{center}
+$\displaystyle \sup_{\mathrm{t}\in \mathbb{R}^{\mathrm{d}}}|d_{HS}(\mathrm{t},\ \mathrm{F}_{0})-\mathrm{d}_{\mathrm{H}\mathrm{S}}$($\mathrm{t},\ \mathrm{F}$ˆ $\mathrm{n}$) $|\rightarrow 0\mathrm{a}.\mathrm{s}.$
+\end{center}
+Note that, by the continuity of $F, F(\mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}}) \rightarrow$F(µ0, $\Sigma_{0}$) a.s.. Hence, for
+
+each $\ovalbox{\tt\small REJECT}>0$ there exists $n_{0}$ such that for all $n>n_{0}$ we have
+
+x$\in$Csußp(F0) $\{${\it dHS} $(\mathrm{x}$; Fˆ $\mathrm{n})-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}(\mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}}))\}\leq$
+
+x$\in$Csußp(F0) $\{${\it dHS} $(\mathrm{x}$; Fˆ $\mathrm{n})-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}_{0}$ (µ0, $\Sigma_{0}$)$)\}+$
+
+x$\in$Csußp(F0)\{{\it dHS} $(\mathrm{x};\mathrm{F}_{0}$ (µ0, $\Sigma_{0}$)$)-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}$ (µ0, $\Sigma_{0}))$\} $+$
+
+x$\in$Csußp(F0)\{{\it dHS} $(\mathrm{x};\mathrm{F}$ (µ0, $\Sigma_{0}$)$)-\mathrm{d}_{\mathrm{H}\mathrm{S}}(\mathrm{x};\mathrm{F}(\mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}}))$\}
+$$
+\leq 22-+0+-=\ovalbox{\tt\small REJECT}\ovalbox{\tt\small REJECT}\ovalbox{\tt\small REJECT}
+$$
+In the next example, we illustrate a univariate filter based on half-space
+
+depth that controls independently the left and the right tail of the distribu-
+
+tion. In the univariate case, given a point $x$ there exist only two halfspaces
+
+including it, hence the half-space depth assumes the explicit form
+$$
+d_{HS}(x;F)=\min(P_{F}((-\infty,\ x]),\ P_{F}([x,\ \infty)))
+$$
+$$
+=\min(F(x),\ 1-F(x)+P_{F}(X=x))\ ,
+$$
+1
+\end{document}

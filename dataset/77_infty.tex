@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+P1 Affine invariance: $d(\mathrm{x};\mathrm{F})=\mathrm{d}(\mathrm{A}\mathrm{x}+\mathrm{b};\mathrm{F}_{\mathrm{A},\mathrm{b}})$ ;
+
+P2 Maximality at center: if $F$ is “symmetric” around µ then $d(\mathrm{x};\mathrm{F}) \leq$
+
+d(µ; F) for all $\mathrm{x}$; for a more detailed discussion on symmetry see ?.
+
+P3 Monotonicity: if $()$ holds, then
+
+$ d(\mathrm{x};\mathrm{F})\leq$ d(µ $+$a(x--µ); F) $\ovalbox{\tt\small REJECT}\in[0$, 1$]$ ;
+
+P4 Approaching zero: $\Vert \mathrm{x}\Vert\rightarrow\infty\Rightarrow \mathrm{d}(\mathrm{x};\mathrm{F})\rightarrow 0.$
+
+1 Gervini-Yohai depth
+
+Here we want to show that the Gervini-Yohai depth, defined as $d_{GY}(\mathrm{t},\ \mathrm{F},\ \mathrm{G})=$
+
+$1-\mathrm{G}$ ($\Delta$ ($\mathrm{t}$, µ(F), $\Sigma(\mathrm{F})$)), is a proper statistical depth function, i.e., it satis-
+
+fies the four properties introduced above.
+
+1. Affine invariance: it follows directly from the affine invariance property
+
+of the Mahalanobis distance;
+
+2. Maximality at center: if $F$ is elliptically symmetric around µ(F),
+\begin{center}
+$d_{GY}$ (µ($\mathrm{F}$), $\mathrm{F}, \mathrm{G}$) $=1-\mathrm{G}$ ($\Delta$(µ($\mathrm{F}$), µ($\mathrm{F}$), $\Sigma(\mathrm{F}))$) $=1-\mathrm{G}(0)$ .
+\end{center}
+For any $\mathrm{t}\neq$ µ(F) we have
+\begin{center}
+$\Delta$ ($\mathrm{t}$, µ($\mathrm{F}$), $\Sigma(\mathrm{F})$) $>0$
+
+$G$ ($\Delta$ ($\mathrm{t}$, µ($\mathrm{F}$), $\Sigma(\mathrm{F}))$) $\geq \mathrm{G}(0)$
+
+$1-G$ ($\Delta$ ($\mathrm{t}$, µ($\mathrm{F}$), $\Sigma(\mathrm{F}))$) $\leq 1-\mathrm{G}(0)$
+
+$d_{GY}(\mathrm{t},\ \mathrm{F},\ \mathrm{G})\leq \mathrm{d}_{\mathrm{G}\mathrm{Y}}$ (µ($\mathrm{F}$), $\mathrm{F}, \mathrm{G}$),
+\end{center}
+when $G$ is strictly monotone then strict inequality holds, and µ(F) is
+
+the unique maximizer of the Gervini-Yohai depth.
+
+3. Monotonicity:
+
+$\Delta$(µ(F) $+$a(t --µ(F)), µ(F), $\Sigma(\mathrm{F})$) $=$ (a(t --µ(F)))T $\Sigma(\mathrm{F})^{-1}$ (a(t --µ(F)))
+
+$=\ovalbox{\tt\small REJECT} 2$ ($\mathrm{t}$--µ(F))T $\Sigma(\mathrm{F})^{-1}$($\mathrm{t}$--µ(F))
+
+$=$ a2$\Delta$(t, µ(F), $\Sigma(\mathrm{F})$)
+
+$\leq\Delta$($\mathrm{t}$, µ(F), $\Sigma(\mathrm{F})$)
+
+Then $d_{GY}$ (µ(F) $+$a(t --µ(F)), $\mathrm{F}, \mathrm{G}$) $\geq \mathrm{d}_{\mathrm{G}\mathrm{Y}}(\mathrm{t},\ \mathrm{F},\ \mathrm{G})$ .
+
+4. Approaching zero: if $\Vert \mathrm{t} \Vert\rightarrow \infty$ we have that $\Delta$ ($\mathrm{t}$, µ(F), $\Sigma(\mathrm{F})$) $\rightarrow \infty$
+
+and consequently $G$ ($\Delta$ ($\mathrm{t}$, µ(F), $\Sigma(\mathrm{F}))$) $\rightarrow 1$. Then
+\begin{center}
+$d_{GY}(\mathrm{t},\ \mathrm{F},\ \mathrm{G})=1-\mathrm{G}$($\Delta$ ($\mathrm{t}$, µ($\mathrm{F}$), $\Sigma(\mathrm{F}))$) $\rightarrow 0$
+\end{center}
+1
+\end{document}

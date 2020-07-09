@@ -1,0 +1,79 @@
+\documentclass[prd,superscriptaddress,twocolumn,10pt]{revtex4}
+\usepackage{amsmath,amssymb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color} 
+\DeclareFontFamily{OT1}{rsfs}{}
+\DeclareFontShape{OT1}{rsfs}{m}{n}{ <-7> rsfs5 <7-10> rsfs7 <10->rsfs10}{} 
+\DeclareMathAlphabet{\mycal}{OT1}{rsfs}{m}{n} 
+\begin{document}
+ with implied star product and symmetric C components.
+  Master field components are now separated in physical scalar field $C_0^1$  and higher ones, related to it on-shell by derivatives. 
+The expansion of C is given by
+\begin{equation}
+C=\sum_{s=1}^{\infty}\sum_{|m|<s}C_m^sV_m^s
+\end{equation}
+for $C_m^s\sim C^{\alpha_1\alpha_2..\alpha_{2s-1}}$
+where m and number of oscillators $\tilde{y}_{1}$ versus $\tilde{y}_2$ are related with $2m=N_1-N_2$ and $C_m^s$ are functions of spacetime coordinates. Auxiliary tensors are absorbed within a field.
+The fields $A$ and $\bar{A}$ are expanded analogously
+\begin{align}
+A&=\sum_{s=2}^{\infty}\sum_{|m|<s}A_m^sV_m^s & \overline{A}=\sum_{s=2}^{\infty}\sum_{|m|<s}\overline{A}_m^sV_m^s.
+\end{align}
+The standard procedure of finding the generalised KG equation consists of inserting the expressions for $A$, $\bar{A}$ and $C$ in  () and determining the smallest possible set of equations needed to find the scalar equation in arbitrary background.
+Standard procedure can be described considering equation () in AdS background since it is a foundation for the following computations. The vacuum $C_0^1$ equation without AdS fields is ordinary KG  equation while one can determine the higher components in the terms of $C_0^1$. 
+The AdS connection consists of the spin-2 generators that form SL(2), subalgebra of $hs[\lambda]$ 
+\begin{align}
+A&=e^{\rho}V_1^2dz+V_0^2d\rho\\
+\bar{A}&=e^{\rho}V_{-1}^2d\bar{z}-V_0^2d\rho
+\end{align}
+with AdS metric
+\begin{equation}
+ds^2=d\rho^2+e^{2\rho}dzd\bar{z}. 
+\end{equation}
+The higher spins fields vanish, and we are working in Euclidean metric and  Fefferman-Graham gauge. The general form of the $C$ equation () in the AdS background is 
+\begin{align}
+&\partial_{\rho}C_m^s+2C_m^{s+1}+C_m^{s+1}g_3^{(s+1)2}(m,0)=0  \end{align}
+\begin{align}
+ \partial C_m^s+e^{\rho}(C_{m-1}^{s-1}+\frac{1}{2}g_2^{2s}(1,m-1)C^s_m\\ \nonumber+\frac{1}{2}g_3^{2(s+1)}(1,m-1)C_{m-1}^{s+1})=0 \end{align}
+\begin{align}
+\overline{\partial}C^s_m-e^{\rho}( C_{m+1}^{s-1}-\frac{1}{2}g_2^{2s}(-1,m+1)C^s_{m+1}\\+\frac{1}{2}g_3^{2(s+1)}(-1,m+1)C^{s+1}_{m+1})=0 \nonumber
+\end{align}
+for $|m|<s$, $\partial=\partial_z,\overline{\partial}=\partial_{\overline{z}}$ and the $\lambda$-dependence in the structure constants suppressed. 
+In the simplest case choosing $s=1,s=2$ one can solve for the higher components in C and obtain the Klein-Gordon KG equation 
+\begin{equation}
+\left[ \partial_{\rho}^2+2\partial_{\rho}+4e^{-2\rho}\partial\bar{\partial}-(\lambda^2-1) \right]C_0^1=0.
+\end{equation}
+ Consistency condition on equations is that all the components of C have smooth solution when expressed using $C_0^1$. The strategy for determining the minimal set of equations for $C_0^1$ is to select components of C that are of the form $C_{\pm m}^{m+1}$ and therefore the smallest spin for fixed m (e.g. $C_0^1, C_{\pm1}^2,..$). That are minimal components. 
+ One needs $V_{m,\rho}^s$ equations for fixed m, solve for non-minimal components in terms of minimal ones and $\rho$ derivatives, for $A_{\rho}=-\overline{A}_{\rho}=V_{0}^2$. After solving for minimal ones, one needs to solve $V_{m,z}^s$ and $V_{m,\overline{z}}^s$ equations in terms of $C_0^1$ and its derivatives. 
+Once that we have expressed the higher components of C in terms of $C_0^1$ we can determine the part that defines the KG equation and the
+generalised part that appears due to the HS background.
+To obtain the equation of motion for the scalar field up to linear order we consider the variation of the gauge field and apply the KG equation on it. This and the standard procedure for obtaining the linearised equation of motion for the scalar field described above
+should be equal once the gauge parameter is chosen conveniently.
+That approach can be written in the following way.
+First we express the higher components of the C field in terms of the combination of the derivatives on $C_0^1$ in the background AdS. 
+Focusing on the master field $C$, the equation () is invariant under the $hs[\lambda]\oplus hs[\lambda]$  gauge invariance when 
+\begin{align}
+C\rightarrow C+C\star \bar{\Lambda}-\Lambda\star C 
+\end{align}
+for 
+\begin{equation}
+\Lambda(\rho,z,\bar{z})=\sum_{n=1}^{2s-1}\frac{1}{(n-1)!}(-\partial)^{n-1}\lambda^{(s)}(z,\bar{z})e^{(s-n)\rho}V^{s}_{s-n}. 
+\end{equation}
+Where we take $\Lambda$ to be chiral, so $\bar{\Lambda}=0$.
+The field in the higher spin background is obtained by transformation
+\begin{align}
+\tilde{C}_m^s=C_m^s-(\Lambda\star C)^s_m.
+\end{align}
+The field $C_m^s$ we express in terms of the $C_0^1$.
+To do that we focus on the set of equations (),(20),().
+The product of the C field with $\Lambda$ gives combination of higher components of C in AdS background which can, as we will show, be expressed in terms of $C_0^1$. On the field $C_0^1$ we can use the transformation () and obtain 
+\begin{align}
+\tilde{C}_0^1=C_0^1-(\Lambda\star C)^1_0.
+\end{align}
+Since we are at the linear order, once we have $C_0^1$ we can rewrite it as $\tilde{C}_0^1$ which is defined on the higher spin background. 
+From the expression for the gauge field $\Lambda$ () and the relation for the star product () we can determine the variation of the scalar field $C^1_0$
+\begin{align}
+(\delta C)^1_0 &=-\sum_{n=1}^{2s-1}\frac{1}{(n-1)!}(-\partial)^{n-1}\Lambda^{(s)} \\ &\times\frac{1}{2}g_{2s-1}^{ss}(s-n,n-s)C^s_{-(s-n)}e^{(s-n)\rho}, 
+\end{align}
+\end{document}

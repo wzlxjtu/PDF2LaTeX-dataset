@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+
+
+We again use the asymptotic expansions to write 
+\begin{eqnarray}
+S_{\mathrm{GH}} = -{5 \over 2} \int d^5 x \sqrt{g} e^{5 f_k} \left[{1 \over \epsilon^5} +{3 f_2\over \epsilon^3} +{1 \over2 \epsilon} \left(5 f_2^2 + 2 f_4\right) \right]
+\end{eqnarray}
+Adding the two together, we find in total that 
+\begin{eqnarray}
+S_{\mathrm{6D}}+S_{\mathrm{GH}} = -\int d^5 x \sqrt{g} e^{5 f_k} \left[{2 \over \epsilon^5} +{1 \over 6 \epsilon^3}\left(20 f_2 - \left(\phi^0_1\right)^2 \right) \right.- {1 \over 48\epsilon}\left(1200 f_2^2 + 480 f_4  \right.  \nonumber\\
+\vphantom{.}\hspace{0.2 in}\left. \left. \hspace{.5in} + 120 f_2 \left(\phi^0_1\right)^2 - \left(\phi^0_1\right)^4 + 48\, \phi^0_1 \phi^0_3 -36(\phi^3_2)^2 + 144 \sigma_2^2  \right)\right]
+\end{eqnarray}
+We must now undergo the task of inverting all of the UV modes to rewrite the action in terms of induced fields at the cut-off surface (since it is the latter which transform nicely under bulk diffeomorphism). Before quoting the result, we note that at the cut-off $z = \epsilon$, the induced metric $\gamma_{i j}$ is given by 
+\begin{eqnarray}
+\gamma_{i j}=  e^{2 f}\big|_{z = \epsilon} \,g^{(S^5)}_{i j}
+\end{eqnarray}  
+The Ricci tensor and Ricci scalar are given by
+\begin{eqnarray}
+R_{ij}[\gamma] = 4e^{-2f}\gamma_{ij}\big|_{z = \epsilon}~~~~~~~~~~~~~~R[\gamma] = 20 \,e^{- 2 f}\big|_{z = \epsilon}
+\end{eqnarray}
+In terms of these quantities, we find that the inverted form of the divergent part of the on-shell action is 
+\begin{eqnarray}
+S = - \int d^5 x \sqrt{\gamma} \left[2 + {1 \over 4} \left(\phi^0\right)^2 + {3 \over 4} \left(\phi^3\right)^2 - 3 \sigma^2 +{7 \over 12 }\left(\phi^0\right)^4\right.
+\nonumber\\
+\vphantom{.}\hspace{1.4 in}\left. + {1 \over 12} R[\gamma] - {1 \over 320} R[\gamma]^2 - {3 \over 32} R[\gamma] \left(\phi^0\right)^2 \right]
+\end{eqnarray}
+We may now address the two points mentioned at the start of this subsection. To begin, we check that in the flat limit, we reproduce the divergent terms obtained in. In particular, we expect that the first line of should be equal to $-S_{ct}^{(W)}$ up to and including order $O(z^4)$. Though the expressions look different at first sight, it can be checked via the relationships between expansion coefficients in  (along with their higher order counterparts) that in the limit $e^{-2f} \rightarrow 0$ the two expressions indeed \textit{are} equivalent up to $O(z^4)$. Thus all of their divergent contributions are the same in the flat limit. However, even in this limit the two differ at order $O(z^5)$, which means that they have different finite contributions. As mentioned earlier, the finite terms we must work with are those coming from . An action which has both the required finite and infinite counterterms is
+\begin{eqnarray}
+S_{\mathrm{ct}} = \int d^5 x \sqrt{\gamma} \left[2 + {1 \over 4} \left(\phi^0\right)^2 + {3 \over 4} \left(\phi^3\right)^2 + 3 \sigma^2 +{1 \over 48 }\left(\phi^0\right)^4 - {3 \over 4} \left(\phi^0\right)^2 \sigma\right.
+\nonumber\\
+\vphantom{.}\hspace{1.4 in}\left. + {1 \over 12} R[\gamma] - {1 \over 320} R[\gamma]^2 - {3 \over 32} R[\gamma] \left(\phi^0\right)^2 \right]
+\end{eqnarray}
+\end{document}

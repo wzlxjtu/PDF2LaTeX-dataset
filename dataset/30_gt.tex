@@ -1,0 +1,75 @@
+\documentclass[prd,superscriptaddress,twocolumn,10pt]{revtex4}
+\usepackage{amsmath,amssymb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color} 
+\DeclareFontFamily{OT1}{rsfs}{}
+\DeclareFontShape{OT1}{rsfs}{m}{n}{ <-7> rsfs5 <7-10> rsfs7 <10->rsfs10}{} 
+\DeclareMathAlphabet{\mycal}{OT1}{rsfs}{m}{n} 
+\begin{document}
+HS theory can also be considered in the sense of AdS/CFT correspondence, where the HS theory of massless HS fields corresponds to a limiting case of the string theory for the string tension going to zero. Large N superconformal field theories were studied as holographic duals for higher spin gauge theories in perturbative expansion around AdS spacetime .
+Klebanov and Polyakov  have proposed a duality  between the singlet sector of the critical 3-d O(N) vector model with $(\phi^a\phi^a)^2$ interaction and minimal bosonic theory in AdS4 which contains massless gauge fields with even spin. The analog of AdS4 conjecture by Klebanov and Polyakov appeared in AdS3  conjecturing a duality between a complex scalar coupled to higher-spin fields in Vasiliev's gravity in 3 dimensions and WN minimal model CFT in t'Hooft limit denoted by coset representation
+ \begin{equation}
+\frac{SU(N)_k\oplus SU(N)_1}{SU(N)_{k+1}},
+\end{equation}
+where we define the t'Hooft limit with $N,k\rightarrow\infty$ for $\lambda\equiv\frac{N}{k+N}$. 
+This duality has been verified by the number of studies, correspondence of global symmetries in bulk and at the boundary , correspondence of the 1-loop partition function in the bulk and at the large NCFT  , and partition function of the HS black hole at high temperature in the bulk and at the boundary CFT, as well as for the 3-point functions when $\lambda=\frac{1}{2}$ and $s=2,3,4$ for the scalar-scalar-HS field (00s) correlator in the t'Hooft limit. 
+Via three-point functions, tests of the conjecture have been done in  (for 00s correlator with general $\lambda$), and in .
+In this work, we extract the coupling of the 00s  three-point correlator  by considering the linearised Vasiliev equations of motion, and we verify it by choosing the spin to be three and comparing with result in .
+The result corresponds to coupling of the three-point correlation function up to selected normalisation. 
+While we consider general $\lambda$, the similar work has been done for the fixed $\lambda$ in .
+The structure of the work is as follows: In the section two we consider linearised equations of motion in the Vasiliev's theory, in the section three we consider the higher spin field in the metric formulation, and in section four we conclude.
+  \section{Linearized equations of motion}
+Let us first consider the coefficient coming from the Vasiliev linearised equations. Vasiliev's theory contains five equations for the master fields W which is spacetime 1-form, B and $S_{\alpha}$ which are spacetime 0-forms. The generating functions are dependent on the coordinates of the spacetime, auxiliary bosonic twistor variables (referred to as "oscillators") and Clifford element pairs, where in definitions we follow conventions from .
+The oscillators  and various other ingredients are used to define the "deformed" oscillator star-commutation relations which give rise to $hs[\lambda]$ higher spin algebra. 
+Two of the above mentioned equations that will be of the interest here are
+\begin{align}
+dW&=W\wedge\star W \\
+dB&=W\star B-B\star W 
+\end{align}
+We can rewrite W with projector operators 
+\begin{equation}
+\mathcal{P}_{\pm}=\frac{1\pm\psi}{2} 
+\end{equation}
+for $\psi$ elements of the Clifford pairs such that $W=-\mathcal{P}_{+}A-\mathcal{P}_{-}\overline{A}$
+for 
+\begin{align}
+\mathcal{P}_{\pm}\psi_{1}&=\psi_1\mathcal{P}_{\pm}=\pm\mathcal{P}_{\pm} &\mathcal{P}_{\pm}\psi_2=\psi_2\mathcal{P}_{\mp}
+\end{align}
+where A are Chern-Simons gauge fields which take value in the Lie algebra hs$[\lambda]$. In this formulation the equation 
+\begin{equation}
+dW=W\wedge\star W
+ \end{equation}
+gives
+\begin{align}
+dA+A\wedge\star A =0 \\ 
+D\overline{A}+\overline{A}\wedge \star \overline{A}=0 
+\end{align}
+where A and $\overline{A}$ are positive polynomials of the positive degree in products of deformed oscillators.
+() and () are in that case equal to field equations $hs[\lambda]\otimes hs[\lambda]$  Chern-Simons theory. \\ 
+The generators of hs$[\lambda]$ are defined with spin index \textit{s} and mode index \textit{m}  as
+$V^s_{m}$ for $s\geq2 $
+while $|m|<s$ and obey
+ star product
+\begin{equation}
+V_m^s\star V_n^t=\sum_{u=1,2,3}^{s+t-|s-t|-1}g_u^{st}(m,n;\lambda)V^{s+t-u}_{m-n}
+\end{equation}
+where 
+\begin{equation}g_u^{st}(m,n;\lambda)=(-1)^{u+1}g_u^{ts}(m,n;\lambda)\end{equation}
+are specific coefficients dependent on $\lambda$ and defined according to conventions .
+The equations describe interaction of arbitrary higher spin background with lienarized scalars.
+The coupling that we are interested in can be extracted from rewriting the master field B as a linearized fluctuation around vacuum value $\mathcal{\nu}$
+\begin{align}
+B=\mathcal{\nu}+\mathcal{P}_{+}\psi_2C(x,\tilde{y}_{\alpha})+\mathcal{P}_-\psi_2\tilde{C}(x,\tilde{y}_{\alpha})
+\end{align}
+and expanding the master field $C$ in the deformed oscillators $\tilde{y}_{\alpha}$ in the equation
+\begin{equation}
+dC+A\star C- C \star \overline{A}=0.
+\end{equation}
+ That allows us determining the generalised Klein-Gordon (KG) equation in the background of HS fields.
+While the expansion of the master field C in formalism of bosonic Vasiliev's theory is given by
+ \begin{equation}
+ C=C_0^1+C^{\alpha\beta}\tilde{y}_{\alpha}\tilde{y}_{\beta}+C^{\alpha\beta\sigma\lambda}\tilde{y}_{\alpha}\tilde{y}_{\beta}\tilde{y}_{\sigma}\tilde{y}_{\lambda}+...
+ \end{equation}
+\end{document}

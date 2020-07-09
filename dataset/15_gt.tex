@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+
+The non-zero components of the Ricci tensor are
+\begin{eqnarray}
+R_{uu} = - 5 \left(f'' + (f')^2 \right) \hspace{1 in} R_{mn} =  -g_{mn} \left(f'' + 5(f')^2 \right)
+\end{eqnarray}
+while the Ricci scalar is given by
+\begin{eqnarray}
+R = - 10 f'' - 30(f')^2 
+\end{eqnarray}
+Furthermore, we have that $\sqrt{G} = e^{5f} \sqrt{g}$, where $g$ is the determinant of the unit $S^5$ metric. Upon integration by parts, part of the Einstein-Hilbert term cancels with the Gibbons-Hawking term to give the following simple expression
+\begin{eqnarray}
+S = \int du \int d^5 x \sqrt{g}\, e^{5f}\left[-5 \left((f')^2 +4 W^2 \right)+2 {\cal L}_{\mathrm{kin}}\right]
+\end{eqnarray}
+The restriction to the flat case was not strictly necessary so far, but it will be crucial in the next step.
+The gradient flow equations, together with the chain-rule, allows us to rewrite
+\begin{eqnarray}
+{\cal L}_{\mathrm{kin}} =-2\,  W'
+\end{eqnarray}
+Plugging this into and using the BPS equation of the warp factor, we find
+\begin{eqnarray}
+S = -4  \int d^5 x \sqrt{g}\,e^{5f} W \Big|_0^\Lambda
+\end{eqnarray}
+where $\Lambda$ is the UV cutoff. Only the $\Lambda$ part of the action contributes, since $e^{5f} W|_0$ vanishes due to the close-off of the geometry. 
+Removing the UV cutoff $\Lambda\rightarrow \infty$ is equivalent to removing the cutoff $\varepsilon$ on our asymptotic coordinate $z$, i.e. $\varepsilon\rightarrow 0$. From the UV asymptotics we find that in this limit the factor $e^{5f}$ diverges like 
+\begin{eqnarray}
+e^{5f} \sim {1 \over \varepsilon^5}
+\end{eqnarray}
+This is the reason for the previous claims that only the terms up to $O(z^5)$ in the superpotential are relevant for obtaining counterterms. All the higher-order terms vanish as the cutoff is removed. 
+We may thus legitimately insert the approximate superpotential into to get the counterterms, 
+\begin{eqnarray}
+S^{(W)}_{\mathrm{ct}} = 4 \int d^5x \sqrt{\gamma} \left[  {1\over 2} + {3 \over 4} \sigma^2 + {1 \over 16} (\phi^0)^2 -{3 \over 16} (\phi^3)^2 + {1 \over 192} (\phi^0)^4 -{3 \over 16} (\phi^0)^2 \sigma \right]
+\end{eqnarray}
+where $\gamma$ is the induced metric on the $z = \varepsilon$ boundary. All fields are evaluated at $z = \varepsilon$. This gives all finite and infinite counterterms for the flat domain wall solutions.
+\end{document}

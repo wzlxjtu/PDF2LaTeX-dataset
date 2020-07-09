@@ -1,0 +1,24 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+Let $\Delta_1^{\tau} = E[Y_1(1,M(1))-Y_1(0,M(0))|\tau]$ denote the ATE conditional on $\tau \in \{a,c,de,n\}$; $\theta_1^{\tau}(d)$ and $\delta_1^{\tau}(d)$ denote the corresponding direct and indirect effects. Because $M(1)=M(0)=0$ for any never-taker, the indirect effect for this group is by definition zero $(\delta_1^{n}(d)=E[Y_1(d,0) -Y_1(d,0)|\tau=n]=0)$ and $\Delta_1^{n} = E[Y_1(1,0)-Y_1(0,0)|\tau=n]=\theta_1^{n}(1)=\theta_1^{n}(0)=\theta_1^{n}$ equals the direct effect for never-takers. Correspondingly, because $M(1)=M(0)=1$ for any always-taker, the indirect effect for this group is by definition zero $(\delta_1^{a}(d)=E[Y_1(d,1) -Y_1(d,1)|\tau=a]=0)$ and $\Delta_1^{a} = E[Y_1(1,1)-Y_1(0,1)|\tau=a]=\theta_1^{a}(1)=\theta_1^{a}(0)=\theta_1^{a}$ equals the direct effect for always-takers. For the compliers, both direct and indirect effects may exist. Note that $M(d)=d$ due to the definition of compliers. Accordingly, $\theta_1^{c}(d) = E[Y_1(1,d)-Y_1(0,d)|\tau=c]$ equals the direct effect for compliers, $\delta_1^{c}(d)= E[Y_1(d,1) -Y_1(d,0)|\tau=c]$ equals the indirect effect for compliers, and $\Delta_1^{c}= E[Y_1(1,1) -Y_1(0,0)|\tau=c]$ equals the total effect for compliers. In the absence of any direct effect, the indirect effects on the compliers are homogeneous, $\delta_1^{c}(1)=\delta_1^{c}(0)=\delta_1^{c}$, and correspond to the local average treatment effect. Analogous results hold for the defiers.
+As already mentioned, we will also consider direct effects conditional on specific values $D=d$ and mediator states $M=M(d)=m$, which are denoted by $\theta_1^{d,m}(d)=E[Y_1(1,m)-Y_1(0,m)|D=d,M(d)=m]$. These parameters are identified under weaker assumptions than strata-specific effects, but are also less straightforward to interpret, as they refer to mixtures of two strata. For instance, $\theta_1^{1,0}(1)=E[Y_1(1,0)-Y_1(0,0)|D=1,M(1)=0]$ is the effect on a mixture of  never-takers and defiers, as these two groups satisfy $M(1)=0$. Likewise, $\theta_1^{0,0}(0)$ refers to never-takers and compliers satisfying $M(0)=0$,  $\theta_1^{0,1}(0)$ to always-takers and defiers satisfying $M(0)=1$, and $\theta_1^{1,1}(1)$ to always-takers and compliers satisfying $M(1)=1$.
+\subsection{Quantile effects}
+We denote by $F_{Y_{t}(d,m)}(y) = \Pr(Y_t(d,m) \leq y)$ the cumulative distribution function of $Y_t(d,m)$ at outcome level $y$. Its inverse, $F_{Y_{t}(d,m)}^{-1}(q) = \inf \{y : F_{Y_t(d,m)}(y) \geq q \}$, is the quantile function of $Y_t(d,m)$ at rank $q$. The total QTE are denoted by 
+\end{document}

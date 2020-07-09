@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Combining $()$ and $()$ yields,
+\begin{center}
+$h(1,1,1,\ h^{-1}(1,1,0;y))=F_{Y_{1}(1,1)|D=0,M=1}^{-1}$ ? $F_{Y_{0}(1,1)|D=0,M=1}(y)$ .   (1)
+\end{center}
+Note that $h(1,1,1,\ h^{-1}(1,1,0;y))$ maps the period 1 (potential) outcome of an in-
+
+dividual with the outcome $y$ in period $0$ under treatment with the mediator. Ac-
+
+cordingly, $E[F_{Y_{1}(1,1)|D=0,M=1}^{-1}\ \ovalbox{\tt\small REJECT}\ F_{Y_{0}(1,1)|D=0,M=1}(Y_{0})|D=0,\ M=1] =E[Y_{1}(1,1)|D=$
+
+$0, M = 1]$. We can identify $F_{Y_{0}(1,1)|D=0,M=1}(y) = F_{Y_{0}|D=0,M=1}(y)$ under Assump-
+
+tion 2, but we cannot identify $F_{Y_{1}(1,1)|D=0,M=1}(y)$ . However, we show in the follow-
+
+ing that we can identify the overall quantile-quantile transform $F_{Y_{1}(1,1)|D=0,M=1}^{-1}$ ?
+
+$F_{Y_{0}(1,1)|D=0,M=1}(y)$ under the additional Assumption $5\mathrm{b}$. Under Assumptions 1 and
+
+$5\mathrm{b}$, the conditional potential outcome distribution function equals
+$$
+F_{Y_{\mathrm{t}}(d,1)|D=1,M=1}(y)^{A1}=\mathrm{P}\mathrm{r}(h(d,\ m,\ t,\ U)\leq y|D=1,\ M=1,\ T=t)\ ,
+$$
+$$
+=\mathrm{P}\mathrm{r}(U\leq h^{-1}(d,\ m,\ t;y)|D=1,\ M=1,\ T=t)\ ,
+$$
+(2)
+$$
+A5b=\mathrm{P}\mathrm{r}(U\leq h^{-1}(d,\ m,\ t;y)|D=1,\ M=1)\ ,
+$$
+$$
+=F_{U|11}(h^{-1}(d,\ m,\ t;y))\ ,
+$$
+for $d, d'\in\{0$, 1$\}$. We repeat similar steps as above. First, evaluating $F_{Y_{1}(1,1)|D=1,M=1}(y)$
+
+at $h(1,1,1,\ u)$ gives
+$$
+F_{Y_{1}(1,1)|D=1,M=1}(h(1,1,1,\ u))=F_{U|11}(h^{-1}(1,1,1;h(1,1,1,\ u)))=F_{U|11}(u)\ .
+$$
+Applying $F_{Y_{1}(1,1)|D=1,M=1}^{-1}(q)$ to both sides, we have
+\begin{center}
+$h\ (1,\ 1,\ 1,\ u)\ =\ F_{Y_{1}(1,1)|D=1,M=1}^{-1}(F_{U|11}(u))$ .   (3)
+\end{center}
+Second, for $F_{Y_{0}(1,1)|D=1,M=1}(y)$ we have
+\begin{center}
+$F_{U|11}^{-1}(F_{Y_{0}(1,1)|D=1,M=1}(y))=h^{-1}(1,1,1;y)$ .   (4)
+\end{center}\end{document}

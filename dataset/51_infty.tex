@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+0.1 Quantile direct effect under $\mathrm{d}=1$ conditional on $\mathrm{D}=1$
+
+and $\mathrm{M}(1)=0$
+
+In the following, we prove that
+\begin{center}
+?11,0 $(q,\ 1) = F_{Y_{1}(1,0)|D=1,M(1)=0}^{-1}(q) - F_{Y_{1}(0,0)|D=1,M(1)=0}^{-1}(q)$ ,
+$$
+=\ F_{Y_{1}|D=1,M=0}^{-1}(q)\ -\ F_{Q_{00}}^{-1}(Y_{0})|D=1,M=0(q)
+$$
+\end{center}
+For this purpose, we have to show that
+\begin{center}
+$F_{Y_{1}(1,0)|D=1,M(1)=0}(y)=F_{Y_{1}|D=1,M=0}(y)$ and   (1)
+
+$F_{Y_{1}(0,0)|D=1,M(1)=0}(y)=F_{Q_{00}(Y_{0})|D=1,M=0}(y)$ ,   (2)
+\end{center}
+which is sufficient to show that the quantiles are also identified. We can show $()$ using
+
+the observational rule $F_{Y_{1}(1,0)|D=1,M(1)=0}(y) = F_{Y_{1}|D=1,M=0}(y) = E[1\{Y_{1}\ \leq\ y\}|D =$
+
+$1, M=0]$, with $1\{\cdot\}$ being the indicator function. Using $()$ , we obtain
+$$
+F_{Q_{00}(Y_{0})|D=1,M=0}(y)
+$$
+$$
+=E[1\{Q_{00}(Y_{0})\leq y\}|D=1,\ M=0],
+$$
+\begin{center}
+$=E[1\{F_{Y_{1}|D=0,M=0}^{-1}\ \ovalbox{\tt\small REJECT}\ F_{Y_{0}|D=0,M=0}(Y_{0})\leq y\}|D=1,\ M=0]$,   (3)
+$$
+=E[1\{Y_{1}(0,0)\leq y\}|D=1,\ M=0],
+$$
+$$
+=F_{Y_{1}(0,0)|D=1,M(1)=0}(y)\ ,
+$$
+\end{center}
+which proves $()$ .
+
+0.2 Average direct effect under $\mathrm{d}=0$ conditional on $\mathrm{D}=0$
+
+and $\mathrm{M}(0)=0$
+
+In the following, we show that ?01 $0(0) = E[Y_{1}(1,0) -Y_{1}(0,0)|D = 0, M(0) =$
+
+$0] = E[Q_{10}(Y_{0})\ -Y_{1}|D\ =\ 0,\ M\ =\ 0]$. Using the observational rule, we obtain
+
+$E[Y_{1}(0,0)|D=0,\ M(0)=0]=E[Y_{1}|D=0,\ M=0]$. Accordingly, we have to show
+\end{document}

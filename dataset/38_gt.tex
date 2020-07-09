@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+$U$ is constant across $T$ for each individual $i$.  For example, Assumption 3 is satisfied in the fixed effect model $U = \eta + v_t$, with $\eta$ being a time-invariant individual-specific unobservable (fixed effect) and $v_t$ an idiosyncratic time-varying unobservable with the same distribution in both time periods.
+ and  impose time invariance conditional on the treatment status, $U T|D=d$, to identify the average treatment effect on the treated, $\varphi_1=E[Y_1(1,M(1))-Y_1(0,M(0))|D=1]$ or local average treatment effect, $\varphi_1=E[Y_1(1,M(1))-Y_1(0,M(0))|\tau=c]$, respectively. We additionally condition on the mediator status to identify direct and indirect effects. %Furthermore, we can identify the ATE and indirect effects under additional assumptions about the assignment of $D$, which we discuss in Section .
+For our next assumption, we introduce some further notation. Let $F_{U|d,m}(u) )= \Pr(U \leq u |D=d,M=m)$ be the conditional distribution of $U$ with support $\mathbb{U}_{dm}$. \\ %\vspace{5 pt}\\
+\textbf{Assumption 4:} Common support given $M=0$.\\
+(a) $\mathbb{U}_{10}\subseteq \mathbb{U}_{00}$,\\
+(b) $\mathbb{U}_{00}\subseteq \mathbb{U}_{10}$.\vspace{5 pt}\\
+Assumption 4a is a common support assumption, implying that any possible value of $U$ in the population with $D=1,M=0$ is also contained in the population with $D=0,M=0$. Assumption 4b imposes that any value of $U$ conditional on $D=0,M=0$ also exists conditional on $D=1,M=0$. Both assumptions together imply that the support of $U$ is the same in both populations, albeit the distributions may generally differ.
+Assumptions 1 to 3 permit identifying direct effects on mixed populations of never-takers and defiers as well as never-takers and compliers, respectively, as formally stated in Theorem 1.\\
+\noindent \textbf{Theorem 1:} Under Assumptions 1–3,
+\begin{itemize}
+\item[(a)] and Assumption 4a, the average and quantile direct effects under $d=1$ conditional on $D=1$ and $M(1)=0$ are identified:
+\begin{align*}
+\theta_1^{1,0}(1)= E[Y_1-Q_{00}(Y_0)|D=1,M=0], \\
+\theta_1^{1,0}(q,1)= F_{Y_1|D=1,M=0}^{-1}(q)-F_{Q_{00}(Y_0)|D=1,M=0}^{-1}(q).
+\end{align*}
+\item[(b)] and Assumption 4b, the average and quantile direct effects under $d=0$
+\end{itemize}
+\end{document}

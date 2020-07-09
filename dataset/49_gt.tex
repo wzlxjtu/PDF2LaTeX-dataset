@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+Second, for $F_{Y_0(0,0)|D=1,M=0}(y)$ we have
+\begin{equation}
+F_{U|D=1,M=0}^{-1} ( F_{Y_0(0,0)|D=1,M=0}(y)) =   h^{-1}(0,0,0;y).
+\end{equation}
+Combining () and () yields,
+\begin{equation} 
+h(0,0,1,h^{-1}(0,0,0;y))  =F_{Y_1(0,0)|D=1,M=0}^{-1} \circ F_{Y_0(0,0)|D=1,M=0}(y) .
+\end{equation}
+Note that $h(0,0,1,h^{-1}(0,0,0;y))$ maps the period 1 (potential) outcome of an individual with the outcome $y$ in period 0 under non-treatment without the mediator. Accordingly, $E[F_{Y_1(0,0)|D=1,M=0}^{-1} \circ F_{Y_0(0,0)|D=1,M=0}(Y_0)|D=1,M=0]= E[Y_1(0,0)|D=1,M=0]$. We can identify $F_{Y_0(0,0)|D=1,M=0}(y)$ under Assumption 2, but we cannot identify $F_{Y_1(0,0)|D=1,M=0}(y)$. However, we show in the following that we can identify the overall quantile-quantile transform $F_{Y_1(0,0)|D=1,M=0}^{-1} \circ F_{Y_0(0,0)|D=1,M=0}(y)$ under the additional Assumption 3b.
+Under Assumptions 1 and 3b, the conditional potential outcome distribution function equals
+\begin{equation} 
+\begin{array}{rl}
+ F_{Y_t(d,0)|D=0,M=0}(y)  \stackrel{A1}{=} \Pr(h(d,m,t,U) \leq y|D=0,M=0,T=t) ,\\
+= \Pr(U \leq h^{-1}(d,m,t;y)|D=0,M=0,T=t) ,\\
+\stackrel{A3b}{=} \Pr(U \leq h^{-1}(d,m,t;y)|D=0,M=0) ,\\
+= F_{U|00} ( h^{-1}(d,m,t;y)),
+\end{array}
+\end{equation}
+for $d,d' \in \{0,1\}$. We repeat similar steps as above. First, evaluating $F_{Y_1(0,0)|D=0,M=0}(y)$ at $h(0,0,1,u)$ gives
+\begin{equation*}
+F_{Y_1(0,0)D=0,M=0}(h(0,0,1,u)) = F_{U|00} ( h^{-1}(0,0,1;h(0,0,1,u)))  =F_{U|00} ( u).
+\end{equation*}
+Applying $F_{Y_1(0,0)|D=0,M=0}^{-1}(q)$ to both sides, we have
+\begin{equation} 
+h(0,0,1,u)  =F_{Y_1(0,0)|D=0,M=0}^{-1}(F_{U|00} ( u)).
+\end{equation}
+\end{document}

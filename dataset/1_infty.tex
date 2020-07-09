@@ -1,0 +1,205 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Proposition of Appendix sbows tbat a sugficient condition
+
+for the identifiability in the case[ñ]of Gaussian and Boltzmann
+
+linear policies is that the second moment matrix of the fea-
+
+ture vector $\mathrm{E}_{s\sim d_{\mu}^{\pi*}} [\phi(s)\phi(s)\ ]$ is non-singular along with
+
+the fact that the policy $\pi\theta$ plays each action with positive
+
+robability for the Boltzmann policy.
+
+Concentration Result We are now ready to present acon-
+
+centration result, of independent interest, for the parameters
+
+and the negative $\log$-likelihood that represents the central
+
+tool of our analysis (details and derivation in Appendix).
+
+Under Assumption and Assumption, let $D =$
+
+$\{(s_{i},\ a_{i})\}_{i=1}^{n}$ be a dataset of $n$ ą $0$ independent sam-
+
+ples, where $s_{i} \sim d_{\mu}^{\pi_{\theta*}}$ and $a_{i} \sim \pi_{\theta}*(\cdot|s_{i})$ . Let
+
+$\hat{\theta} =$ {\it arg} $\displaystyle \min_{\theta\in\ominus}\hat{\ell}(\theta)$ and $\theta^{*} =$ {\it arg} $\displaystyle \min_{\theta\in\ominus}\ell(ñ)$ . I
+
+the empirical FIM:
+\begin{center}
+$\mathrm{F}_{(\theta)} = \displaystyle \frac{1}{n}i--\sum^{\mathrm{E}_{a\sim\pi\theta(\cdot|s)}}^{n}[\mathrm{t}(s,\ a,\ \theta)\mathrm{t}(s,\ a,\ \theta)^{T}]$   (1)
+\end{center}
+bas a positive minimum eigenvalue $\hat{\lambda}_{\min}$ ą $0$ gor all $\theta \mathrm{P}\Theta,$
+
+then, for any $\delta\in [0$, 1$]$ , with probability at least $ 1-\delta$:
+$$
+\Vert\hat{\theta}-\theta^{*}\Vert_{2}\ ď\ \frac{\sigma}{\lambda_{\min}}\sqrt{\frac{2d}{n}\log\frac{2d}{\delta}}.
+$$
+Furthermore, with probability at least $ 1-\delta$, individually:
+$$
+\mathrm{P}(\hat{\theta})-\ell(\theta^{*})\ ď\ \frac{d^{2}\sigma^{4}}{\lambda_{\min}^{2}n}\log\frac{2d}{\delta}
+$$
+$$
+\hat{\ell}(\theta^{*})-\hat{\ell}(\hat{\theta})\ ď\ \frac{d^{2}\sigma^{4}}{\lambda_{\min}^{2}n}\log\frac{2d}{\delta}.
+$$
+The theorem shows that the $L^{2}$-norm of the difference be-
+
+tween the maximum likelihood parameter $\theta$ and the true pa-
+
+ameter $\theta^{*}$ concentrates with rate $\mathcal{O}(n^{-1/2})$ while the like-
+
+libood $\hat{\ell}$ and its expectation $\ell$ concentrate witb gaster rate
+
+$o_{\wedge}(n^{-1})$ . Note that the result assumes $\mathrm{t}\mathrm{h}\mathrm{a}\mathrm{t}\wedge$ the empirical FIM
+
+$\mathcal{F}(\theta)$ has a strictly positive eigenvalue $\lambda_{\min}$ ą $0$. This con-
+
+dition can be enforced as long as the true Fisher matrix $\mathcal{F}(\theta)$
+
+has a positive minimum eigenvalue $\lambda_{\min}$, i.e. under identi-
+
+fiability assumption (Lemma) and given a sufficiently large
+
+number of samples. Proposition of Appendix provides the
+
+minimum number of sapples such that with probability at
+
+least $ 1-\delta$ it holds that $\lambda_{\min}$ ą $0.$
+
+Identification Rule Analysis The goal of the analysis $0$
+
+the identification rule is to find the critical value $c(1)$ so that
+
+the following probabilistic requirement is enforced.
+
+Let $\delta \mathrm{P} [0$, 1$]$. An identification rule producing {\it î} is $\delta-$
+
+{\it correct} if: $\mathrm{P}\mathrm{r}$ ($I$ [ñ] $I^{*}$) ď $\delta.$
+
+We denote with $\alpha = \displaystyle \frac{1}{d-d^{*}}\mathrm{E}[|\{i\not\in I^{*}\ :\ i\mathrm{P}\hat{I}_{c}\}|]$ tbe ex-
+
+pected fractio[ñ] of parameters that the agent does not control
+
+selected bp the identification rule and with $\beta = \displaystyle \frac{1}{d^{*}}\mathrm{E}[|\{i \mathrm{P}$
+
+$I^{*}$ : $i \not\in \hat{I}_{c}\}|]$ the expected fraction of parameters that the
+
+agent does control not selected by the identification rule. We
+
+now provide a result tbat $\mathrm{t}$) $ 0\iota \mathrm{z}\mathfrak{n}\mathrm{d}\mathrm{s}\alpha$ and $\beta$ and employs tbem
+
+to derive $\delta$-correctness.
+
+Let $I_{c}$ be the set of parameter indexes selected by the
+
+Identification Rule obtained using $n$ ą $0$ i.i.d. samples
+
+collected witb $\pi_{\theta}*$, witb $\theta^{*} \mathrm{P} \Theta$. Tben, under Assump-
+
+tion and Assumption, let $\theta_{i}^{*} =$ {\it arg} $\displaystyle \min_{\theta\in\ominus_{i}}\ell(\theta)$ for all
+
+$i \mathrm{P} \{1,\ d\}$ and $\nu = \displaystyle \min\{1,\ \frac{\lambda_{\min}}{\sigma^{2}}\}$. If $\hat{\lambda}_{\min}$ ě $\displaystyle \frac{\lambda_{\min}}{22}$ and
+
+$\ell(\theta_{i}^{*})-l(\theta^{*})$ ě $c(1)$ , it holds that:
+
+$\alpha$ ď $2d\displaystyle \exp\{-\frac{c(1)\lambda_{\min}^{2}n}{16d^{2}\sigma^{4}}\}$
+
+$\beta$ ď $\displaystyle \frac{2d-1}{d^{*}}i\in I \displaystyle \exp\{-\frac{(l(\theta_{i}^{*})-l(\theta^{*})-c(1))\lambda_{\min}\nu n}{16(d-1)^{2}\sigma^{2}}\}.$
+
+Furthermore, the Identification Rule is $((d-d^{*})\alpha+d^{*}\beta)-$
+
+correct.
+
+Since $\alpha$ and $\beta$ are functions of $c(1)$ , we could, in prin-
+
+ciple, employ Theorem to enforce a value $\delta$, as in Defini-
+
+tion, and derive $c(1)$ . However, Theorem is not very attrac-
+
+tive in practice as it holds under an assumption regarding the
+
+minimum $\mathrm{e}\mathrm{i}\mathrm{g}\mathrm{e}\mathfrak{n}\mathrm{v}\mathrm{a}\mathrm{l}\iota \mathrm{z}\mathrm{e}\wedge$ of tbe FIM and tbe corresponding es-
+
+timate, i.e. $\lambda_{\min}$ ě $\displaystyle \frac{\lambda_{?}\mathrm{i}\mathrm{n}}{2\sqrt{2}}$, that cannot be verified in practice
+
+since $\lambda_{\min}$ is unknown. Similarly, the constants $d^{*}, l(\theta_{i}^{*})$
+
+and $l(\theta^{*})$ are typically unknown. We will provide in Section
+
+a heuristic for setting $c(1)$ .
+
+Policy Space Identification in a Configurable
+
+Environment
+
+The identification rules presented so far are unable to dis-
+
+tinguish between a parameter set to zero because the agent
+
+cannot control it, or because zero is its optimal value. To
+
+overcome this issue, we employ the Conf-MDP properties
+
+to select a configuration in which the parameters we want to
+
+examine have an optimal value other than zero. Intuitively, $\mathrm{i}$
+
+we want to test whether the agent can control parameter $\theta_{i},$
+
+we should place the agent in an environment $\omega_{i} \mathrm{P} \Omega$ where
+
+$\theta_{i}$ is maximally important gor tbe optimal policy. $\prime\Gamma \mathrm{h}\mathrm{i}\mathrm{s}$ intu-
+
+ition is justified by Theorem, since to maximize the {\it power}
+
+of the test $(1-\beta)$ , all other things being equal, we should
+
+maximize the $\log$-likelihood gap $l(\theta_{i}^{*})-l(\theta^{*})$ , i.e. parame-
+
+ter $\theta_{i}$ should be essential to justify the agent's behavior. Let
+
+$I \mathrm{P} \{1,\ d\}$ be a set of parameter indexes we want to test,
+
+our ideal goal is to find the environment $\omega_{I}$ such that:
+
+$\omega_{I}\mathrm{P}$ {\it arg} $\displaystyle \max_{\omega\in\Omega}\{l(\theta_{I}^{*}(\omega))-l(\theta^{*}(\omega))\}$, (2)
+
+where $\theta^{*}(\omega) \mathrm{P}$ {\it arg} $\displaystyle \max_{\theta\in\ominus}J_{\mathcal{M}_{\omega}}(\theta)$ and $\theta_{I}^{*}(\omega) \mathrm{P}$
+
+{\it arg} $\displaystyle \max_{\theta\in\ominus_{I}}J_{\mathcal{M}_{\omega}}(\theta)$ are the parameters of the optimal
+
+policies in the environment $\mathrm{M}_{\omega}$ in $\Pi_{\ominus}$ and $\Pi_{\ominus_{I}}$ respec-
+
+tively. Clearly, given the samples $D$ collected with a sin-
+
+gle optimal policy $\pi^{*}(\omega_{0})$ in a single environment $\mathrm{M}_{\omega_{0}},$
+
+solving problem (2) is hard as it requires performing an off-
+
+distribution optimization both on the space of policy param-
+
+eters and configurations. For these reasons, we consider a
+
+surrogate objective that assumes that the optimal parameter
+
+in the new configuration can be reached by performing a sin-
+
+gle gradient step
+
+Let $I \mathrm{P}\{1,\ d\}$ and $\overline{I}=\{1,\ d\}\backslash I$. For a vector $\mathrm{v}$, we
+
+denote with $\mathrm{v}|_{I}$ the vector obtained by setting to zero the
+\end{document}

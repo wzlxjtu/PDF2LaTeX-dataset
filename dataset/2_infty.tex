@@ -1,0 +1,226 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+coměonents in $I$. Let $\theta^{*}(\omega_{0}) \mathrm{P} \Theta$ the initial parameter.
+
+Let $\alpha\geq 0, \theta_{I}^{*}(\omega)=\theta_{0}+\alpha\nabla_{\theta}J_{\mathcal{M}_{\omega}}(\theta^{*}(\omega_{0}))|_{I}$ and $\theta^{*}(\omega)=$
+
+$\theta_{0}+\alpha\nabla_{\theta}J_{\mathcal{M}_{\omega}}(\theta^{*}(\omega_{0}))$ . Then, under Assumption, we have:
+
+$\ell(\theta_{I}^{*}(\omega))-\ell(\theta^{*}(\omega))$ ě $\displaystyle \frac{\lambda_{\min}\alpha^{2}}{2}\Vert\nabla_{\theta}J_{\mathcal{M}_{\omega}}(\theta^{*}(\omega_{0}))|_{\overline{I}}\Vert_{2}^{2}.$
+
+Thus, we maximize the $L^{2}$-norm of the gradient com-
+
+onents that correspond to the parameters we want to test.
+
+Since we have at our disposal only samples $D$ collected with
+
+the current policy $\pi_{\theta^{*}(\omega_{0})}$ and in the current environment $\omega_{0},$
+
+we have to perform an $0\mathcal{E}\mathcal{E}$-distribution optimization over $\omega.$
+
+To this end, we employ an approach analogous to that $0$
+
+where we optimize the empirical version of the objective
+
+with a penalization that accounts for the distance between
+
+the distribution pver trajectories:
+
+$ C_{I}(\omega/\omega_{0})=\Vert\hat{\nabla}_{\theta}J_{\mathrm{M}_{\omega/\omega_{0}}}(\theta^{*}(\omega_{0}))|_{\overline{I}}\Vert_{2}^{2}-\zeta \displaystyle \frac{\hat{d}_{2}(\omega\Vert\omega_{0})}{n}$, (1)
+
+where $\hat{\nabla}_{\theta}J_{\mathcal{M}_{\omega/\omega_{0}}}(\theta^{*}(\omega_{0}))$ is an off-distribution estimator $0$
+
+the gradient $\nabla_{\theta}J_{\mathcal{M}_{\omega}}(\theta^{*}(\omega_{0}))$ using samples collected with
+
+$\omega_{0}, \hat{d}_{2}$ is the estimated 2-Renyi divergence that works as
+
+a penalization to discourage too large updates and $\zeta$ ě $0$
+
+is a regularization parameter. The expression of the esti-
+
+mated gradient, 2-Renyi divergence and the pseudocode are
+
+reported in Appendix.
+
+Experimental Evaluation
+
+In this section, we present the experimental evaluation of the
+
+identification rules in three RL domains. To set the values $0$
+
+$c(l)$ we resort to the Wilk's asymptotic approximation (The-
+
+orem) to enforce (asymptotic) guarantees on the type I er-
+
+ror. For Identification Rule we perform $2^{d}$ statistical tests by
+
+using the same dataset $D$. Thus, we partition $\delta$ using Bon-
+
+ferroni correction and setting $c(l) = \chi_{l,1-\delta/2^{d}}^{2}$, where $\chi_{l,\xi}^{2}$
+
+is the $\xi$-quintile of a chi square distribution with $l$ degrees
+
+of freedom. Instead, for Identification Rule, we perform $d$
+
+statistical test, and thus, we set $c(1) =\chi_{1,1-\delta/d}^{2}.$
+
+Discrete Grid World
+
+The grid world environment is a simple representation of a
+
+two-dimensional world ($5\times 5$ cells) in which an agent has to
+
+reach a target position by moving in the four directions. The
+
+goal of this set of experiments is to show the advantages
+
+of configuring the environment when performing the pol-
+
+icy space identification using rule. The initial position of the
+
+agent and the target position are drawn at the beginning $0$
+
+each episode from a Boltzmann distribution $\mu_{\omega}$. The agent
+
+plays a Boltzmann linear policy $\pi\theta$ with binary features $\phi$ in-
+
+dicating its current row and column and the row and column
+
+of the goal. For each run, the agent can control a subset $I^{*}$
+
+of the parameters $\theta_{I}*$ associated with those features, which
+
+is randomly selected. Furthermore, the supervisor can con-
+
+figure the environment by changing the parameters $\omega$ of the
+
+initial state distribution $\mu_{\omega}$. Thus, the supervisor can induce
+
+the agent to explore certain regions of the grid world and,
+
+consequently, change the relevance of the corresponding pa-
+
+ameters in the optimal policy.
+
+Figure shows the empirical $\hat{\alpha}$ and $\hat{\beta}$, i.e. the fraction $0$
+
+parameters that the agent does not control that are wrongly
+
+selected and the fraction of those the agent controls that are
+
+not selected respectively, as a function of the number $n\mathrm{o}$
+
+episodes used to perform the identification. We compare two
+
+cases: {\it conf} where the identification is carried out by also
+
+configuring the environment, i.e. optimizing Equation (1),
+
+and {\it no-conf} in which the identification is performed in the
+
+priginal environment only. In both cases, we can see that
+
+$\hat{\alpha}$ is almost independent of the number of samples, as it ip
+
+directly controlled by the critical value $c(1)$ . Differently, $\hat{\beta}$
+
+decreases as the number of samples increases, i.e. the power
+
+of the test $1-\hat{\beta}$ increases with $n$. Remarkably, we observe
+
+that configuring the environment gives a significant advan-
+
+tage in understanding the parameters controlled by the agent
+
+w.r. $\mathrm{t}$ using a fixed environment, as $\hat{\beta}$ decreases faster in the
+
+{\it conf} case. This phenomenon also justifies empirically our
+
+choice of objective (Equation (1)) for selecting the new envi-
+
+ronment. Hyperparameters, further experimental results, to-
+
+gether with experiments on a continuous version of the grid
+
+world, are reported in Appendix-.
+
+Minigol
+
+In the Minigolf environment, an agent hits a ball using a put-
+
+ter with the goal of reaching the hole in the minimum num-
+
+ber of attempts. Surpassing the hole causes the termination
+
+of the episode and a large penalization. The agent selects the
+
+force applied to the putter by playing a Gaussian policy lin-
+
+ear in some polynomial features (complying to Lemma) $0$
+
+the distance from the hole ({\it x}) and the friction of the green
+
+({\it f}) . We consider two agents: $\mathcal{A}_{1}$ has access to both the $x$ and
+
+$f$ whereas $\mathcal{A}_{2}$ knows only $x$. Thus, we expect that $\mathcal{A}_{1}$ learns
+
+a policy that allows reaching the hole in a smaller number $0$
+
+hits, compared to $\mathcal{A}_{2}$, as it can calibrate force according to
+
+friction; whereas $\mathcal{A}_{2}$ has to be more conservative, being un-
+
+aware of $f$. There is also a supervisor in charge of selecting,
+
+for the two agents, the best putter length $\omega$, i.e. the config-
+
+urable parameter of the environment. In this experiment, we
+
+want to highlight that knowing the policy space might be $0$
+
+crucial importance when learning in a Conf-MDP.
+
+Figure-left shows the performance of the optimal policy
+
+as a function of the putter length $\omega$. We can see that for agent
+
+$\mathcal{A}_{1}$ the optimal putter length is $\omega_{\mathrm{A}_{1}}^{*} = 5$ while for agent
+
+$\mathcal{A}_{2}$ is $\omega_{\mathrm{A}_{2}}^{*} = 11.5$. Figure-right compares the performance
+
+of the optimal policy of agent $\mathcal{A}_{2}$ when the putter length $\omega$
+
+is chosen by the supervisor using four different strategies.
+
+In (i) the configuration is sampled uniformly in the interval
+
+[1, 15]. In (ii) the supervisor employs the optimal configura-
+
+tion for agent $\mathcal{A}_{1} (\omega\ =\ 5)$ , i.e. assuming the agent is aware
+
+of the friction. (iii) is obtained by selecting the optimal con-
+
+figuration of the policy space produced by using our identi-
+
+fication rule. Finally, (iv) is derived by employing an oracle
+
+that knows the true agent's policy space $(\omega=\ 11.5)$ . We can
+
+see that the performance of the identification procedure (iii)
+
+is comparable with that of the oracle (iv) and notably higher
+
+than the performance when employing an incorrect policy
+
+space (ii). Hyperparameters and additional experiments are
+\end{document}

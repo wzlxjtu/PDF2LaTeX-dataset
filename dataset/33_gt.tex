@@ -1,0 +1,73 @@
+\documentclass[prd,superscriptaddress,twocolumn,10pt]{revtex4}
+\usepackage{amsmath,amssymb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color} 
+\DeclareFontFamily{OT1}{rsfs}{}
+\DeclareFontShape{OT1}{rsfs}{m}{n}{ <-7> rsfs5 <7-10> rsfs7 <10->rsfs10}{} 
+\DeclareMathAlphabet{\mycal}{OT1}{rsfs}{m}{n} 
+\begin{document}
+ be of the form $V^s_{s-1}$, as we see below, which means that multiplication of HS generators we have to  consider is 
+\begin{equation}
+V_{-1}^2\star V_{-1}^2\star....\star V_{-1}^2.
+\end{equation}
+Then 
+\begin{align}
+V_{-1}^2\star V_{-1}^2 &=\frac{1}{2}( g_1^{22}(-1,-1)V_{-2}^3+g_{2}^{22}(-1,-1)V_{-2}^2\nonumber\\&+g_{3}^{22}(-1,-1)V_{-2}^1 )
+\end{align}
+where the $g_2^{22}(-1,-1)=g_3^{22}(-1,-1)=0$. Multiplying with following $V_{-1}^2$, etc. on e can conclude
+\begin{equation}
+\underbrace{V_{-1}^{2}\star V_{-1}^2\star ....\star V_{-1}^2}_{s-1}=\frac{1}{2^{s-1}}g_1^{2(s-1)}(-1,-(s-2))V_{-(s-1)}^s
+\end{equation}
+while 
+\begin{equation}
+g_{2}^{2(s-1)}(-1,-(s-2))=g_{3}^{2(s-1)}(-1,-(s-2))=0.
+\end{equation}
+That  means we have found the contribution to the $\bar{z}...\bar{z}$ component multiplied with lowest derivative on $\Lambda^{(s)}$ due to definition of trace for generators $V_n^s$ 
+\small
+\begin{equation}
+tr\left( V_m^s V_n^t \right)=N_s\frac{(-1)^{s-m-1}}{(2s-2)!}\Gamma(s+m)\Gamma(s-m)\delta^{st}\delta_{m,-n}. 
+\end{equation}
+\normalsize
+for 
+\begin{equation}
+N_s\equiv \frac{3\cdot 4^{s-3}\sqrt{\pi}q^{2s-4}\Gamma(s)}{(\lambda^2-1)\Gamma(s+\frac{1}{2})}(1-\lambda)_{s-1}(1+\lambda)_{s-1}
+\end{equation}
+and $(a)_n=\frac{\Gamma(a+n)}{\Gamma(a)}$ ascending Pochhammer symbol. The overall constant is set to \begin{equation}tr(V_1^2V_{-1}^2)=-1.
+\end{equation}
+Let us go back to $\phi_{\bar{z}....\bar{z}}$ component. The star product $e_{\bar{z}}\star...\star e_{\bar{z}}$ will contribute with $\frac{1}{2^{s-1}}e^{(s-1)\rho}V^{s}_{-(s-1)}$ if we consider as explained above the lowest derivative on $\Lambda^{(s)}$. We can denote this as 
+\begin{align}
+e_{\bar{z}}\star....\star e_{\bar{z}}(V_{-1}^2\star ....\star V_{-1}^2)=\frac{1}{2^{s-1}}e^{(s-1)\rho}V^{s}_{-(s-1)}.\end{align} The $\tilde{E}_{\bar{z}_s}=\tilde{A}_{\bar{z}_s}-\tilde{\bar{A}}_{\bar{z}_s}$ needs to be able to satisfy the conditions of the trace () in star multiplication with $e_{\bar{z}}\star...\star e_{\bar{z}}$, the only HS generator that  contributes is $V^s_{s-1}$ generator. When we gauge the field $A_{\bar{\mu}_s}$, $d\bar{z}$ component appears in $d\Lambda$ while $A_{AdS}$ and $[A_{AdS},\Lambda]_{\star}$ do not have $d\bar{z}$ component. The $\tilde{\bar{A}}_{\bar{z}_s}$ has $d\bar{z}$ component that comes from $\bar{A}_{AdS}$ part and it is $e^{\rho}V_{-1}^2d\bar{z}$. This however will not appear with the right number of derivatives on $\Lambda$. Since we have chosen $\Lambda$ to be chiral and $\bar{\Lambda}=0$, that was the only contribution from $\tilde{\bar{A}}_{\bar{z}}$. 
+Altogether, we can write $\phi_{\bar{z}...\bar{z}}$ component for the $\bar{\partial}\Lambda^{(s)}$ derivative as
+\small
+\begin{align}
+\phi_{\bar{z}....\bar{z}}|_{\bar{\partial}\Lambda^{(s)}}&=tr\left[\frac{1}{2^{s-1}}e^{(s-1)}V^s_{-(s-1)}\star V^s_{s-1}e^{(s-1)\rho}\bar{\partial}\Lambda^{(s)}(z,\bar{z})\right]\\
+&=\frac{1}{2^{s-1}}e^{2(s-1)\rho}\bar{\partial}\Lambda^{(s)} N_s.
+\end{align}
+\normalsize
+Inserting the normalisation $N_s$ we obtain
+\begin{align}\nonumber
+\phi_{\bar{z}...\bar{z}}|_{\bar{\partial}\Lambda^{(s)}}&=\frac{1}{2^{s-1}}e^{2(s-1)\rho}\bar{\partial}\Lambda^{(s)}\\&\times
+\frac{3\cdot 4 \sqrt{\pi}4^{4-2s}\Gamma(s)\Gamma(s+\lambda)\Gamma(s-\lambda)}{(\lambda^2-1)\Gamma(s+\frac{1}{2})\Gamma(1-\lambda)\Gamma(1+\lambda)}.
+\end{align}
+The expression $\phi_{\bar{z}...\bar{z}}$ we want to compare with expression () for highest derivative on $C_0^1$ and $\bar{\partial}\Lambda^{(s)}$. 
+In the computation of the vertex this would be a term 
+\begin{equation}
+\phi^{z...z}\mathcal{\phi}\nabla_z...\nabla_{z}\mathcal{\phi}
+\end{equation}
+for $\phi^{z...z}$ higher spin field with $s$ indices and $\mathcal{\phi}$ scalar field. Raising indices
+ contributes with a factor $2^se^{-2s\rho}$, so that the field $\phi^{z...z}$ becomes
+\begin{align}
+\phi^{z...z}&=\frac{1}{2}e^{-2\rho}\bar{\partial}{\Lambda}^{(s)}3\cdot4^{4-2s}\nonumber \\ &\times
+\frac{\Gamma(s)\Gamma(s+\lambda)\Gamma(s-\lambda)}{(\lambda^2-1)\Gamma(s+\frac{1}{2})\Gamma(1-\lambda)\Gamma(1+\lambda)}.
+\end{align}
+When  we take the ratio with $\Box_{KG}|_{\text{highest number of derivatives}(\delta C_0^1)|_{\bar{\partial}\Lambda}}=(-1)^s4e^{-s\rho}\bar{\partial}\Lambda^{(s)}\partial^sC_0^1$ we get (schematically written)
+\begin{align}
+&\frac{\phi^{z...z}|_{\bar{\partial}\Lambda^{(s)}}}{\Box_{KG}|_{\text{highest number of derivatives}(\delta C)_0^1|_{\bar{\partial}\Lambda^{(s)}}}}\nonumber\\&=(-1)^s\frac{1}{2}3\sqrt{\pi}\frac{4^{4-2s}\Gamma(s)\Gamma(s+\lambda)\Gamma(s-\lambda)}{(\lambda^2-1)\Gamma(s+\frac{1}{2})\Gamma(1-\lambda)\Gamma(1+\lambda)}.
+\end{align}
+which taking into account the normalisation gives the coupling for the 00s three point function.
+\section{Conclusion and Outline}
+We have considered the three-point coupling using metric-like formation to express the higher spin field and using the linearised Vasiliev's equations of motion.  The obtained result can also be verified using the alternative methods, for example following the procedure by . 
+The generalisation of the result to higher point functions would be non-trivial since in order to compute higher order vertices, one would have to consider perturbations around the background AdS field with higher spin fields up to that required higher order. 
+\end{document}

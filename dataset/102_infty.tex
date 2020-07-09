@@ -1,0 +1,232 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+computing the parameters for $z_{u}^{i}$. Incorporating the au-
+
+toregressive likelihood into yields:
+
+$p(x_{u}|x_{o},\displaystyle \ b)=|\det\frac{dq_{x_{o},b}}{dx_{u}}|\prod_{i=1}^{|u|}p(z_{u}^{i}\ |z_{u}^{i-1},\ \ldots,\ z_{u}^{1},\ x_{o},\ b)$ ,
+
+(1)
+
+where $|u|$ is the cardinality of the unobserved covariates.
+
+0.1 Training and Best Guess Objective
+
+Since we follow a flow-based approach, we have access to
+
+the normalized conditional likelihoods; thus, we can train
+
+our model by maximizing $\log$ likelihood. During training, if
+
+we have access to complete training data, we will need to
+
+manually create binary masks $b$ based on some predefined
+
+distribution $p_{b}. p_{b}$ is typically chosen based on the applica-
+
+tion. For instance, Bernoulli random masks are commonly
+
+used for real-valued vectors. Given binary masks, training
+
+data $x$ are divided into $x_{u}$ and $x_{o}$ and fed into the condi-
+
+tional model $p (x_{u}\ |\ x_{o},\ b)$ . If training data already contains
+
+missing values, we can only train our model on the remain-
+
+ing covariates. As before, we manually split each data point
+
+into two parts, $x_{u}$ and $x_{o}$ based on a binary mask $b$. Note
+
+that dimensions in $b$ corresponding to the missing values are
+
+always set to $0$, i.e., they are never observed during training.
+
+In this setting, we will need another binary mask $m$ indicat-
+
+ing those dimensions that are not missing. Accordingly, we
+
+define observed dimensions as $x_{o} = x[b]$ and unobserved
+
+dimensions as $x_{u}=x[m\mathrm{O}(1-b)]$. In this setting, we op-
+
+timize $p (x_{u}\ |\ x_{o},\ m,\ b)$ . During testing, we set $b=m$, that
+
+is, the model imputes the missing values conditioned on all
+
+the remaining covariates.
+
+Best Guess Objective Given a trained model, multiple im-
+
+putations can be easily accomplished by drawing multiple
+
+samples from the learned conditional distribution. However,
+
+certain downstream tasks may require a single imputed “best
+
+guess”. Unfortunately, the analytical mean $\mathrm{E}_{p(x_{u}|x_{o},b)}[x_{u}]$
+
+is not available for flow-based deep generative models. Fur-
+
+thermore, getting an accurate empirical estimate could be
+
+prohibitive in high dimensional space. In this work, we
+
+propose a robust solution that gives a single best guess
+
+in terms of the MSE metric (it can be easily extended to
+
+other metrics, e.g. an adversarial one). Specifically, we ob-
+
+tain our best guess by inverting the conditional transforma-
+
+tion over the mean of the latent distribution, i.e., $q_{x_{o},b}^{-1}(\overline{z})=$
+
+$q_{x_{o},b}^{-1}(\mathrm{E}_{p_{\mathrm{Z}}(z|x_{o},b)}[z])$ . The mean $\overline{z}$ is analytically available
+
+for Gaussian mixture base model. To ensure that this best
+
+guess is close to unobserved values, we optimize with an
+
+auxiliary MSE loss:
+
+$\mathcal{L}=-\log p(x_{u}|x_{o},\ b) +$?$||${\it qx-o}1, $b(\overline{z})-x_{u}\Vert^{2}$, (2)
+
+where ? controls the relative importance of the auxiliary
+
+objective. Note that we only penalize one particular point
+
+from $p (x_{u}\ |\ x_{o},\ b)$ to be close to $x_{u}$. Hence, it does not af-
+
+fect the diversity of the conditional distribution. Unlike our
+
+arbritrary conditioning task, conditional generative model-
+
+ing deals only with a fixed vector of external information
+
+$y$ (such as a class label) to condition the likelihood of a
+
+fixed set of covariates $x$ (such as pixels in an image). Typi-
+
+cally, approaches supplement the inputs of common genera-
+
+tive models with some encoding of the conditional informa-
+
+tion. Conditional GANs , for example, extended GANs by
+
+inputting a class label encoding into both the generator and
+
+discriminator function, allowing these models to learn mul-
+
+tiple conditional distributions. Similarly, a conditional form
+
+of VAE was proposed by , which introduces an additional
+
+network that learns the conditional prior {\it p}? $(z\ |\ y)$ , where $\mathrm{z}$
+
+is some latent encoding and $y$ is a class label.
+
+0.2 Arbitrary Conditioning Models
+
+Previous attempts to learn probability distributions condi-
+
+tioned on arbitrary subsets of known covariates include the
+
+Universal Marginalizer , which is trained as a feed-forward
+
+network to approximate the marginal posterior distribution
+
+of each unobserved dimension conditioned on the observed
+
+ones. During sampling, they propose to use a sequential
+
+sampling mechanism by adding a newly sampled dimension
+
+to the observed sets and running the network in an autore-
+
+gressive manner. However, we observe that VAEAC suffers
+
+from failure modes common in VAEs given that they opti-
+
+mize with respect to ELBO loss . In particular, VAEs some-
+
+times sacrifice learning the true posterior for minimizing re-
+
+construction loss, which often leads the model to generate
+
+blurry samples for multimodal distributions. We extend the
+
+RealNVP model by replacing all the coupling layers with
+
+our proposed arbitrary conditional alternative. For the sake
+
+of sampling efficiency, we use standard Gaussian base likeli-
+
+hoods here. Implementation details of and baselines are pro-
+
+vided in Appendix . Figure. shows samples drawn from and
+
+VAEAC. More samples are available in Appendix . We no-
+
+tice our model can generate coherent and diverse inpaint-
+
+ings for all three datasets and different masks. Compared
+
+to VAEAC, our model is capable of generating sharp sam-
+
+ples and restoring more details. Even when the missing rate
+
+is high, can still generate decent inpaintings. To quantita-
+
+tively evaluate our model, we report peak signal-to-noise
+
+ratio (PSNR) and negative $\log$-likelihoods (NLL) in Table..
+
+We generate 5 different masks for each test image and re-
+
+port the average scores and the standard deviation. We note
+
+that PSNR is a metric that prefers blurry images over sam-
+
+ple diversity . ${\rm Log}$-likelihood measures how well the model
+
+matches the real conditional distribution, but may not cor-
+
+relate with visual quality . Hence, we evaluate the trade-
+
+off between sample quality and diversity via the precision
+
+and recall scores (PRD) . Since we cannot sample from the
+
+groundtruth conditional distribution, we compute the PRD
+
+score between the imputed joint distribution $p(x_{o})p(x_{u} |$
+
+$x_{o})$ and the true joint distribution $p(x)$ via 10,000 samples
+
+from them. The PRD scores for two distributions measure
+
+how much of one distribution can be generated by another.
+
+Higher recall means a greater portion of samples from the
+
+true distribution $p(x)$ are covered by $p(x_{o})p(x_{u}\ |\ x_{o})$ ; and
+
+similarly, higher precision means a greater portion of sam-
+
+ples from $p(x_{o})p(x_{u}\ |\ x_{o})$ are covered by $p(x)$ . We report
+
+the $(F_{8},\ F_{\frac{1}{8}})$ pairs in Table.to represent recall and precision,
+
+respectively.
+\end{document}

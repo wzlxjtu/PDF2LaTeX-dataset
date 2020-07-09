@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+with zero corresponding to a NA value. Next we want to identify the
+
+bivariate outliers by iterating the filter over all possible pairs of variables.
+
+Consider a pair of variables $\mathrm{X}^{(\mathrm{j}\mathrm{k})} = \{(\mathrm{X}_{\mathrm{i}\mathrm{j}},\ \mathrm{X}_{\mathrm{i}\mathrm{k}})\}, \mathrm{i} = 1$, . . . , $\mathrm{n}$. The ini-
+
+tial location and dispersion estimators are, respectively, the coordinate-wise
+
+median and the $2 \times 2$ sub-matrix $S^{(jk)}$ of the estimate $S$ computed by the
+
+generalized S-estimator on non-filtered data. Note that, this ensure the pos-
+
+itive definiteness property for $S$ and each $d\times d$ sub-matrix corresponding to
+
+a subset of $d$ variables. For bivariate points with no flagged components by
+
+the univariate filter we compute the squared Mahalanobis distance $\ovalbox{\tt\small REJECT}_{i}^{(jk)}$ and
+
+hence apply the bivariate filter, for all $1 <j < k <p$. At the end we want
+
+to identify the cells $(i,j)$ which have to be flagged as cell-wise outliers. The
+
+procedure used for this purpose is described in ? and reported here. Let
+
+$J=$\{$(i,j,\ k)$ : $\ovalbox{\tt\small REJECT}_{i}^{(jk)}$ is flagged as bivariate outlier\}
+
+be the set of triplets which identifies the pairs of cells flagged by the bivariate
+
+filter in rows $i=1$, . . . , $n$. For each cell $(i,\ j)$ in the data, we count the number
+
+of flagged pairs in the {\it i}-th row in which the considered cell is involved:
+$$
+m_{ij}=\#\{k:\ (i,j,\ k)\in J\}.
+$$
+In absence of contamination, $m_{ij}$ follows approximately a binomial distribu-
+
+tion {\it Bin} $(\displaystyle \sum_{k\neq j}\mathrm{U}_{\mathrm{j}\mathrm{k}}$, d$)$ where d represents the overall proportion of cell-wise
+
+outliers undetected by the univariate filter. Hence, we flag the cell $(i,\ j)$ if
+
+$m_{ij} > c_{ij}$ , where $c_{ij}$ is the 0.99-quantile of {\it Bin} $(\displaystyle \sum_{k\neq j}\mathrm{U}_{j\mathrm{k}},\ 0.1)$ . Finally, we
+
+perform the {\it p}-variate filter as described in subsection to the full data matrix.
+
+Detected observations (rows) are directly flagged as {\it p}-variate (case-wise) out-
+
+liers. We denote the procedure based on univariate, bivariate and {\it p}-variate
+
+filters, HS-UBPF.
+
+0.1 A sequencing filtering procedure
+
+Suppose we would like to apply a sequence of $k$ filters with different dimension
+
+$1 \leq d_{1} \leq d_{2} \leq.$ . . $\leq d_{k} \leq p$. For each $d_{i}, i = 1$, . . . , $k$, the filter updates
+
+the data matrix adding NA values to the {\it di}-tuples identified as {\it di}-variate
+
+outliers. In this way, each filter applies only those {\it di}-tuples that have not
+
+been flagged as outliers by the filters with lower dimension. Initial values for
+
+each procedures rather than $d_{1}$ would be obtained by applying the GSE to
+
+the actual filtered values. This procedure aims to be avalid alternative to
+
+that used in the presented HS-UBPF filter to perform a sequence of filters
+
+with different dimensions. However, this is a preliminary idea, indeed it has
+
+not been implemented yet.
+
+1
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+This motivates us to define a superpotential $W$ as
+\begin{center}
+$W=\sqrt{S_{0}^{2}+S_{3}^{2}}$   (1)
+\end{center}
+Unfortunately, this superpotential does {\it not} allow one to write the BPS equations for both
+
+$\phi^{0}$ and $\phi^{3}$ as gradient flow equations. The reason for this failure is that the integrability
+
+condition required to convert the BPS equation into a gradient flow form is not satisfied;
+
+see e.g. Appendix C.2.1 of . We thus follow the strategy of to construct an approximate
+
+superpotential. Our model consists of two consistent truncations that admit flat domain walls
+
+and an exact superpotential. These are the $\phi^{3}=0, \phi^{0}\neq 0$ truncation and the $\phi^{0}=0, \phi^{3}\neq 0$
+
+truncation. The corresponding flow equations are (we set $\eta=-1$ henceforth)
+\begin{center}
+$\phi^{0'}=-8\partial_{\phi^{0}}W|_{\phi^{3}=0}\ \phi^{3'}=8\partial_{\phi^{3}}W|_{\phi^{0}=0}$   (2)
+\end{center}
+respectively. In either truncation, the BPS equations for the warp factor and dilaton $\sigma$ can
+
+be put in the following form,
+\begin{center}
+$f'=2W\ \sigma'=2\partial_{\sigma}W$   (3)
+\end{center}
+An important fact is that, though the gradient flow equations of do not hold exactly in the
+
+full model with $\phi^{0}\neq 0, \phi^{3}\neq 0$, they $do$ hold up to and including $O(z^{5})$ . Looking at the form
+
+of the UV asymptotics of the scalar fields, one may expand the superpotential of keeping
+
+only terms contributing up to this order. This gives
+\begin{center}
+$ W=\displaystyle \frac{1}{2}+\frac{3}{4}\sigma^{2}+\frac{1}{16}(\phi^{0})^{2}-\frac{3}{16}(\phi^{3})^{2}+\frac{1}{192}(\phi^{0})^{4}-\frac{3}{16}(\phi^{0})^{2}\sigma+\ldots$   (4)
+\end{center}
+where the dots represent terms of order $O(z^{6})$ . This is the approximate superpotential we
+
+will use in what follows.
+
+0.0.1 Bogomolnyi trick
+
+We now use the Bogomolnyi trick to get the finite counterterms needed to preserve super-
+
+symmetry in the case of a flat domain wall. The central idea of the Bogomolnyi trick is that
+
+for a BPS solution, the renormalized on-shell action must vanish. In order to make use $0$
+
+this fact, we will first want to recast the on-shell action in a simpler form. To do so, we
+
+begin by inserting. We find that
+\begin{center}
+$\displaystyle \mathcal{L}=-\frac{1}{4}R-20W^{2}+2\mathcal{L}_{\mathrm{k}\mathrm{i}\mathrm{n}}$   (5)
+\end{center}
+where we've defined
+\begin{center}
+$\displaystyle \mathcal{L}_{\mathrm{k}\mathrm{i}\mathrm{n}}=(\sigma')^{2}+\frac{1}{4}\ [-(\phi^{3'})^{2}+\cos^{2}\phi^{3}(\phi^{0'})^{2}]$   (6)
+\end{center}
+1
+\end{document}

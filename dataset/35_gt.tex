@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+$\Delta_1(q) = F_{Y_1(1,M(1))}^{-1}(q) -F_{Y_1(0,M(0))}^{-1}(q)$.
+The QTE can be disentangled into the direct quantile effects, denoted by $\theta_1(q,d) = F_{Y_1(1,M(d))}^{-1}(q) -F_{Y_1(0,M(d))}^{-1}(q)$, and the indirect quantile effects, denoted by $\delta_1(q,d) = F_{Y_1(d,M(1))}^{-1}(q) -F_{Y_1(d,M(0))}^{-1}(q)$.
+The conditional distribution function in stratum $\tau$ is $F_{Y_{t}(d,m)|\tau}(y) = \Pr(Y_t(d,m) \leq y |\tau)$ and the corresponding conditional quantile function is $F_{Y_t(d,m)|\tau}^{-1}(q) = \inf \{y : F_{Y_{t}(d,m)|\tau}(y) \geq q \}$ for $\tau \in \{a,c,d,n\}$. Using the previously described stratification framework, we define the QTE conditional on $\tau \in \{a,c,de,n\}$: $\Delta_1^{\tau}(q) = F_{Y_1(1,M(1))|\tau}^{-1}(q)-F_{Y_1(0,M(0))|\tau}^{-1}(q)$. The direct quantile treatment effect among never-takers equals $\Delta_1^{n} (q)= F_{Y_1(1,0)|n}^{-1}(q)-F_{Y_1(0,0)|n}^{-1}(q) =\theta_1^{n}(q)$. The direct quantile effect among always-takers equals $\Delta_1^{a} (q)= F_{Y_1(1,1)|a}^{-1}(q)-F_{Y_1(0,1)|a}^{-1}(q) =\theta_1^{a}(q)$. The total QTE among compliers equals $\Delta_1^{c}(q) = F_{Y_1(1,1)|c}^{-1}(q)-F_{Y_1(0,0)|c}^{-1}(q)$, the direct quantile effect among compliers equals $\theta_1^{c}(q,d) = F_{Y_1(1,d)|c}^{-1}(q)-F_{Y_1(0,d)|c}^{-1}(q)$, and the indirect quantile effect among compliers equals $\delta_1^{c}(q,d) = F_{Y_1(d,1)|c}^{-1}(q)-F_{Y_1(d,0)|c}^{-1}(q)$. Finally, we define the direct quantile treatment effects conditional on specific values $D=d$ and mediator states $M=M(d)=m$,
+\begin{align*}
+\theta_1^{d,m}(q,1)=F_{Y_1(1,m)|D=d,M(1)=m}^{-1}(q)-F_{Y_1(0,m)|D=d,M(1)=m}^{-1}(q) \mbox{ and} \\
+\theta_1^{d,m}(q,0)=F_{Y_1(1,m)|D=d,M(0)=m}^{-1}(q)-F_{Y_1(0,m)|D=d,M(0)=m}^{-1}(q),
+\end{align*}
+with the quantile function $F_{Y_t(d,m)|D=d,M(d)=m}^{-1}(q) = \inf \{y : F_{Y_{t}(d,m)|D=d,M(d)=m}(y) \geq q \}$ and the distribution function $F_{Y_{t}(d,m)|D=d,M(d)=m}(y) = \Pr(Y_t(d,m) \leq y |D=d,M(d)=m)$.
+\subsection{Observed distribution and quantile transformations}
+We subsequently define various functions of the observed data required for the identification results. The conditional distribution function of the observed outcome $Y_t$ conditional on treatment value $d$ and mediator state $m$, is given by $F_{Y_{t}|D=d,M=m}(y) = \Pr(Y_t \leq y |D=d,M=m)$ for $d,m \in \{0,1\}$. The corresponding conditional quantile 
+\end{document}

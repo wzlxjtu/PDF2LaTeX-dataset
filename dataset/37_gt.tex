@@ -1,0 +1,31 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+is a one-to-one correspondence between a potential outcome's distribution and quantile functions, which is a condition for point identification. For discrete potential outcomes, only bounds on the effects could be identified, in analogy to the discussion in  for total (rather than direct and indirect) effects. Assumption 1 also implies that individuals with identical unobserved characteristics $U$ have the same potential outcomes $Y_t(d,m)$, while higher values of $U$ correspond to strictly higher potential outcomes $Y_t(d,m)$. Strict monotonicity is automatically satisfied in additively separable models, but Assumption 1 also allows for more flexible non-additive structures that arise in nonparametric models. 
+The next assumption rules out anticipation effects of the treatment or the mediator on the outcome in the baseline period. This assumption is plausible if assignment to the treatment or the mediator cannot be foreseen in the baseline period, such that behavioral changes affecting the pre-treatment outcome are ruled out.\vspace{5 pt}\\
+\textbf{Assumption 2:} No anticipation effect of $M$ and $D$ in the baseline period.\\
+$Y_0(d,m) - Y_0(d',m') = 0\mbox{, for } d, d', m, m' \{1,0\}.$
+\vspace{5 pt}\\
+Similarly,  and  assume the assignment to the treatment group does not affect the potential outcomes as long as the treatment is not yet realized. %This is implied by Assumption 1 and 2.
+Furthermore, we assume conditional independence between unobserved heterogeneity and time periods given the treatment and no mediation. \vspace{5 pt}\\
+\textbf{Assumption 3:} Conditional independence of $U$ and  $T$ given $D=1,M=0$ or $D=0,M=0$.\\
+(a) $U T|D=1,M=0$,\\
+(b) $U T|D=0,M=0$.\vspace{5 pt}\\
+Under Assumption 3a, the distribution of $U$ is allowed to vary across groups defined upon treatment and mediator state, but not over time within the group with $D=1,M=0$. Assumption 3b imposes the same restriction conditional on $D=0,M=0$. Assumption 3 thus imposes stationarity of $U$ within groups defined on $D$ and $M$. This assumption is weaker than (and thus implied by) requiring that
+\end{document}

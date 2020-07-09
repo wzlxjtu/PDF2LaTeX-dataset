@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+such a splitting is referred to as {\it modular} In our Rényi-Ulam game variation,
+
+the expected values of FDR and FOR are the error rates $e_{1}$ and $e_{0}$ in case the
+
+truthful answer being yes and no, respectively. Fig. displays the error rates {\it e} $0$
+
+and $e_{1}$ as functions of ?. For ?$= 31,$ we compute $e_{0} \approx 0.052$ and $e_{1} \approx 0.007,$
+
+i.e. we have an error rate of0.052 for rejecting and an error rate of 0.007 for
+
+confirming a base pair.
+
+0.1. {\it Entropy}
+
+To quantify the uncertainty of an ensemble, we define the {\it structural entropy}
+
+of an ensemble, $\Omega$, of an RNA sequence, $\mathrm{x}$, as the Shannon entropy
+$$
+H(\Omega)=-\sum_{s\in\Omega}p(s)\log_{2}p(s)\ ,
+$$
+Proposition implies that a sample with small structural entropy contains a dis-
+
+tinguished structure and a proof is given in . We refer to asample having a
+
+distinguished structure of probability at least ? as being $\ovalbox{\tt\small REJECT}$-{\it distinguished}.
+
+Next we quantify the reduction of a bit query on an ensemble. Recall that the
+
+associated r.v. $X_{i,j}$ of a base pair $(i,\ j)$ partitions the sample $\Omega$ into two disjoint
+
+sub-samples $\Omega_{0}$ and $\Omega_{1}$, where $\Omega_{k} = \{s\ \in\ \Omega\ :\ X_{i,j}(s)\ =\ k\} (k\ =\ 0,1)$ . The
+
+{\it conditional entropy}, $H(\Omega|X_{i,j})$ , represents the expected value of the entropies
+
+of the conditional distributions on $\Omega$, averaged over the conditioning r.v. $X_{i,j}$
+
+and can be computed by
+$$
+H(\Omega|X_{i,j})=(1-p_{i,j})H(\Omega_{0})+p_{i},{}_{j}H(\Omega_{1})\ .
+$$
+Then the {\it entropy reduction} $R(\Omega,\ X_{i,j})$ of $X_{i,j}$ on $\Omega$ is the difference between
+
+the {\it a priori} Shannon entropy $H(\Omega)$ and the conditional entropy $H(\Omega|X_{i,j})$ , i.e.
+$$
+R(\Omega,\ X_{i,j})=H(\Omega)-H(\Omega|X_{i,j})\ .
+$$
+$\mathbb{P}(s\in\Omega^{*})=(1-e_{0})^{l_{0}}(1-e_{1})^{l_{1}}$, where $l_{0}$ and $l_{1}$ denote the number of No-/Yes-
+
+answers to queried base pairs along the path, respectively. Fig. displays the
+
+distribution of $l_{1}$. We observe that {\it l}1 has amean around 5, i.e., the probabilities
+
+of queried base pairs being confirmed and being rejected are roughly equal.
+
+For $l_{0} = l_{1} = 5$, we have atheoretical estimate $\mathbb{P} (s\ \in\ \Omega^{*}) \approx 0.736$. In Fig.
+
+we present that $\mathbb{P} (s\ \in\ \Omega^{*})$ decreases as the error rate $e_{0}$ increases, for fixed
+
+$e_{1}=0.01.$
+
+1. Information theory
+
+As the Boltzmann ensemble is a particular type of discrete probability spaces,
+
+the information-theoretic results on the ensemble trees will be stated in the more
+
+general setup. Let $\Omega = (\mathrm{S},\ \mathrm{P}(\mathrm{S}),p)$ be a discrete probability space consisting
+
+of the sample space $\mathrm{S}$, its power set $\mathrm{P}(\mathrm{S})$ as the s-algebra and the probability
+
+measure {\it p}. The {\it Shannon entropy} of $\Omega$ is given by
+$$
+H(\Omega)=-\sum_{s\in \mathrm{S}}p(s)\log_{2}p(s)\ ,
+$$
+1
+\end{document}

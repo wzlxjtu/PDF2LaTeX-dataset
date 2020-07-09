@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+Terms cancel in the second integral and we get
+\begin{gather*}
+=(q;q)^2(p;p)^2\Gamma_e\big(pq\big(A^{-2}B^2\big)^{\pm1}\big)\Gamma_e\big((pq)^\frac12 t B^{-1} C^{\pm1}z^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t AD^{\pm1}z^{\pm1}\big)\\
+\quad{}\times\oint\frac{{\rm d}u}{4\pi i u} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} C^{\pm1}u^{\pm1}\big)}{\Gamma\big(u^{\pm2}\big)}\\
+\quad{}\times\Gamma_e\big((pq)^\frac12 t B C^{\pm1}u^{\pm1}\big)\Gamma_e\big((pq)^\frac12 t A^{-1}D^{\pm1}u^{\pm1}\big)T_{{\mathfrak J}_C}(u)\\
+\quad{}\times\oint\frac{{\rm d}v}{4\pi i v} \frac{1}{\Gamma\big(v^{\pm2}\big)}
+\Gamma_e\big( AB^{-1} u^{\pm1} v^{\pm1}\big) \Gamma_e\big( A^{-1}B z^{\pm1} v^{\pm1}\big) .
+\end{gather*}
+The integrals can be evaluated using the inversion formula which sets $u=z$:
+\begin{gather*}
+=\Gamma_e\big((pq)^\frac12 t B^{-1} C^{\pm1}z^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t AD^{\pm1}z^{\pm1}\big)\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} D^{\pm1}z^{\pm1}\big)\\
+\quad{} \times\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} C^{\pm1}z^{\pm1}\big)\Gamma_e\big((pq)^\frac12 t B C^{\pm1}z^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t A^{-1}D^{\pm1}z^{\pm1}\big)T_{{\mathfrak J}_C}(z) .
+\end{gather*}
+We see that all terms cancel so we get
+\begin{gather*}
+ T_{{\mathfrak J}_C}(u)\times_u \big(\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)\times_w C^{(0,0;AB^{-1})}_{{\mathfrak J}_B}(w)\big)\\
+\qquad{} \times_v\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(h,z,v)\times_h C^{(0,0;A^{-1}B)}_{{\mathfrak J}_B}(h)\big)\big)= T_{{\mathfrak J}_C}(z).
+\end{gather*}
+\section{Computation of the sphere with two punctures and a defect}
+Here we compute the difference operator. The computation is a small twist on the one of the previous section, however it is less straightforward and thus  for which we perform another duality operation. After the duality the $p$ vanishing limit is well defined for all fields. Let us write the fields surviving after scaling
+\begin{gather*}
+(p q)^{\frac16}A^{\frac13}b^{-\frac23} t^{\frac13}a^{-\frac23} z_2^{-\frac13} z_1^{\pm1}w_2^j , \ (p q)^{\frac16}A^{-\frac23}b^{\frac13} t^{\frac13}a^{\frac13} z_2^{-\frac13} v_1^{\pm1} w_2^j , \\
+(q p)t^{-2} , \ (q p)^{\frac13} A^{-\frac13} t^{-\frac43} b ^{-\frac13} a^{-\frac13} z_2^{\frac13} v_2^{-1} \big(w^j_2\big)^{-1} , \
+ (q p)^{\frac13} A^{-\frac13} t^{\frac23} b ^{-\frac13} a^{-\frac13} z_2^{\frac13} v_2^{-1} \big(w^j_2\big)^{-1} , \
+a b^{-1} t w_1^{\pm1} ,\\
+( q p)^{ \frac1 2 }a b^{-1} v_2^ {-1} z_2^{-1} , \ ( q p)^{\frac12} b^{-1} t^{-1} A^{-1} w_1^{\pm1} a^{-1} ,\\
+(q p)^{\frac12} a^{-1} b z_2 v_2 , \ (q p)^{\frac12} z_2^{-1} t^{-1} w_1^{\pm1} v_2^{-1} , \
+b t a^{-1} w_1^{\pm1} , \ (q p)^{\frac12} t v_2 A v_1^{\pm1} , \ (q p)^{\frac12} a b t v_2 z_1^{\pm1} ,
+\end{gather*}
+We would like to thank Hee-Cheol Kim, S.~Ruijsenaars, Cumrun Vafa, and Gabi Zafrir for relevant discussions. The research was supported by Israel Science Foundation under grant no. 1696/15 and by I-CORE Program of the Planning and Budgeting Committee.
+\end{document} 

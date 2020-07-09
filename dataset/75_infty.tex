@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Here $A=\{\mathrm{t}\in \mathbb{R}^{\mathrm{d}}\ :\ \mathrm{d}_{\mathrm{G}\mathrm{Y}}(\mathrm{t},\ \mathrm{F},\ \mathrm{G})\ \leq \mathrm{d}_{\mathrm{G}\mathrm{Y}}\ (\ovalbox{\tt\small REJECT},\ \mathrm{F},\ \mathrm{G})\}$, where ? is any point
+
+in $\mathbb{R}^{d}$ such that $\Delta$(?, $\mathrm{F}$) $=\ovalbox{\tt\small REJECT}$ and $\ovalbox{\tt\small REJECT}=G^{-1}$ (a) is a large quantile of $G$. Then,
+
+we flag $\lfloor nd_{n}\rfloor$ observations. It is easy to see that,
+$$
+d_{n}=\sup_{\mathrm{t}\in \mathrm{A}}\{[1-\ H\ovalbox{\tt\small REJECT} n\ (\Delta\ (\mathrm{t},\ \mathrm{F}\ovalbox{\tt\small REJECT}\ \mathrm{n}))]-[1-\mathrm{G}(\Delta(\mathrm{t},\ \mathrm{F}\ovalbox{\tt\small REJECT}\ \mathrm{n}))]\}^{+}
+$$
+\begin{center}
+$=\displaystyle \sup_{\mathrm{t}\in \mathrm{A}}\{G$ ($\Delta$ ($\mathrm{t},\ \mathrm{F}$ˆ $\mathrm{n}))- \mathrm{H}$ˆ $\mathrm{n}(\Delta(\mathrm{t},\ \mathrm{F}$ˆ $\mathrm{n}))\}^{+}$
+$$
+=\sup\{G(\Delta)-H\ovalbox{\tt\small REJECT}\ n(\Delta)\}^{+}
+$$
+\end{center}
+$\Delta\geq$?
+
+since $d_{GY}$ isanon increasing function of the squared Mahalanobis distance
+
+of the point $\mathrm{t}$. We can rephrase Proposition 2. in ?, that states the con-
+
+sistency property of the filter as follows. Consider a random vector $\mathrm{Y} =$
+
+$(\mathrm{X}_{1},\ .\ .\ .\ ,\ \mathrm{X}_{\mathrm{d}}) \sim \mathrm{F}_{0}$ and a pair of location and scatter estimators $\mathrm{T}_{0\mathrm{n}}$ and
+
+$\mathrm{C}_{0\mathrm{n}}$ such that $\mathrm{T}_{0\mathrm{n}} \rightarrow\ovalbox{\tt\small REJECT} 0 =$ µ(F0) $\in \mathbb{R}^{\mathrm{d}}$ and $\mathrm{C}_{0\mathrm{n}} \rightarrow \Sigma_{0} = \Sigma(\mathrm{F}_{0})$ a.s..
+
+Consider any continuous distribution function $G$ and let {\it Hn} be the empirical
+$$
+n
+$$
+distribution function of $\Delta_{i}$ and $H_{0}(t) =\mathrm{P}\mathrm{r}$( ($\mathrm{Y}$--µ0)t$\Sigma$0-1 (Y--µ0) $\leq \mathrm{t}$). If
+
+the distribution $G$ satisfies:
+\begin{center}
+$\displaystyle \max_{\mathrm{t}\in \mathrm{A}}\{d_{GY}(\mathrm{t},\ \mathrm{F}_{0},\ \mathrm{H}_{0})-\mathrm{d}_{\mathrm{G}\mathrm{Y}}(\mathrm{t},\ \mathrm{F}_{0},\ \mathrm{G})\}\leq 0$,   (1)
+\end{center}
+where $A=\{\mathrm{t}\in \mathbb{R}^{\mathrm{d}}\ :\ \mathrm{d}_{\mathrm{G}\mathrm{Y}}(\mathrm{t},\ \mathrm{F}_{0},\ \mathrm{G})\ \leq \mathrm{d}_{\mathrm{G}\mathrm{Y}}\ (\ovalbox{\tt\small REJECT},\ \mathrm{F}_{0},\ \mathrm{G})\}$, where ? is any point
+
+in $\mathbb{R}^{d}$ such that $\Delta$(?, $\mathrm{F}_{0}$) $=\ovalbox{\tt\small REJECT}$ and $\ovalbox{\tt\small REJECT}=G^{-1}$ (a) is a large quantile of $G$, then
+
+$n_{0}n \rightarrow 0$ a.s.
+
+where
+$$
+n_{0}=\ \lfloor nd_{n}\rfloor.
+$$
+{\it Proof}. Note that
+
+$d_{GY}$ ($\mathrm{t}$, Fˆ $\mathrm{n}$, Hˆ $\mathrm{n}$) $-\mathrm{d}_{\mathrm{G}\mathrm{Y}}$($\mathrm{t}$, Fˆ $\mathrm{n}, \mathrm{G}$) $=\mathrm{G}(\Delta(\mathrm{t},\ \mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}}))-$ Hˆ $\mathrm{n}(\Delta(\mathrm{t},\ \mathrm{T}_{0\mathrm{n}},\ \mathrm{C}_{0\mathrm{n}}))$
+
+and condition in equation $()$ is equivalent to
+\begin{center}
+$\mathrm{m}\Delta\geq \mathrm{a}$?$\mathrm{x} \{G(\Delta)\ -H_{0}(\Delta)\}\leq 0,$
+\end{center}
+The rest of the proof is the same as in Proposition 2. of ?.
+$$
+\square 
+$$
+Figure shows the bivariate scatter plot of WTS versus HTLD, HTLD
+
+versus WSBC and WSBC versus SUR where the GY-UBF and HS-UBF
+
+filters are applied, respectively. The bivariate observations with at least
+
+one component flagged as outlier are in blue, and outliers detected by the
+
+bivariate filter are in orange. We see that the HS-UBF identifies less outliers
+
+with respect to the GY-UBF.
+
+1
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+where $\omega_k$ are
+\begin{gather*}
+ \omega_0=1 , \qquad \omega_1=-1 , \qquad \omega_2=p^\frac12 ,\qquad \omega_3=-p^{-\frac12} .
+\end{gather*}
+The functions $p_k(h)$ are
+\begin{alignat*}{3}
+  p_0(h)\equiv \prod_n \theta(p^\frac12 h_n) , \qquad  p_1(h)\equiv \prod_n \theta\big({-}p^\frac12 h_n\big) , \\
+  p_2(h)\equiv p\prod_n h_n^{-\frac12}\theta(h_n) ,\qquad  p_3(h)\equiv p\prod_n h_n^{\frac12}\theta\big({-}h_n^{-1}\big) ,
+\end{alignat*}
+and $\mathcal{E}_k$ is
+\begin{gather*}
+ \mathcal{E}_k(\xi;z)\equiv\frac{\theta\big(q^{-\frac12} \xi \omega_k^{-1} z\big)\theta\big(q^{-\frac12} \xi \omega_k z^{-1}\big)}{\theta\big(q^{-\frac12}\omega_k^{-1} z\big)\theta\big(q^{-\frac12} \omega_k z^{-1}\big)} .
+\end{gather*}
+The van Diejen operator and the operator () are the same up to a constant function (independent of~$z$). It's clear that $V(h;z)$ coincides with the corresponding term in \eqref{diuer} if we make the identifications
+\begin{gather*}
+ h_{1,2,3,4}=t^{-1}A^{\pm1}C^{\pm1} , \qquad h_{5,6,7,8}=t^{-1}B^{\pm1}D^{\pm1} .
+\end{gather*}
+Since $V_b(h;z)$ is elliptic in $z$ with periods~$1$ and $p$ and it is easy to check that $W^{{\mathfrak J}_B}_{{\mathfrak J}_D, (1,0; AB^{-1})}(z)$ is also elliptic with the same period, it is enough to show that the two functions have the same poles and residues to prove that they can differ only by a function independent of~$z$. In the fundamental parallelogram $V_b$ has poles at (we assume with no loss of generality that $|p|<|q|\ll |t|<1$ and the rest of the variables are on unit circle)
+\begin{gather*}
+ z=\pm q^{-\frac12}p , \qquad z= \pm q^{\frac12}, \qquad z=\pm p^\frac12 q^{\pm\frac12}.
+\end{gather*}
+In addition to such poles the operator \eqref{diuer} seems to have poles at $z=\pm t^{-2}p , \pm t^2 , 	\pm p^\frac12 t^{\pm2}$ and $z=\pm1,\pm p^\frac12$, but computation of the residue at these poles yields zero. The computation of the residue at the poles is straightforward, the result is ($h$ is either $1$ or $-1$)
+\begin{gather*}
+\operatorname{Res}_{z\to h q^\frac12} W^{{\mathfrak J}_B}_{{\mathfrak J}_D, (1,0; AB^{-1})}(z)=
+-h(p;p)^{-2}\frac{\theta_p\big(h p^\frac{1}{2}t^{\pm1}A C^{\pm1}\big)\theta_p\big(h p^\frac{1}{2}t^{\pm1}B^{-1}D^{\pm1}\big)}
+{2q^{-\frac12}\theta_p\big(q^{-1}\big)},\\
+\operatorname{Res}_{z\to h q^{-\frac12}} W^{{\mathfrak J}_B}_{{\mathfrak J}_D, (1,0; AB^{-1})}(z)=
+h(p;p)^{-2}\frac{\theta_p\big(hp^\frac{1}{2}t^{\pm1}A C^{\pm1}\big)\theta_p\big(h p^\frac{1}{2}t^{\pm1}B^{-1}D^{\pm1}\big)}
+{2q^{\frac12}\theta_p\big(q^{-1}\big)},\\
+\operatorname{Res}_{z\to h p^\frac12 q^{\frac12}} W^{{\mathfrak J}_B}_{{\mathfrak J}_D, (1,0; AB^{-1})}(z)=
+-h (p;p)^{-2}\frac{A^{-2}B^{2}\theta_p\big(h t^{\pm1}A C^{\pm1}\big)\theta_p\big(h t^{\pm1}B^{-1}D^{\pm1}\big)}
+{2p^{-\frac32}q^{-\frac12}\theta_p\big(q^{-1}\big)},\\
+\operatorname{Res}_{z\to h p^\frac12 q^{-\frac12}} W^{{\mathfrak J}_B}_{{\mathfrak J}_D, (1,0; AB^{-1})}(z)=
+h (p;p)^{-2}\frac{A^{-2}B^{2}\theta_p\big(h t^{\pm1}A C^{\pm1}\big)\theta_p\big(h t^{\pm1}B^{-1}D^{\pm1}\big)}
+{2p^{-\frac32}q^{\frac12}\theta_p\big(q^{-1}\big)}.
+\end{gather*}
+\end{document} 

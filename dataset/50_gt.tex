@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+Second, for $F_{Y_0(0,0)|D=0,M=0}(y)$ we have
+\begin{equation} 
+F_{U|00}^{-1} ( F_{Y_0(0,0)|D=0,M=0}(y)) =   h^{-1}(0,0,0;y).
+\end{equation}
+Combining () and () yields,
+\begin{equation} 
+h(0,0,1,h^{-1}(0,0,0;y))  =F_{Y_1(0,0)|D=0,M=0}^{-1} \circ F_{Y_0(0,0)|D=0,M=0}(y) .
+\end{equation}
+The left sides of () and () are equal. In contrast to (), () contains only distributions that can be identified from observable data. In particular, $F_{Y_t(0,0)|D=0,M=0}(y)  =\Pr(Y_t(0,0) \leq y|D=0,M=0) =  \Pr(Y_t \leq y|D=0,M=0)$. Accordingly, we can identify $F_{Y_1(0,0)|D=1,M=0}^{-1} \circ F_{Y_0(0,0)|D=1,M=0}(y)$ by $Q_{00} (y) \equiv F_{Y_1|D=0,M=0}^{-1} \circ F_{Y_0|D=0,M=0}(y) $.
+Parsing $Y_0$ through $Q_{00}(\cdot)$ in the treated group without mediator gives
+\begin{equation} \begin{array}{rl}
+ E[Q_{00}(Y_0)|D=1,M=0] \\ \qquad =  E[F_{Y_1|D=0,M=0}^{-1} \circ F_{Y_0|D=0,M=0}(Y_0 )|D=1,M=0], \\
+ \qquad =  E[F_{Y_1(0,0)|D=0,M=0}^{-1} \circ F_{Y_0(0,0)|D=0,M=0}(Y_0(1,0))|D=1,M=0], \\
+\qquad \stackrel{A1,A3b}{=}  E[h(0,0,1,h^{-1}(0,0,0; Y_0(1,0)))|D=1,M=0], \\
+\qquad \stackrel{A2}{=} E[h(0,0,1,h^{-1}(0,0,0; Y_0(0,0)))|D=1,M=0], \\
+\qquad \stackrel{A1,A3a}{=}E[F_{Y_1(0,0)|D=1,M=0}^{-1} \circ F_{Y_0(0,0)|D=1,M=0}(Y_0 (0,0))|D=1,M=0],\\
+\qquad =E[Y_1(0,0)|D=1,M=0]=E[Y_1(0,0)|D=1,M(1)=0], \end{array}
+\end{equation}
+which has data support because of Assumption 4a.
+\end{document}

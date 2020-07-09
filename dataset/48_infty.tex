@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+among never-takers with $D = 1$ (as defiers do not exist). Likewise, ?011 corre-
+
+sponds to the direct effect on always-takers with $D=0$. Indeed, the results in Table
+
+suggest that both parameters are consistently estimated with the change-in-changes
+
+model (Panel A.).
+
+1 Proof of Theorem 1
+
+1.1 Average direct effect under $\mathrm{d}=1$ conditional on $\mathrm{D}=1$
+
+and $\mathrm{M}(1)=0$
+
+In the following, we prove that ?11 $0(1) = E[Y_{1}(1,0) -Y_{1}(0,0)|D = 1, M_{i}(1) =$
+
+$0] = E[Y_{1}\ -Q_{00}(Y_{0})|D\ =\ 1,\ M\ =\ 0]$. Using the observational rule, we obtain
+
+$E[Y_{1}(1,0)|D\ =\ 1,\ M(1)\ =\ 0] = E[Y_{1}|D\ =\ 1,\ M\ =\ 0]$. Accordingly, we have to
+
+show that $E[Y_{1}(0,0)|D\ =\ 1,\ M(1)\ =\ 0] = E[Q_{00}(Y_{0})|D\ =\ 1,\ M\ =\ 0]$ to finish the
+
+proof. Denote the inverse of $h(d,\ m,\ t,\ u)$ by $h^{-1}(d,\ m,\ t;y)$ , which exists because of
+
+the strict monotonicity required in Assumption 1. Under Assumptions 1 and $3\mathrm{a}$, the
+
+conditional potential outcome distribution function equals
+$$
+F_{Y_{\mathrm{t}}(d,0)|D=1,M=0}(y)^{A1}=\mathrm{P}\mathrm{r}(h(d,\ m,\ t,\ U)\ \leq y|D=1,\ M=0,\ T=t)\ ,
+$$
+$$
+=\mathrm{P}\mathrm{r}(U\leq h^{-1}(d,\ m,\ t;y)|D=1,\ M=0,\ T=t)\ ,
+$$
+(1.1)
+$$
+A3a=\mathrm{P}\mathrm{r}(U\leq h^{-1}(d,\ m,\ t;y)|D=1,\ M=0)\ ,
+$$
+$$
+=F_{U|10}(h^{-1}(d,\ m,\ t;y))\ ,
+$$
+for $d, d' \in \{0$, 1$\}$. We use these quantities in the following. First, evaluating
+
+$F_{Y_{1}(0,0)|D=1,M=0}(y)$ at $h(0,0,1,\ u)$ gives
+$$
+F_{Y_{1}(0,0)|D=1,M=0}(h(0,0,1,\ u))=F_{U|10}(h^{-1}(0,0,1;h(0,0,1,\ u)))=F_{U|10}(u)\ .
+$$
+Applying $F_{Y_{1}(0,0)|D=1,M=0}^{-1}(q)$ to both sides, we have
+\begin{center}
+$h(0,0,1,\ u)=F_{Y_{1}(0,0)|D=1,M=0}^{-1}(F_{U|10}(u))$ .   (1.2)
+\end{center}\end{document}

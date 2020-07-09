@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+over the conditioning feature $X_{1}$, i.e.
+$$
+H(X_{2}|X_{1})=\sum_{\mathrm{i}_{1}}\mathbb{P}(X_{1}=x_{\mathrm{i}_{1}}^{(1)})H(X_{2}|X_{1}=x_{\mathrm{i}_{1}}^{(1)})\ .
+$$
+Proposition 1 (Chain rule,).
+\begin{center}
+$H(X_{1},\ X_{2})=H(X_{1})+H(X_{2}|X_{1})$ .   (1)
+\end{center}
+Proposition 2. {\it Let R} $($?, $X_{1}, X_{2})$ {\it denote the} entropy reduction {\it of}?fi{\it rst by the}
+
+{\it feature} $X_{1}$ {\it and then by the feature} $X_{2}$, {\it and R} $($?, $(X_{1},\ X_{2}))$ {\it denote the} entropy
+
+reduction {\it of} ? {\it by a pair of features} $(X_{1},\ X_{2})$ . {\it Then}
+\begin{center}
+$R ($?, $X_{1}, X_{2})=R(\ovalbox{\tt\small REJECT},\ (X_{1},\ X2))$ .   (2)
+\end{center}
+The maximum entropy of an arbitrary feature is achieved when all its outcomes
+
+occur with equal probability, and this maximum value is proportional to the
+
+logarithm of the number of possible outcomes to the base 2. Thus Proposition
+
+implies that the more possible outcomes a feature has, the higher entropy reduc-
+
+tion it could possibly lead to. Meanwhile, afeature with an arbitrary number of
+
+outcomes can be viewed as a combination of {\it binary features}, the ones with two
+
+possible outcomes. Even though the entropy of the combination of two features
+
+is greater than each of them, Proposition shows that partitioning the space sub-
+
+sequently by two features has the same entropy reduction as partitioning by
+
+their combination. Therefore, instead of considering features with outcomes as
+
+many as possible, we focus on binary features.
+
+1. Query repeats
+
+Here we assess the improvement of the error rates by repeating the same
+
+query twice. Let $Y$ (or $N$) denote the event of the queried base pair existing
+
+(or not) in the target structure. Let $y$ (or {\it n}) denote the event of the experi-
+
+ment confirming (or rejecting) the base pair. Let {\it nn} denote the event of two
+
+independent experiments both rejecting the base pair. Similarly, we have {\it yy}
+
+and {\it yn}. Utilizing the same sequences and structures as described in Fig., we
+
+estimate the conditional probabilities $\mathbb{P}(n|N)\approx 0.993$ and $\mathbb{P}(n|Y) \approx 0.055$. The
+
+{\it prior probability} $\mathbb{P} (Y\ )$ can be computed via the expected number $l_{1}$ of confirmed
+
+queried base pairs on the path, divided by the number of queries in each sam-
+
+ple. Fig. displays the distribution of {\it l}1 having mean around5. Thus we adopt
+
+$\mathbb{P} (Y\ ) =\mathbb{P}(N)=0.5$. By Bayes’theorem, we calculate the {\it posterior}
+$$
+\mathbb{P}(N|nn)=\frac{\mathbb{P}(nn|N)\mathbb{P}(N)}{\mathbb{P}(nn)}=\frac{\mathbb{P}(n|N)^{2}\mathbb{P}(N)}{\mathbb{P}(n|N)^{2}\mathbb{P}(N)+\mathbb{P}(n|Y)^{2}\mathbb{P}(Y)},
+$$
+where $\mathbb{P}(nn) = \mathbb{P}(nn|N)\mathbb{P}(N)+\mathbb{P}(nn|Y)\mathbb{P}(Y\ )$ . we have $\mathbb{P}(nn|N) = \mathbb{P}(n|N)^{2}$
+
+and $\mathbb{P} (nn|Y) =\mathbb{P}(n|Y)^{2}$. Similarly, we compute $\mathbb{P}(Y|nn)$ , $\mathbb{P}(Y|yy)$ and $\mathbb{P}(Y|yn)$
+
+1
+\end{document}

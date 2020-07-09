@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document}
+\textbf{Proof.} See Appendix .
+\noindent \textbf{Theorem 5:} Under Assumptions 1-3, 5, 7-8,
+\begin{itemize}
+\item[a)] and Assumptions 4a, 6a, the total average treatment effect on compliers is identified:
+\begin{align*}
+\Delta_1^c= \frac{p_{1|1}}{ p_{1|1} - p_{1|0}} E[Y_1|D=1,M=1] -\frac{p_{1|0}}{p_{1|1} - p_{1|0}}E[Q_{11}(Y_0)|D=0,M=1] \\
+ − \frac{p_{0|0}}{ p_{1|1} - p_{1|0}} E[Y_1|D=0,M=0] +\frac{p_{0|1}}{p_{1|1} - p_{1|0}}E[Q_{00}(Y_0)|D=1,M=0].
+\end{align*}
+Furthermore, the total quantile treatment effect on compliers $\Delta_1^{c}(q) = F_{Y_{1}(1,1)|c}^{-1}(q)-F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified using the inverse of () and ().
+\item[b)] and Assumptions 4a, 6b, the average indirect effect
+under $d = 0$ on compliers is identified:
+\begin{align*}
+\delta_1^c(0) = \frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_0)|D=1,M=1] - \frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Y_1|D=0,M=1]\\
+\hspace{-0.15cm}- \frac{p_{0|0}}{p_{1|1} - p_{1|0}} E[Y_1|D=0,M=0] +\frac{p_{0|1}}{p_{1|1} - p_{1|0}}E[Q_{00}(Y_0)|D=1,M=0].
+\end{align*}
+Furthermore, the quantile indirect effect
+under $d = 0$ on compliers $\delta_1^{c}(q,0) = F_{Y_{1}(0,1)|c}^{-1}(q)-F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified using the inverse of () and ().
+\item[c)] and Assumptions 4b, 6a, the average indirect effect
+under $d = 1$ on compliers is identified:
+\begin{align*}
+\delta_1^{c}(1) = \frac{p_{1|1}}{ p_{1|1} - p_{1|0}} E[Y_1|D=1,M=1] -\frac{p_{1|0}}{p_{1|1} - p_{1|0}}E[Q_{11}(Y_0)|D=0,M=1]\\
+\hspace{-0.15cm}- \frac{p_{0|0}}{p_{1|1} - p_{1|0}}E[Q_{00}(Y_0)|D=0,M=0] + \frac{p_{0|1}}{p_{1|1} - p_{1|0}}E[Y_1|D=1,M=0].
+\end{align*}
+Furthermore, the quantile indirect effect
+under $d = 1$ on compliers $\delta_1^{c}(q,1) = F_{Y_{1}(1,1)|c}^{-1}(q)-F_{Y_{1}(1,0)|c}^{-1}(q)$ is identified using the inverse of () and ().
+\end{itemize}
+\textbf{Proof.} See Appendix .
+\end{document}

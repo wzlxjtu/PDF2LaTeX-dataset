@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+ $e_i \pm e_j$ for all $i \neq j$. The free energy in the specific case of a vector multiplet in the adjoint, a single antisymmetric hypermultiplet, and $N_f$ fundamental hypermultiplets then is
+\begin{eqnarray}
+F(\lambda_i) = \sum_{i \neq j} \left[F_V(\lambda_i - \lambda_j) + F_V(\lambda_i + \lambda_j) + F_H(\lambda_i - \lambda_j) + F_H(\lambda_i + \lambda_j) \right] 
+\nonumber\\
+\vphantom{.}\hspace{0.3in}+ \sum_i \left[F_V(2 \lambda_i) + F_V(-2 \lambda_i) + N_f F_H(\lambda_i) + N_f F_H(-\lambda_i) \right]
+\end{eqnarray}
+The next step is to look for extrema of this function in the specific case of $\lambda_i \geq 0$ for all $i$. Extrema in the case of non-positive $\lambda_i$ can be obtained from these through action of the Weyl group.
+To calculate the extrema, one first assumes that as $N \rightarrow \infty$, the vevs scale as $\lambda_i = N^\alpha x_i$ for $\alpha>0$ and $x_i$ of order $O(N^0)$. One then introduces a density function
+\begin{eqnarray}
+\rho(x) = {1 \over N} \sum_{i=1}^N \delta(x-x_i) 
+\end{eqnarray}
+which in the continuum limit should approach an $L^1$ function normalized as 
+\begin{eqnarray}
+\int dx\, \rho(x) = 1
+\end{eqnarray}
+In terms of this density function, one finds that 
+\begin{eqnarray}
+F \approx -{9 \pi \over 8} N^{2 + \alpha} \int dx dy \,\rho(x) \rho(y) \left(|x-y| + |x+y| \right) + {\pi (8-N_f) \over 3} N^{1 + 3 \alpha} \int dx\, \rho(x)\, |x|^3
+\end{eqnarray}
+where the large argument expansions  have been used, and terms subleading in $N$ have been dropped. This only has non-trivial saddle points when both terms scale the same with $N$, which demands that $\alpha=1/2$ and gives the famous result that $F\propto N^{5/2}$. Extremizing the free energy over normalized density functions then gives 
+\begin{eqnarray}
+F \approx - {9 \sqrt{2} \pi N^{5/2} \over 5 \sqrt{8-N_f}}
+\end{eqnarray}
+This value of the free energy is to be identified with the renormalized on-shell action of the supersymmetric AdS$_6$ solution. This identification yields the following relation between the six-dimensional Newton's constant $G_6$ and the parameters $N$ and $N_f$ of the dual SCFT,
+\begin{eqnarray}
+G_6= \frac{5\pi\sqrt{8-N_f}}{27\sqrt{2}} ~N^{-5/2}
+\end{eqnarray}
+\end{document}

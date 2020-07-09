@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+1 Proof of Theorem 2
+
+1.1 Average direct effect under $\mathrm{d}=0$ conditional on $\mathrm{D}=0$
+
+and $\mathrm{M}(0)=1$
+
+In the following, we show that ?011 (0) $= E[Y_{1}(1,1) -Y_{1}(0,1)|D = 0, M(0) =$
+
+$1] = E[Q_{11}(Y_{0})\ -Y_{1}|D\ =\ 0,\ M\ =\ 1]$. Using the observational rule, we obtain
+
+$E[Y_{1}(0,1)|D\ =\ 0,\ M(0)\ =\ 1] = E[Y_{1}|D\ =\ 0,\ M\ =\ 1]$. Accordingly, we have to
+
+show that $E[Y_{1}(1,1)|D\ =\ 0,\ M(0)\ =\ 1] = E[Q_{11}(Y_{0})|D\ =\ 0,\ M\ =\ 1]$ to finish the
+
+proof. Under Assumptions 1and $5\mathrm{a}$, the conditional potential outcome distribution
+
+function equals
+$$
+F_{Y_{\mathrm{t}}(d,0)|D=1,M=0}(y)^{A1}=\mathrm{P}\mathrm{r}(h(d,\ m,\ t,\ U)\leq y|D=0,\ M=1,\ T=t)\ ,
+$$
+$$
+=\mathrm{P}\mathrm{r}(U\leq h^{-1}(d,\ m,\ t;y)|D=0,\ M=1,\ T=t)\ ,
+$$
+(1)
+$$
+A5a=\mathrm{P}\mathrm{r}(U\leq h^{-1}(d,\ m,\ t;y)|D=0,\ M=1)\ ,
+$$
+$$
+=F_{U|01}(h^{-1}(d,\ m,\ t;y))\ ,
+$$
+for $d, d' \in \{0$, 1$\}$. We use these quantities in the following. First, evaluating
+
+$F_{Y_{1}(1,1)|D=0,M=1}(y)$ at $h(1,1,1,\ u)$ gives
+$$
+F_{Y_{1}(1,1)|D=0,M=1}(h(1,1,1,\ u))=F_{U|01}(h^{-1}(1,1,1;h(1,1,1,\ u)))=F_{U|01}(u)\ .
+$$
+Applying $F_{Y_{1}(1,1)|D=0,M=1}^{-1}(q)$ to both sides, we have
+\begin{center}
+$h(1,1,1,\ u)=F_{Y_{1}(1,1)|D=0,M=1}^{-1}(F_{U|01}(u))$ .   (2)
+\end{center}
+Second, for $F_{Y_{0}(1,1)|D=0,M=1}(y)$ we have
+\begin{center}
+$F_{U|01}^{-1}(F_{Y_{0}(1,1)|D=0,M=1}(y))=h^{-1}(1,1,0;y)$ .   (3)
+\end{center}\end{document}

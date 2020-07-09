@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+Combining () and () yields,
+\begin{equation} 
+h(1,1,1,h^{-1}(1,1,0;y))  =F_{Y_1(1,1)|D=0,M=1}^{-1} \circ F_{Y_0(1,1)|D=0,M=1}(y) .
+\end{equation}
+Note that $h(1,1,1,h^{-1}(1,1,0;y))$ maps the period 1 (potential) outcome of an individual with the outcome $y$ in period 0 under treatment with the mediator. Accordingly, $E[F_{Y_1(1,1)|D=0,M=1}^{-1} \circ F_{Y_0(1,1)|D=0,M=1}(Y_0)|D=0,M=1]= E[Y_1(1,1)|D=0,M=1]$. We can identify $F_{Y_0(1,1)|D=0,M=1}(y)= F_{Y_0|D=0,M=1}(y)$ under Assumption 2, but we cannot identify $F_{Y_1(1,1)|D=0,M=1}(y)$. However, we show in the following that we can identify the overall quantile-quantile transform $F_{Y_1(1,1)|D=0,M=1}^{-1} \circ F_{Y_0(1,1)|D=0,M=1}(y)$ under the additional Assumption 5b.
+Under Assumptions 1 and 5b, the conditional potential outcome distribution function equals
+\begin{equation} 
+\begin{array}{rl}
+ F_{Y_t(d,1)|D=1,M=1}(y)  \stackrel{A1}{=} \Pr(h(d,m,t,U) \leq y|D=1,M=1,T=t) ,\\
+= \Pr(U \leq h^{-1}(d,m,t;y)|D=1,M=1,T=t) ,\\
+\stackrel{A5b}{=} \Pr(U \leq h^{-1}(d,m,t;y)|D=1,M=1) ,\\
+= F_{U|11} ( h^{-1}(d,m,t;y)),
+\end{array}
+\end{equation}
+for $d,d' \in \{0,1\}$. We repeat similar steps as above. First, evaluating $F_{Y_1(1,1)|D=1,M=1}(y)$ at $h(1,1,1,u)$ gives
+\begin{equation*}
+F_{Y_1(1,1)|D=1,M=1}(h(1,1,1,u)) = F_{U|11} ( h^{-1}(1,1,1;h(1,1,1,u)))  =F_{U|11} ( u).
+\end{equation*}
+Applying $F_{Y_1(1,1)|D=1,M=1}^{-1}(q)$ to both sides, we have
+\begin{equation} 
+h(1,1,1,u)  =F_{Y_1(1,1)|D=1,M=1}^{-1}(F_{U|11} ( u)).
+\end{equation}
+Second, for $F_{Y_0(1,1)|D=1,M=1}(y)$ we have
+\begin{equation} 
+F_{U|11}^{-1} ( F_{Y_0(1,1)|D=1,M=1}(y)) =   h^{-1}(1,1,1;y).
+\end{equation}
+\end{document}

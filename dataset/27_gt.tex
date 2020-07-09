@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+
+These will turn out to be the same, so we just work with the former. Thus we have that 
+\begin{eqnarray}
+\bar \psi_A = \psi_A^\dagger \gamma_7
+\end{eqnarray}
+If we choose $\gamma_7$ such that 
+\begin{eqnarray}
+(\gamma_7)^\dagger = - \gamma_7
+\end{eqnarray}
+we can express the Hermitian conjugates of our gamma matrices as
+\begin{eqnarray}
+\gamma_\mu^\dagger = \eta\, G^{-1} \gamma_\mu G
+\end{eqnarray}
+Importantly, with $G=G_1$ in , we have 
+\begin{eqnarray}
+\eta = -1
+\end{eqnarray}
+This will be important in Appendix  when the consistency of the symplectic Majorana condition is analyzed. 
+For now, we just recall that the symplectic Majorana condition must take the form 
+\begin{eqnarray}
+\bar \psi_A = \epsilon^{AB} \psi_B^T\, {\cal C}
+\end{eqnarray}
+where 
+\begin{eqnarray}
+{\cal C}^2 = 1 \hspace{0.7 in} {\cal C}^T = {\cal C} \hspace{0.7in} \gamma_\mu^T = - {\cal C}^{-1} \gamma_\mu {\cal C}
+\end{eqnarray}
+We now want to reduce from $d=7$ to $d=6$. In particular, we reduce on the time-like direction $x_7$. This entails finding a Euclidean induced metric on the six-dimensional surface . From the point of view of the Clifford algebra, we must remove the matrix $\gamma_7$ to get a six-dimensional Clifford algebra. However, the properties of the matrix $\gamma^7$ remain the same. In fact, we may choose
+\begin{eqnarray}
+\gamma_7 = \gamma_0\gamma_1\gamma_2\gamma_3\gamma_4\gamma_5
+\end{eqnarray}
+which satisfies all of the properties ,.
+\section{Free differential algebra}
+\setcounter{equation}{0}
+In this Appendix, we will construct the free differential algebra (FDA) of a supergravity theory with $\mathbb{H}_6$ background in order to motivate the form of the supersymmetry variations given in .
+The first step of constructing the FDA is to write down the Maurer-Cartan equations (MCEs), which may be thought of as the geometrization of the (anti-)commutation relations of the superalgebra. In short, instead of defining the algebra via the (anti-)commutators of its generators, the MCEs encode the algebraic structure in integrability conditions. In 
+\end{document}

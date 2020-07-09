@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+and considering the empirical distribution function $F_{n}(\cdot)$ , the halfspace
+
+depth will be
+$$
+d_{HS}(x,\ F_{n})\ovalbox{\tt\small REJECT}=\min(\frac{1}{n}\sum_{i=1}^{n}I(X_{i}\leq x),\ \frac{1}{n}\sum_{i=1}^{n}I(X_{i}\geq x))\ .
+$$
+Consider $\mathrm{T}_{0\mathrm{n}} = (\mathrm{T}_{0\mathrm{n},1},\ .\ .\ .\ ,\ \mathrm{T}_{0\mathrm{n},\mathrm{p}})$ and $\mathrm{S}_{0\mathrm{n}} = (\mathrm{S}_{0\mathrm{n},1},\ .\ .\ .\ ,\ \mathrm{S}_{0\mathrm{n},\mathrm{p}})$ , apair of
+
+initial location and dispersion estimators. Here we choose for T $0\mathrm{n}$ and $\mathrm{S}_{0\mathrm{n}}$
+
+respectively the coordinate-wise median and the median absolute deviation
+
+(MAD). For each variable $(X_{1j},\ X_{2j},\ .\ .\ .\ ,\ X_{nj}) (j\ =\ 1,\ .\ .\ .\ ,\ p)$ , we denote the
+
+standardized version of $X_{ij}$ by $Z_{ij} = \displaystyle \frac{X_{i\mathrm{j}}-T_{0\mathrm{n},\mathrm{j}}}{S_{0\mathrm{n},\mathrm{j}}}$. Let $F_{j}$ a chosen reference
+
+distribution for $Z_{ij}$ ; here we use the standard normal distribution, i.e., $F_{j}=$
+
+$\Phi$. Let $\hat{F}_{n,j}$ be the empirical distribution for the standardized values, that is
+$$
+\hat{F}_{n,j}(t)=\frac{1}{n}\sum_{i=1}^{n}I(Z_{ij}\ \leq t)\ j=1,\text{ . . . , }p.
+$$
+We define the proportion of flagged outliers by
+
+$ d_{n,j}=\displaystyle \max$ ({\it t}$\leq$s-u?pß,j $\{d_{HS} (t,\ F_{n,j})-d_{HS}(t,\ F_{j})\}^{+}$;{\it t}$\geq$su?ßp,j $\{d_{HS}(t,\ F_{n,j})-d_{HS}(t,\ F_{j})\}^{+}$),
+
+where $\ovalbox{\tt\small REJECT}\ovalbox{\tt\small REJECT},j= F_{j}^{-}1(\ovalbox{\tt\small REJECT})$ is alarge quantile of $F_{j}$. Note that, according to $()$ ,
+
+we are considering the set {\it C}ß({\it Fj}) $= \{x \in \mathbb{R}$ : $d_{HS}(x, F_{j}$ ) $<$ {\it dHS}(?ß,{\it j} )$\},$
+
+which results in the simpler form written above considering the definition of
+
+the half-space depth in the univariate case. Here, if we consider the order
+
+statistics $Z_{(i),j}$, define $ i_{-}=\displaystyle \min$\{$i:Z_{(i),j} >$ -?ß,{\it j}\} and $i_{+}=\displaystyle \max\{i:Z_{(i),j} <$
+
+?ß,{\it j} \}. Using the definition of half-space depth function in the univariate case,
+
+presented above, the previous expression can be written as
+\begin{center}
+$d_{n,j}=\displaystyle \max(\sup_{i<i-}\{\frac{i}{n}-F_{j}(Z_{(i),j})\}^{+},\sup_{i>i_{+}}\{F_{j}(Z_{(i),j})-\frac{i-1}{n}\}^{+})$ .   (1)
+\end{center}
+Then, we flag $\lfloor nd_{n,j}\rfloor$ observations with the smallest depth value as cell-wise
+
+outliers and replace them by NA’s.
+
+0.1 A consistent univariate, bivariate and {\it p}-variate fil-
+
+ter
+
+Given a sample $\mathrm{X}_{1}$, . . . , $\mathrm{X}_{\mathrm{n}}$ where $\mathrm{X}_{\mathrm{i}} \in \mathbb{R}^{\mathrm{p}}, \mathrm{i}= 1$, . . . , $\mathrm{n}$, we first apply the
+
+univariate filter described in the previous example to each variable separately.
+
+Filtered data are indicated through an auxiliary matrix $\mathrm{U}$ of zeros and ones,
+
+1
+\end{document}

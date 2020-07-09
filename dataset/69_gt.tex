@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}
+
+\begin{document}
+Let $\bf{X}$ be a $\mathbb{R}^p$-valued random variable with distribution function $F$. For a point $\bf{x} \in \mathbb{R}^p$, we consider the statistical data depth of $\bf{x}$ with respect to $F$ be $d(\bf{x};F)$ such that $d$ satisfies the four properties given in \citet{Liu1990} and \citet{Zuo2000a} and reported in Appendix  of the Supplementary Material. Given an independent and identically distributed sample $\bf{X}_1, \ldots, \bf{X}_n$ of size $n$, we denote $\hat{F}_n(\cdot)$ its empirical distribution function and by $d(\bf{x}; \hat{F}_n)$ the sample depth. We assume that, $d(\bf{x}; \hat{F}_n)$ is a uniform consistent estimator of $d(\bf{x}; F)$, that is, 
+\begin{equation*}
+\sup_{\bf{x}}| d(\bf{x}; \hat{F}_n) - d(\bf{x}; F) | \stackrel{a.s.}{\rightarrow} 0 \qquad n \rightarrow \infty ,
+\end{equation*}
+a property enjoined by many statistical data depth functions, e.g., among others simplicial depth \citep{Liu1990}, half-space depth \citep{Tukey1975}. One important feature of the depth functions is the $\alpha$-depth trimmed region given by $R_\alpha(F) = \{ \bf{x} \in \mathbb{R}^p: d(\bf{x}; F) \ge \alpha\}$; for any $\beta \in [0,1]$, we will denote $R^\beta(F)$ the smallest region $R_\alpha(F)$ that has probability larger that or equal to $\beta$ according to $F$. Throughout, subscripts and superscripts for depth regions are used for depth levels and probability contents, respectively. Let $C^\beta(F)$ be the complement in $\mathbb{R}^p$ of the set $R^\beta(F)$. Let $m = \max_{\bf{x}} d(\bf{x};F)$, be the maximum of the depth, for simplicial depth $m \le 2^{-p}$, for half-space depth $m \le 1/2$.
+Given a high order quantile $\beta$, we define a filter of dimension $p$ based on
+\begin{equation}
+d_n = \sup_{\bf{x} \in C^\beta(F)} \{ d(\bf{x}; \hat{F}_n) - d(\bf{x}; F) \}^+ ,
+\end{equation}
+where $\{a\}^+$ represents the positive part of $a$, and we mark as outliers all the $\lfloor n d_n/m \rfloor$ observations with the smallest population depth (where $\lfloor a \rfloor$ is the largest integer less then or equal to $a$). This define a filter in the general dimension $p$.
+We have the following result, with obvious proof.
+If $\sup_{\bf{x}}| d(\bf{x}; \hat{F}_n) - d(\bf{x}; F) | = o(n)$ (a.s.) then $n d_n \rightarrow 0$ as $n \rightarrow \infty$.
+If the above result holds, then the filter would be consistent. In the next subsection we are going to illustrate this approach using the half-space depth.
+\subsection{Filters based on Half-space Depth}
+Let $\bf{X}$ be a $\mathbb{R}^p$-valued random variable with distribution function $F$. For a point $\bf{x} \in \mathbb{R}^p$, the half-space depth of $\bf{x}$ with respect to $F$ is defined as the minimum probability of all closed half-spaces including $\bf{x}$:
+\begin{equation*}
+d_{HS} (\bf{x};F) = \min_{H \in \mathcal{H}(\bf{x})} P_F(\bf{X} \in H).
+\end{equation*}
+where $\mathcal{H}(\bf{x})$ indicates the set of all half-spaces in $\mathbb{R}^p$ containing $\bf{x} \in \mathbb{R}^p$.
+A random vector $\bf{X} \in \mathbb{R}^p$ is said elliptically symmetric distributed, denoted by
+\end{document}

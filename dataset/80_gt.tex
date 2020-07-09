@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+In principle there should be three punctured spheres depending on all eight parameters but the particular construction of gives us a three punctured sphere only depending on five with the map to eight parameters written above.
+The three punctures are of different color
+\begin{gather*}
+w\colon \ {\mathfrak J}_B=\big(t; A^{\pm1}B^{\pm1},C^{\pm1}D^{\pm1}\big) , \\
+u\colon \ {\mathfrak J}_C=\big(t;A^{\pm1}D^{\pm1},B^{\pm1}C^{\pm1}\big) , \\
+v\colon \ {\mathfrak J}_D=\big(t; A^{\pm1}C^{\pm1}, B^{\pm1}D^{\pm1}\big) .
+\end{gather*}
+Without loss of any generality let us assume that we will compute residues with respect to $a_1=A B^{-1}$. Then as we have only a subgroup of ${\rm SU}(8)$ we need to specify the flux for this. We obtain that the flux for the cap is
+\begin{gather*} \big({\rm U}(1)_A,{\rm U}(1)_B,{\rm U}(1)_C,{\rm U}(1)_D\big) = \big(\tfrac14,-\tfrac14,0,0\big) .
+\end{gather*}
+\section{Defect operators}
+Using the building blocks of the previous section we can introduce surface defects into the index computation. Given a model of some flux and corresponding to some surface we introduce a~defect operator by gluing to the surface first two three punctured spheres and then closing two of the punctures with caps. In case one closes the two punctures with cap defined by residues $(0,0;i)$ and $(0,0;\overline i)$, where by $\overline i$ we mean $a_j$ such that $a_i=1/a_j$, one adds tube with zero flux, which gives us the original model without defect. We can indeed check, see Appendix, that the index satisfies such property
+\begin{gather}
+T_{{\mathfrak J}_C}(u)= T_{{\mathfrak J}_C}(z)\times_z \big(\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(h,z,g)\times_h C^{(0,0;i)}_{{\mathfrak J}_B}(h)\big)\nonumber\\
+\hphantom{T_{{\mathfrak J}_C}(u)=}{}
+\times_g\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(v,u,g)\times_v C^{(0,0;\overline i)}_{{\mathfrak J}_B}(v)\big)\big) .
+\end{gather}
+However, when we close one of the punctures with $(M,L;i)$ and other with $(0,0;\overline i)$ we introduce a surface defect. Performing the computation with $M=1$ and $L=0$, see Appendix, we can see that the index is given by acting on the one with no defect by a~difference operator
+\begin{gather*}
+{\mathfrak D}_{{\mathfrak J}_D}^{{\mathfrak J}_B,(1,0;i)}T_{{\mathfrak J}_D}(u)=
+T_{{\mathfrak J}_D}(g)\times_g \big(\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(h,z,g)\times_h C^{(0,0;i)}_{{\mathfrak J}_B}(h)\big)\\
+\hphantom{{\mathfrak D}_{{\mathfrak J}_D}^{{\mathfrak J}_B,(1,0;i)}T_{{\mathfrak J}_D}(u)=}{}
+\times_z\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(v,z,u)\times_v C^{(1,0;\overline i)}_{{\mathfrak J}_B}(v)\big)\big) .\nonumber
+\end{gather*}
+The difference operator is given by
+\end{document} 

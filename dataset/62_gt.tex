@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\subsection{Average direct effect
+under $\mathbf{d = 1}$ on compliers}
+In the following, we show that
+\begin{align*}
+\theta_{1}^{c}(1) = E[Y_1(1,1)-Y_1(0,1)|\tau=c], \\ = 
+\frac{p_{1|1}}{ p_{1|1} - p_{1|0}} E[Y_1-Q_{01}(Y_0) |D=1,M=1] \\ -\frac{p_{1|0}}{p_{1|1} - p_{1|0}}E[Q_{11}(Y_0)-Y_1|D=0,M=1].
+\end{align*}
+Plugging () in (), we obtain
+\begin{equation*}
+\begin{array}{rl}
+E[Y_1|D=1,M=1] = \displaystyle \frac{p_a}{p_a + p_c}E[Q_{11}(Y_0)|D=0,M=1] \\
+ \displaystyle \quad + \frac{p_c}{p_a + p_c} E[Y_1(1,1)|\tau=c].
+\end{array}
+\end{equation*}
+This allows identifying
+\begin{equation} 
+\begin{array}{rl}
+E[Y_1(1,1)|\tau=c] = \displaystyle \frac{p_{1|1}}{ p_{1|1} - p_{1|0}} E[Y_1|D=1,M=1] \\
+ \displaystyle \quad -\frac{p_{1|0}}{p_{1|1} - p_{1|0}}E[Q_{11}(Y_0)|D=0,M=1].
+\end{array}
+\end{equation}
+From () we have $E[Y_1(0,1)|D=1,M=1] = E[Q_{01}(Y_0)|D=1,M=1]$. Applying the law of iterative expectations, gives
+\begin{align*}
+E[Y_1(0,1)|D=1,M=1] = \frac{p_a}{p_a+p_c} E[Y_1(0,1)|D=1,M=1, \tau=a] \\+ \frac{p_c}{p_a+p_c}E[Y_1(0,1)|D=1,M=1,\tau= c], \\
+\stackrel{A7}{=} \frac{p_a}{p_a+ p_c} E[Y_1(0,1)|\tau=a] + \frac{p_c}{p_a+p_c}E[Y_1(0,1)|\tau= c].
+\end{align*}
+After some rearrangements and using (), we obtain
+\begin{equation*}
+E[Y_1(0,1)|\tau= c]  = \frac{p_a+p_c}{p_c} E[Q_{01}(Y_0)|D=1,M=1] -   \frac{p_a}{p_c} E[Y_1|D=0,M=1].
+\end{equation*}
+\end{document}

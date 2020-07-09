@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+among never-takers with $D=1$ (as defiers do not exist). Likewise, $\theta_1^{0,1}$ corresponds to the direct effect on always-takers with $D=0$. Indeed, the results in Table  suggest that both parameters are consistently estimated with the change-in-changes model (Panel A.).
+\numberwithin{equation}{section}
+\section{Proof of Theorem 1 }
+\subsection{Average direct effect under $\mathbf{d=1}$ conditional on $\mathbf{D=1}$ and $\mathbf{M(1)=0}$}
+In the following, we prove that $\theta_1^{1,0}(1)= E[Y_1(1,0)-Y_1(0,0)|D=1,M_i (1)=0]=  E[Y_1-Q_{00}(Y_0)|D=1,M=0]$. Using the observational rule, we obtain $E[Y_1(1,0)|D=1,M(1)=0]=E[Y_1|D=1,M=0]$. Accordingly, we have to show that $E[Y_1(0,0)|D=1,M(1)=0]=E[Q_{00}(Y_0)|D=1,M=0]$ to finish the proof.
+Denote the inverse of $h(d,m,t,u)$ by $h^{-1}(d,m,t;y)$, which exists because of the strict monotonicity required in Assumption 1. Under Assumptions 1 and 3a, the conditional potential outcome distribution function equals
+\begin{equation} 
+\begin{array}{rl}
+ F_{Y_t(d,0)|D=1,M=0}(y)  \stackrel{A1}{=} \Pr(h(d,m,t,U) \leq y|D=1,M=0,T=t) ,\\
+= \Pr(U \leq h^{-1}(d,m,t;y)|D=1,M=0,T=t) ,\\
+\stackrel{A3a}{=} \Pr(U \leq h^{-1}(d,m,t;y)|D=1,M=0) ,\\
+= F_{U|10} ( h^{-1}(d,m,t;y)),
+\end{array}
+\end{equation}
+for $d,d' \in \{0,1\}$. We use these quantities in the following.
+First, evaluating $F_{Y_1(0,0)|D=1,M=0}(y)$ at $h(0,0,1,u)$ gives
+\begin{equation*}
+F_{Y_1(0,0)|D=1,M=0}(h(0,0,1,u)) = F_{U|10} ( h^{-1}(0,0,1;h(0,0,1,u)))  =F_{U|10} ( u).
+\end{equation*}
+Applying $F_{Y_1(0,0)|D=1,M=0}^{-1}(q)$ to both sides, we have
+\begin{equation} 
+h(0,0,1,u)  =F_{Y_1(0,0)|D=1,M=0}^{-1}(F_{U|10} ( u)).
+\end{equation}
+\end{document}

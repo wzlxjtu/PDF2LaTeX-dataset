@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+0.1 Average indirect effect under $d=0$ on compliers
+
+In $()$ and $()$ , we show that
+\begin{center}
+d1 (0) $=E[Y_{1}(0,1)-Y_{1}(0,\ 0)|Д\ =c],$
+$$
+=\frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})|D=1,\ M=1]-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=0,\ M=1]
+$$
+$$
+-\frac{p_{0|0}}{p_{0|0}-p_{0|1}}E[Y_{1}|D=0,\ M=0]+\frac{p_{0|1}}{p_{0|0}-p_{0|1}}E[Q_{00}(Y_{0})|D=1,\ M=0].
+$$
+\end{center}
+0.2 Quantile indirect effect under $d=0$ on compliers
+
+In $()$ and $()$ , we show that $F_{Y_{1}(0,1)|c}(y)$ and $F_{Y_{1}(0,0)|c}(y)$ are identified. Accordingly,
+
+d1{\it c} $(q,\ 0) = F^{-1}Y_{1}(0,1)|c(q)$ -- $F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified.
+
+0.3 Average indirect effect under $d=1$ on compliers
+
+In $()$ and $()$ , we show that
+\begin{center}
+d1 (1) $=E[Y_{1}(1,1)-Y_{1}(1,\ 0)|Д\ =c],$
+$$
+=\frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=1,\ M=1]-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})|D=0,\ M=1]
+$$
+$$
+-\frac{p_{0|0}}{p_{0|0}-p_{0|1}}E[Q_{00}(Y_{0})|D=0,\ M=0]+\frac{p_{0|1}}{p_{0|0}-p_{0|1}}E[Y_{1}|D=1,\ M=0].
+$$
+\end{center}
+0.4 Quantile indirect effect under $d=1$ on compliers
+
+In $()$ and $()$ , we show that $F_{Y_{1}(1,1)|c}(y)$ and $F_{Y_{1}(1,0)|c}(y)$ are identified. Accordingly,
+
+d1{\it c} $(q,\ 1)=F^{-1}Y_{1}(1,1)|c(q)-F_{Y_{1}(1,0)|c}^{-1}(q)$ is identified.
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+function is $F_{Y_{\mathrm{t}}|D=d,M=m}^{-1}(q)=\displaystyle \inf\{y\ :\ F_{Y_{\mathrm{t}}|D=d,M=m}(y)\ \geq q\}$. Furthermore,
+
+$Q_{dm}(y) :=F_{Y_{1}|D=d,M=m}^{-1}$ ? $F_{Y_{0}|D=d,M=m}(y)=F_{Y_{1}|D=d,M=m}^{-1}(F_{Y_{0}|D=d,M=m}(y))$
+
+is the quantile-quantile transform of the conditional outcome from period $0$ to 1
+
+given treatment $d$ and mediator status $m$. This transform maps $y$ at rank $q$ in
+
+period $0 (q\ =\ F_{Y_{0}|D=d,M=m}(y))$ into the corresponding $y'$ at rank $q$ in period 1
+
+$(y'=F_{Y_{1}|D=d,M=m}^{-1}(q))$ .
+
+1 Identification and Estimation
+
+1.1 Identification
+
+This sections discusses the identifying assumptions along with the identification
+
+results for the various direct and indirect effects. We note that our assumptions
+
+could be adjusted to only hold conditional on a vector of observed covariates. In
+
+this case, the identification results would hold within cells defined upon covari-
+
+ate values. In our main discussion, however, covariates are not considered for the
+
+sake of ease of notation. For notational convenience, we maintain throughout that
+
+$\mathrm{P}\mathrm{r} (T\ =\ t,\ D\ =\ d,\ M\ =\ m) > 0$ for $t, d, m \in \{1,\ 0\}$, implying that all possible
+
+treatment-mediator combinations exist in the population in both time periods. Our
+
+first assumption implies that potential outcomes are characterized by a continuous
+
+nonparametric function, denoted by $h$, that is strictly monotonic in a scalar $U$ that
+
+reflects unobserved heterogeneity.
+
+Assumption 1: Strict monotonicity of continuous potential outcomes in unob-
+
+served heterogeneity.
+
+The potential outcomes satisfy the following model: $Y_{t}(d,\ m) = h(d,\ m,\ t,\ U)$ , with
+
+the general function $h$ being continuous and strictly increasing in the scalar unob-
+
+servable $U\in \mathbb{R}$ for all $d, m, t\in\{0$, 1$\}.$
+
+Assumption 1 requires the potential outcomes to be continuous implying that there
+\end{document}

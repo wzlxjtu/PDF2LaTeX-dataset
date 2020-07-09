@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+\subsection{Mass-deformed $USp(2N)$ gauge theory}
+As discussed previously, we now give a mass to a single hypermultiplet in the fundamental representation. This amounts to making a shift $\sigma \rightarrow \sigma + m $ in the relevant functional determinant. The result of this shift may be accounted for in  by writing
+\begin{eqnarray}
+F(\lambda_i,m) = \sum_{i \neq j} \left[F_V(\lambda_i - \lambda_j) + F_V(\lambda_i + \lambda_j) + F_H(\lambda_i - \lambda_j) + F_H(\lambda_i + \lambda_j) \right] 
+\nonumber\\
+\vphantom{.}\hspace{0.25in}+ \sum_i \left[F_V(2 \lambda_i)+F_V(-2 \lambda_i) +F_H(\lambda_i+m) + F_H(-\lambda_i+m) \right.
+\nonumber\\
+\vphantom{.}\hspace{1in}\left. + (N_f-1) F_H(\lambda_i) + (N_f-1) F_H(-\lambda_i)  \right]\,\,\,\,
+\end{eqnarray}
+As before, we assume that $\lambda_i = N^\alpha x_i$ for $\alpha>0$ and introduce a density $\rho(x)$ satisfying . Using the expansions , we find the analog of  to be
+\begin{eqnarray}
+F(\mu) \approx - {9 \pi \over 8}N^{2 + \alpha} \int dx dy\, \rho(x) \rho(y) \left(|x-y| + |x+y| \right)  + { \pi \over 3} (9-N_f)N^{1 + 3 \alpha} \int dx\, \rho(x) \,|x|^3
+\nonumber\\
+\vphantom{.} \hspace{0.3 in} - {\pi \over 6} N^{1 + 3 \alpha} \int dx \,\rho(x) \left[ |x + \mu|^3 + |x-\mu|^3 \right]
+\end{eqnarray}
+where for convenience we have defined $\mu \equiv m/N^\alpha$. As in the undeformed case, there is a non-trivial saddle point only when $\alpha=1/2$.  A normalized density function which extremizes the free energy is
+\begin{eqnarray}
+\rho(x) = {1 \over (8-N_f) x_*^2 - \mu^2}\left(\,2(9-N_f) |x| - |x+ \mu| - |x-\mu|\, \right) \hspace{0.3 in} x_* = \sqrt{9 + 2 \mu^2 \over 2(8-N_f)}\,\,\,
+\end{eqnarray}
+with $\rho(x)$ having support only on the interval $x \in [0,x_*]$. Inserting this result back into  then gives our final result,
+\begin{eqnarray}
+F(\mu) = {\pi \over 135}  \left( (N_f-1) |\mu|^5-\sqrt{2\over 8-N_f}\,(9+2 \mu^2)^{5/2} \right)N^{5/2}
+\end{eqnarray}
+We may check that when $\mu=0$, we reobtain the result of the undeformed case .
+With this result and $G_6$ given by we may now try to compare $G_6(F(\mu)-F(0))$ to the same result calculated holographically in Figure . Importantly, since $\mu$ scales as $N^{-1/2}$, we see that in the large $N$ limit the first term of  is subleading and may be neglected. Thus to leading order in $N$, the combination $G_6 F(\mu)$ is in fact independent of $N_f$. Since comparison with the holographic result requires taking the large $N$ limit, our supergravity solutions will be unable to capture information about the precise flavor content of the SCFT dual. This agrees with the previous comments that, from the point of view of six-dimensional supergravity, the $n=1$ solutions we are considering can be consistently embedded into theories with any
+\end{document}

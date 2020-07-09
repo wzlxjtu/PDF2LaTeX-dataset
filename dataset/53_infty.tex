@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+\begin{center}
+$h(1,0,1,\ u)=F_{Y_{1}(1,0)|D=1,M=0}^{-1}(F_{U|10}(u))$ .   (1)
+\end{center}
+Second, for $F_{Y_{0}(1,0)|D=0,M=0}(y)$ we have
+\begin{center}
+$F_{U|10}^{-1}(F_{Y_{0}(1,0)|D=1,M=0}(y))=h^{-1}(1,0,0;y)$ ,   (2)
+\end{center}
+using $()$ . Combining $()$ and $()$ yields,
+\begin{center}
+$h(1,0,1,\ h^{-1}(1,0,0;y))=F_{Y_{1}(1,0)|D=1,M=0}^{-1}$ ? $F_{Y_{0}(1,0)|D=1,M=0}(y)$ .   (3)
+\end{center}
+The left sides of $()$ and $()$ are equal. In contrast to $()$ , $()$ contains only distributions
+
+that can be identified from observable data. In particular, $F_{Y_{\mathrm{t}}(1,0)|D=1,M=0}(y) =$
+
+$\mathrm{P}\mathrm{r} (Y_{t}(1,0)\ \leq\ y|D\ =\ 1,\ M\ =\ 0) = \mathrm{P}\mathrm{r}(Y_{t}\ \leq\ y|D\ =\ 1,\ M\ =\ 0)$ . Accordingly,
+
+we can identify $F_{Y_{1}(1,0)|D=0,M=0}^{-1}$ ? $F_{Y_{0}(1,0)|D=0,M=0}(y)$ by $Q10(y) \equiv F_{Y_{1}|D=1,M=0}^{-1}$ ?
+
+$F_{Y_{0}|D=1,M=0}(y)$ . Parsing $Y_{0}$ through $Q_{10}(\cdot)$ in the non-treated group without me-
+
+diator gives
+$$
+E[Q_{10}(Y_{0})|D=0,\ M=0]
+$$
+$$
+=E[F_{Y_{1}|D=1,M=0}^{-1}\ \ovalbox{\tt\small REJECT}\ F_{Y_{0}|D=1,M=0}(Y_{0})|D=0,\ M=0],
+$$
+$$
+=E[F_{Y_{1}(1,0)|D=1,M=0}^{-1}\ \ovalbox{\tt\small REJECT}\ F_{Y_{0}(1,0)|D=1,M=0}(Y_{0}(0,0))|D=0,\ M=0],
+$$
+\begin{center}
+$A1,A3a=E[h(1,0,1,\ h^{-1}(1,0,0;Y_{0}(0,0)))|D=0,\ M=0]$,   (4)
+$$
+A2=E[h(1,0,1,\ h^{-1}(1,0,0;Y_{0}(1,0)))|D=1,\ M=0],
+$$
+\end{center}
+{\it A}1 $A3b$
+$$
+=\ E[F_{Y_{1}(1,0)}^{-1}|D=0,M=0\ \ovalbox{\tt\small REJECT}\ F_{Y_{0}(1,0)|D=0,M=0}(Y_{0}(1,0))|D\ =\ 0,\ M\ =\ 0],
+$$
+$$
+=E[Y_{1}(1,0)|D=0,\ M=0]=E[Y_{1}(1,0)|D=0,\ M(0)=0],
+$$
+which has data support because of Assumption $4\mathrm{b}.$
+\end{document}

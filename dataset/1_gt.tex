@@ -1,0 +1,106 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage{aaai20}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet} % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{graphicx}  % DO NOT CHANGE THIS
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in}  % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in}  % DO NOT CHANGE THIS
+
+
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{xspace} 
+\usepackage{amsthm}  
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\usepackage{etoolbox}
+\usepackage{bm}
+\usepackage{amsfonts}
+\usepackage[capitalise, noabbrev]{cleveref}
+\usepackage{pifont}
+\usepackage{fixltx2e}
+\usepackage{mathtools}
+\usepackage{mathabx}
+\usepackage{algorithm}
+\usepackage{algorithmicx,algpseudocode}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{mathrsfs}
+\usepackage[percent]{overpic}
+
+
+
+
+\begin{document}
+
+Proposition of Appendix shows that a sufficient condition for the identifiability in the case of Gaussian and Boltzmann linear policies is that the second moment matrix of the feature vector $\mathbb{E}_{s \sim d_{\mu}^{\pi^*}} \left[ \mathbf{\phi}(s)\mathbf{\phi}(s)^T \right]$ is non--singular along with the fact that the policy $\pi_{\mathbf{\theta}}$ plays each action with positive probability for the Boltzmann policy.
+
+\paragraph{Concentration Result} We are now ready to present a concentration result, of independent interest, for the parameters and the negative log--likelihood that represents the central tool of our analysis (details and derivation in Appendix).
+
+
+Under Assumption and Assumption, let $\mathcal{D} = \{(s_i,a_i)\}_{i=1}^n$ be a dataset of $n>0$ independent samples, where $s_i \sim d_{\mu}^{\pi_{\mathbf{\theta}^*}}$ and $a_i \sim \pi_{\mathbf{\theta}^*}(\cdot|s_i)$. Let $\widehat{\mathbf{\theta}} = arg\,min_{\mathbf{\theta} \in \Theta} \widehat{\ell}(\mathbf{\theta})$ and $\mathbf{\theta}^* = arg\,min_{\mathbf{\theta} \in \Theta} {\ell}(\mathbf{\theta})$ . If the empirical FIM:
+\begin{equation}
+	\widehat{\mathcal{F}}(\mathbf{\theta}) = \frac{1}{n} \sum_{i=1}^n \mathbb{E}_{a \sim \pi_{\mathbf{\theta}}(\cdot|s)} \left[\mathbf{\overline{t}}(s,a,\mathbf{\theta})\mathbf{\overline{t}}(s,a,\mathbf{\theta})^T\right]
+\end{equation}
+has a positive minimum eigenvalue $\widehat{\lambda}_{\min} > 0$ for all $\mathbf{\theta} \in \Theta$, then, for any $\delta \in [0,1]$, with probability at least $1-\delta$:
+	\begin{equation*}
+		\left\| \widehat{ \mathbf{\theta}} - \mathbf{\theta}^* \right\|_2 \le \frac{\sigma}{\widehat{\lambda}_{\min}} \sqrt{\frac{2d}{n} \log \frac{2d}{\delta}}.
+		\end{equation*}
+Furthermore, with probability at least $1-\delta$, individually: 
+	\begin{align*}
+		&\ell(\widehat{\mathbf{\theta}}) - \ell({\mathbf{\theta}}^*) \le \frac{d^2\sigma^4}{\widehat{\lambda}_{\min}^2 n}  \log \frac{2d}{\delta}\\
+		&\widehat{\ell}({\mathbf{\theta}}^*) - \widehat{\ell}(\widehat{\mathbf{\theta}})  \le \frac{ d^2\sigma^4}{\widehat{\lambda}_{\min}^2 n}  \log \frac{2d}{\delta}.
+	\end{align*}
+
+The theorem shows that the $L^2$--norm of the difference between the maximum likelihood parameter $\widehat{\mathbf{\theta}}$ and the true parameter ${\mathbf{\theta}^*}$ concentrates with rate $\mathcal{O}(n^{-1/2})$ while the likelihood $\widehat{\ell}$ and its expectation $\ell$ concentrate with faster rate $\mathcal{O}(n^{-1})$. 
+Note that the result assumes that the empirical FIM $\widehat{\mathcal{F}}(\mathbf{\theta})$ has a strictly positive eigenvalue $\widehat{\lambda}_{\min} > 0$. This condition can be enforced as long as the true Fisher matrix ${\mathcal{F}}(\mathbf{\theta})$ has a positive minimum eigenvalue $\lambda_{\min}$, i.e. under identifiability assumption (Lemma) and given a sufficiently large number of samples. Proposition of Appendix provides the minimum number of samples such that 
+with probability at least $1-\delta$ it holds that $\widehat{\lambda}_{\min} > 0$.
+
+\paragraph{Identification Rule Analysis} The goal of the analysis of the identification rule is to find the critical value $c(1)$ so that the following probabilistic requirement is enforced.
+
+Let $\delta \in [0,1]$. An identification rule producing $\widehat{{I}}$ is \emph{$\delta$--correct} if: $\Pr \big( \widehat{{I}} \neq {I}^* \big)\le \delta$. 
+
+
+ We denote with $\alpha = \frac{1}{d-d^*} \mathbb{E} \big[ \big| \big\{ i \notin I^* : i \in \widehat{I}_{c} \big\} \big| \big]$ the expected fraction of parameters that the agent does not control selected by the identification rule and with $\beta = \frac{1}{d^*} \mathbb{E} \big[ \big| \big\{ i \in I^* : i \notin \widehat{I}_{c} \big\} \big| \big]$ the expected fraction of parameters that the agent does  control not selected by the identification rule.
+We now provide a result that bounds $\alpha$ and $\beta$ and employs them to derive $\delta$--correctness.
+
+	Let $\widehat{I}_{c}$ be the set of parameter indexes selected by the Identification Rule obtained using $n>0$ i.i.d. samples collected with $\pi_{\mathbf{\theta}^*}$, with $\mathbf{\theta}^* \in \Theta$. Then, under Assumption and Assumption, let ${\mathbf{\theta}}_i^* = arg\,min_{\mathbf{\theta} \in \Theta_i} \ell(\mathbf{\theta})$ for all $i \in \{1,...,d\}$ and $\nu = \min \left\{1, \frac{\lambda_{\min}}{\sigma^2} \right\}$. If $\widehat{\lambda}_{\min} \ge \frac{\lambda_{\min}}{2\sqrt{2}}$ and $\ell({\mathbf{\theta}}_i^*) - {l}({\mathbf{\theta}^*}) \ge c(1)$, it holds that:
+	{
+	\begin{align*}
+		&\alpha  \le 2d \exp \left\{ -\frac{c(1) {\lambda}_{\min}^2 n}{16d^2 \sigma^4} \right\}\\
+		&\beta \le \frac{2d - 1}{d^*} \sum_{i \in I^*} \exp\left\{ - \frac{ \left( {l}({\mathbf{\theta}}_i^*) - {l}({\mathbf{\theta}^*}) - c(1) \right) {\lambda}_{\min} \nu n}{16(d-1)^2 \sigma^2 } \right\}.
+	\end{align*}
+	}
+	Furthermore, the Identification Rule is $\left((d-d^*)\alpha +d^*\beta\right)$--correct.
+
+
+Since $\alpha$ and $\beta$ are functions of $c(1)$, we could, in principle, employ Theorem to enforce a value $\delta$, as in Definition, and derive $c(1)$. However, Theorem is not very attractive in practice as it holds under an assumption regarding the minimum eigenvalue of the FIM and the corresponding estimate, i.e. $\widehat{\lambda}_{\min} \ge \frac{\lambda_{\min}}{2\sqrt{2}}$, that cannot be verified in practice since $\lambda_{\min}$ is unknown. Similarly, the constants $d^*$, ${l}({\mathbf{\theta}}_i^*)$ and ${l}({\mathbf{\theta}^*})$ are typically unknown. We will provide in Section a heuristic for setting $c(1)$. 
+
+
+\section{Policy Space Identification in a Configurable Environment}
+The identification rules presented so far are
+unable to distinguish between a parameter set to zero because the agent
+cannot control it, or because zero is its optimal value. To overcome this issue, we employ the Conf--MDP properties to select
+a configuration in which the parameters we want to examine have an optimal value other than zero. Intuitively, if we want to test whether the agent can control parameter $\theta_i$, we should place the agent in an environment $\mathbf{\omega}_i \in \Omega$ where $\theta_i$ is maximally important
+for the optimal policy. This intuition is justified by Theorem, since to maximize the \emph{power} of the test ($1-\beta$), all other things being equal, we should maximize the
+log--likelihood gap ${l}({\mathbf{\theta}_i^*}) - {l}({\mathbf{\theta}^*})$, i.e. parameter $\theta_i$ should
+be essential to justify the agent's behavior. Let $I \in \{1,...,d\}$ be a set of parameter
+indexes we want to test, our ideal goal is to find the environment $\mathbf{\omega}_I$ such that:
+\begin{equation}
+	\mathbf{\omega}_I \in arg\,max_{\mathbf{\omega} \in \Omega} \left\{ {l}({\mathbf{\theta}_I^*}(\mathbf{\omega})) - {l}({\mathbf{\theta}^*}(\mathbf{\omega})) \right\},
+\end{equation}
+where ${\mathbf{\theta}^*}(\mathbf{\omega}) \in arg\,max_{\mathbf{\theta} \in \Theta} J_{\mathcal{M}_{\mathbf{\omega}}}(\mathbf{\theta})$ and ${\mathbf{\theta}}_I^*(\mathbf{\omega}) \in arg\,max_{\mathbf{\theta} \in \Theta_I} J_{\mathcal{M}_{\mathbf{\omega}}}(\mathbf{\theta})$ are the parameters of the optimal policies 
+in the environment $\mathcal{M}_{\mathbf{\omega}}$ in $\Pi_{\Theta}$ and $\Pi_{\Theta_I}$ respectively. Clearly, given the samples $\mathcal{D}$ collected with a single optimal policy $\pi^*(\mathbf{\omega}_0)$ in a single environment $\mathcal{M}_{\mathbf{\omega}_0}$, solving problem~\eqref{eq:confProblem} is hard as it requires performing an off--distribution optimization both on the space of policy parameters and configurations. For these reasons, we consider a surrogate objective that assumes that the optimal parameter in the new configuration can be reached by performing a single gradient step
+
+
+Let $I \in \{1,...,d\}$ and $\overline{I} =\{1,...,d\} \setminus I$. For a vector $\mathbf{v}$, we denote with $\mathbf{v} \rvert_I$ the vector obtained by setting to zero the
+
+\end{document}

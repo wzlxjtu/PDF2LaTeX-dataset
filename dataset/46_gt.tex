@@ -1,0 +1,32 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\section{Simulations}
+To shape the intuition for our identification results, this section presents a brief simulation based on the following data generating process (DGP):
+\begin{equation*}
+T \sim Binom(0.5),\textrm{ }D \sim Binom(0.5),\textrm{ }U\sim Unif(-1,1),\textrm{ } V\sim N(0,1)
+\end{equation*}
+independent of each other, and
+\begin{equation*}
+M=I\{D+U+V>0\},\qquad Y_T=\Lambda((1+D+M+D\cdot M)\cdot T+U).
+\end{equation*}
+Treatment $D$ as well as the observed time period $T$ are randomized, while the mediator-outcome association is confounded due to the unobserved time constant heterogeneity $U$. The potential outcome in period $1$ is given by $Y_1(d,M(d'))=\Lambda((1+d+M(d')+d\cdot M(d'))+U)$, where $\Lambda$ denotes a link function. If the latter corresponds to the identity function,  our model is linear and implies a homogeneous time trend $T$ equal to 1. If $\Lambda$ is nonlinear, the time trend is heterogeneous, which invalidates the common trend assumption of difference-in-differences models. $M$ is not only a function of $D$ and $U$, but also of the unobserved random term $V$, which guarantees common support w.r.t.\ $U$, see Assumptions 4 and 6. Compliers, always-takers, and never-takers satisfy, respectively: $c=I\{U+V\leq 0, 1+U+V>0\}$, $a=I\{U+V>0\}$, and $n=I\{1+U+V\leq0\}$.
+In the simulations with 1,000 replications, we consider two sample sizes ($N=1,000, 4,000$) and investigate the behaviour of our change-in-changes methods as well as the difference-in-differences approach of  in both a linear ($\Lambda$ equal to identity function) and nonlinear outcome model where $\Lambda$ equals the exponential function. To implement the change-in-changes estimators in the simulations as well as the application in Section , we make use of the `cic' command in the \texttt{qte} R-package by  with its default values.
+Table  reports the bias, standard deviation (`sd'), root mean squared error (`rmse'), true effect (`true'), and the relative root mean squared error in percent of the true effect (`relr') 
+\end{document}

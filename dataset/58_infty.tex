@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Under Assumption 7 and 8,
+$$
+E[1\{Y_{1}(0,0)\leq y\}|D=1,\ M(1)=0]^{A7}=^{A8}E[1\{Y_{1}(0,0)\ \leq\ y\}|Д\ =n]
+$$
+(1)
+$$
+=F_{Y_{1}(0,0)|Д=n}(y)\ ,
+$$
+which proves.
+
+0.1 Average direct effect under $\mathrm{d}=0$ on compliers
+
+In the following, we show that
+\begin{center}
+?1 (0) $=E[Y_{1}(1,0)-Y_{1}(0,\ 0)|Д\ =c],$
+$$
+=\frac{p_{0|0}}{p_{0|0}-p_{0|1}}E[Q_{10}(Y_{0})-Y_{1}|D=0,\ M=0]
+$$
+$$
+-\frac{p_{0|1}}{p_{0|0}-p_{0|1}}E[Y_{1}-Q_{00}(Y_{0})|D=1,\ M=0].
+$$
+\end{center}
+Plugging $()$ in $()$ under $T=1$, we obtain
+$$
+E[Y_{1}|D=0,\ M=0]=\frac{p_{n}}{p_{n}+p_{c}}E[Q_{00}(Y_{0})|D=1,\ M=0]
+$$
+$$
++\frac{p_{c}}{p_{n}+p_{c}}E[Y_{1}\ (0,\ 0)|Д\ =c].
+$$
+This allows identifying
+$$
+E[Y_{1}\ (0,\ 0)|Д\ =c]\ =\frac{p_{0|0}}{p_{0|0}-p_{0|1}}E[Y_{1}|D=0,\ M=0]
+$$
+(2)
+$$
+-\frac{p_{0|1}}{p_{0|0}-p_{0|1}}E[Q_{00}(Y_{0})|D=1,\ M=0].
+$$
+Accordingly, we have to show the identification of $E[Y_{1}(1,0)|c]$ to finish the proof.
+
+From $()$ we have $E[Y_{1}(1,0)|D=0,\ M=0]=E[Q_{10}(Y_{0})|D=0,\ M=0]$. Applying
+\end{document}

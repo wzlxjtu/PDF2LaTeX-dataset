@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+that $E[Y_{1}(1,0)|D\ =\ 0,\ M(0)\ =\ 0] = E[Q_{10}(Y_{0})|D\ =\ 0,\ M\ =\ 0]$ to finish the
+
+proof. First, we use $()$ to evaluate $F_{Y_{1}(1,0)|D=0,M=0}(y)$ at $h(1,0,1,\ u)$
+$$
+F_{Y_{1}(1,0)|D=0,M=0}(h(1,0,1,\ u))=F_{U|10}(h^{-1}(1,0,1;h(1,0,1,\ u)))=F_{U|10}(u)\ .
+$$
+Applying $F_{Y_{1}(1,0)|D=0,M=0}^{-1}(q)$ to both sides, we have
+\begin{center}
+$h(1,0,1,\ u)=F_{Y_{1}(1,0)|D=0,M=0}^{-1}(F_{U|10}(u))$ .   (1)
+\end{center}
+Second, for $F_{Y_{0}(1,0)|D=0,M=0}(y)$ we have
+\begin{center}
+$F_{U|10}^{-1}(F_{Y_{0}(1,0)|D=0,M=0}(y))=h^{-1}(1,0,0;y)$ ,   (2)
+\end{center}
+using $()$ . Combining $()$ and $()$ yields,
+\begin{center}
+$h(1,0,1,\ h^{-1}(1,0,0;y))=F_{Y_{1}(1,0)|D=0,M=0}^{-1}$ ? $F_{Y_{0}(1,0)|D=0,M=0}(y)$ .   (3)
+\end{center}
+Note that $h(1,0,1,\ h^{-1}(1,0,0;y))$ maps the period 1 (potential) outcome of an indi-
+
+vidual with the outcome $y$ in period $0$ under treatment without the mediator. Ac-
+
+cordingly, $E[F_{Y_{1}(1,0)|D=0,M=0}^{-1}\ \ovalbox{\tt\small REJECT}\ F_{Y_{0}(1,0)|D=0,M=0}(Y_{0})|D=0,\ M=0] =E[Y_{1}(1,0)|D=$
+
+$1, M=0]$. We can identify $F_{Y_{0}(1,0)|D=0,M=0}(y)$ under Assumption 2, but we cannot
+
+identify $F_{Y_{1}(1,0)|D=0,M=0}(y)$ . However, we show in the following that we can identify
+
+the overall quantile-quantile transform $F_{Y_{1}(1,0)|D=0,M=0}^{-1}$ ? $F_{Y_{0}(1,0)|D=0,M=0}(y)$ under
+
+the additional Assumption $3\mathrm{a}$. First, we use $()$ to evaluate $F_{Y_{1}(1,0)|D=1,M=0}(y)$ at
+
+$h(1,0,1,\ u)$
+$$
+F_{Y_{1}(1,0)|D=10,M=0}(h(1,0,1,\ u))=F_{U|10}(h^{-1}(1,0,1;h(1,0,1,\ u)))=F_{U|10}(u)\ .
+$$
+Applying $F_{Y_{1}(1,0)|D=1,M=0}^{-1}(q)$ to both sides, we have
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\setlength{\topmargin}{-.3in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{8.2in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footnotesep}{\baselinestretch\baselineskip}
+\newlength{\abstractwidth}
+\setlength{\abstractwidth}{\textwidth}
+\addtolength{\abstractwidth}{-6pc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsf}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\pagestyle{plain}
+\begin{document}
+
+In both the Lorentzian and Euclidean cases, a convenient way of formulating the coset space non-linear sigma model is to have the scalars $\phi^{\alpha I}$ parameterize an element $L$ of $G$. The so-called coset representative $L$ is an $(n+4)\times(n+4)$ matrix with matrix elements $L^\Lambda_{\,\,\,\,\Sigma}$, for  $\Lambda, \Sigma = 1, \dots n+4$. Using this representative, one may construct a left-invariant 1-form, 
+\begin{eqnarray}
+L^{-1} d L \in \mathfrak{g}
+\end{eqnarray}
+where $\mathfrak{g} = \mathrm{Lie}(G)$. To build a $K$-invariant kinetic term from the above, we decompose
+\begin{eqnarray}
+L^{-1} d L = Q + P
+\end{eqnarray}
+where $Q \in \mathfrak{k} = \mathrm{Lie}(K)$ and $P$ lies in the complement of $\mathfrak{k}$ in $\mathfrak{g}$.  Explicitly, the coset vielbein forms are  given by, 
+\begin{eqnarray}
+P^I_{\,\,\,\,\alpha} = \left(L^{-1}\right)^I_{\,\,\,\,\Lambda} \left(d L^\Lambda_{\,\,\,\,\alpha} + f^\Lambda_{\,\,\,\,\Gamma \Pi} A^\Gamma L^\Pi_{\,\,\,\,\alpha} \right)
+\end{eqnarray}
+where the $f_{\Lambda \Sigma}^{\,\,\,\,\,\,\,\,\Gamma}$ are structure constants of the gauge algebra, i.e.
+\begin{eqnarray}
+[T_\Lambda, T_\Sigma] =  f_{\Lambda \Sigma}^{\,\,\,\,\,\,\,\,\Gamma} \, T_\Gamma
+\end{eqnarray}
+We may then use $P$ to build the kinetic term for the vector multiplet scalars as, 
+\begin{eqnarray}
+{\cal L}_{\mathrm{coset}} = -{1\over 4} e P_{I \alpha \mu} P^{I \alpha \mu}
+\end{eqnarray}
+where $e = \sqrt{|\mathrm{det} \,g|}$ and we've defined $P_\mu^{I \alpha} = P_i^{I \alpha} \partial_\mu \phi^i,$ for $i = 0, \dots, 4n-1$.  With this formulation for the coset space non-linear sigma model, we may now write down the full bosonic Lagrangian of the theory. We will be interested in the case in which only the metric and the scalars are non-vanishing. In this case the Lorentzian theory is given by
+ \begin{eqnarray}
+ e^{-1} {\cal L} = -{1 \over 4} R + \partial_\mu \sigma \partial^\mu \sigma - {1\over 4} P_{I \alpha \mu} P^{I \alpha \mu} - V
+ \end{eqnarray}
+ with the scalar potential $V$ given by 
+ \begin{eqnarray}
+V = -e^{2 \sigma} \left[ {1 \over 36} A^2 + {1 \over 4}B^i B_i + {1 \over 4} (C^I_t C_{I t} + 4 D^I_t D_{I t}) \right] + m^2 e^{-6 \sigma} {\cal N}_{00} 
+\nonumber\\
+\vphantom{.} \hspace{0.5in} - m e^{- 2 \sigma} \left[{2 \over 3} A L_{00} - 2 B^i L_{0 i} \right]
+\end{eqnarray} 
+The scalar potential features the following quantities, 
+\begin{eqnarray}
+A = \epsilon^{r s t} K_{r s t} \hspace{1 in}\,\,B^r\, = \,\epsilon^{r s t} K_{s t 0}
+\nonumber\\
+C_I^t = \epsilon^{t r s} K_{r I s} \hspace{1 in} D_{I t}\,\, = \,\, K_{0 I t}
+\end{eqnarray}
+
+ 
+\end{document}

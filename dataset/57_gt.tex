@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\section{Proof of Theorem 3 }
+\subsection{Average direct effect on the never-takers}
+In the following, we show that $\theta_1^n= E[Y_1(1,0)-Y_1(0,0)|\tau=n]= E[Y_1-Q_{00}(Y_0)|D=1,M=0]$. From (), we obtain the first ingredient $E[Y_1(1,0)|\tau=n]=E[Y_1|D=1,M=0]$. Furthermore, from () we have $E[Q_{00}(Y_0)|D=1,M=0] = E[Y_1(0,0)|D=1,M(1)=0]$. Under Assumption 7 and 8,
+\begin{equation}  \begin{array}{rl} E[Y_1(0,0)|D=1,M(1)=0]\stackrel{A7}{=}E[Y_1(0,0)|D=1,\tau=n]\\\stackrel{A8}{=}E[Y_1(0,0)|\tau=n].
+\end{array} \end{equation}
+\subsection{Quantile direct effect on the never-takers}
+We prove that
+\begin{align*}
+\theta_1^n (q)= F_{Y_{1}(1,0)|\tau=n}^{-1}(q)- F_{Y_{1}(0,0)|\tau=n}^{-1}(q), \\
+= F_{Y_1|D=1,M=0}^{-1}(q)-F_{Q_{00}(Y_{0})|D=1,M=0}^{-1}(q).
+\end{align*}
+ This requires showing that
+\begin{align}
+F_{Y_{1}(1,0)|\tau=n}(y) =F_{Y_1|D=1,M=0}(y) \mbox{ and} \\
+F_{Y_{1}(0,0)|\tau=n}(y) = F_{Q_{00}(Y_{0})|D=1,M=0}(y). 
+\end{align}
+Under Assumptions 7 and 8,
+\begin{equation} 
+\begin{array}{rl}
+F_{Y_t|D=1,M=0} (y) = E[1\{Y_t\leq y\}|D=1,M=0] \\ \stackrel{A7,A8}{=}E[1\{Y_t(1,0)\leq y\}|\tau=n] \\ = F_{Y_{t}(1,0)|\tau=n} (y), \end{array}
+\end{equation}
+which proves (). From (), we have
+\begin{equation*}
+F_{Q_{00}(Y_{0})|D=1,M=0}(y) = F_{Y_{1}(0,0)|D=1,M(1)=0} (y) = E[1\{Y_1(0,0) \leq y\}|D=1,M(1)=0].
+\end{equation*}
+\end{document}

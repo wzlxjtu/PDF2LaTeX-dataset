@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+\begin{align*}
+\theta_1^{0,0}(0)= E[Q_{10}(Y_0)-Y_1|D=0,M=0], \\
+\theta_1^{0,0}(q,0)= F_{Q_{10}(Y_0)|D=0,M=0}^{-1}(q)-F_{Y_1|D=0,M=0}^{-1}(q).
+\end{align*}
+\begin{itemize}
+\item[(a)] and Assumption 6a, the average and quantile direct effects under $d=0$ conditional on $D=0$ and $M(0)=1$ are identified:
+\begin{align*}
+\theta_1^{0,1}(0)= E[Y_1-Q_{11}(Y_0)|D=0,M=1],\\
+\theta_1^{0,1}(q,0)= F_{Y_1|D=0,M=1}^{-1}(q)-F_{Q_{11}(Y_0)|D=0,M=1}^{-1}(q).
+\end{align*}
+\item[(b)] and Assumption 6b, the average and quantile direct effects under $d=1$ is identified conditional on $D=1$ and $M(1)=1$ are identified:
+\begin{align*}
+\theta_1^{1,1}(1)= E[Q_{01}(Y_0)-Y_1|D=1,M=1],\\
+\theta_1^{1,1}(q,1)= F_{Q_{01}(Y_0)|D=1,M=1}^{-1}(q)-F_{Y_1|D=1,M=1}^{-1}(q).
+\end{align*}
+\end{itemize}
+\textbf{Proof.} See Appendix .
+In the instrumental variable framework, any direct effects of the instrument are typically ruled out by imposing the exclusion restriction, in order to identify the causal effect of an endogenous regressor on the outcome, see for instance . By considering $D$ as instrument and $M$ as endogenous regressor, $\theta_1^{1,0}(1)=\theta_1^{0,0}(0)=\theta_1^{0,1}(0)=\theta_1^{1,1}(1)=0$ yield testable implications of the exclusion restriction under Assumptions 1-6.
+So far, we did not impose exogeneity of the treatment or mediator. In the following, we assume treatment exogeneity by invoking independence between the treatment and the potential post-treatment variables.\vspace{5 pt}\\
+\textbf{Assumption 7:} Independence of the treatment and potential mediators/outcomes.\\
+$ \{Y_t(d,m),M(d)\} D \mbox{, for all } d,m,t, \in \{0,1\}.$\vspace{5 pt}\\
+Assumption 7 implies that there are no confounders jointly affecting the treatment on the one hand and the mediator and/or outcome on the other hand. It is
+\end{document}

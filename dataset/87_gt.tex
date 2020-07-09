@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+\begin{document}
+We can perform the integral over $w$ using the inversion formula which sets $y=\frac{AB^{-1}}{(pq)^\frac12t^2}$, and we get
+\begin{gather*}
+(q;q)^2(p;p)^2\Gamma_e\big(pqt^2B^2\big)\Gamma_e\big(pqt^2A^{-2}\big)\Gamma_e\big(pqt^2A^{-1}BC^{\pm1}D^{\pm1}\big)
+\Gamma_e(pq)\Gamma_e\big(t^{-4}A^2B^{-2}\big)\\
+\quad{}\times \Gamma_e\big(pqA^{-2}B^2\big)
+\oint\frac{{\rm d}w_1}{4\pi i w_1}\oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{\Gamma_e\big(\frac{(p q)^{\frac12}}{t^2}w_1^{\pm1}w_2^{\pm1}\big)}{\Gamma_e\big(w_2^{\pm2}\big)\Gamma_e\big(w_1^{\pm2}\big)} \Gamma_e\big( AB^{-1} u^{\pm1} w_1^{\pm1}\big)\\
+\quad {} \times \Gamma_e\big((qp)^{\frac12}t BD^{\pm1} w_1^{\pm1}\big)\Gamma_e\big((q p)^{\frac12} t^2 A^{-1} B u^{\pm1} w_2^{\pm1}\big) \Gamma_e \big(t^{-1} B^{-1} D^{\pm1}w_2^{\pm1}\big) \Gamma_e\big( v^{\pm1} w_1^{\pm1}\big)\\
+\quad{} \times\Gamma_e\big((q p)^{\frac12}t A^{-1} C^{\pm1} w_1^{\pm1}\big) \Gamma_e\big( (q p)^{\frac12} t^2 v^{\pm1} w_2^{\pm1}\big) \Gamma_e\big( t^{-1} A C^{\pm1} w_2^{\pm1}\big) .
+\end{gather*}
+$\Gamma_e(pq)$ is zero but the integral over $w_1$ is pinched at $w_1=v^{\pm1}$ due to the term $\Gamma_e(v^{\pm1}w_1^{\pm1})$ such that the multiplication is finite and we get
+\begin{gather*}
+(q;q)(p;p) \Gamma_e\big(pqt^2B^2\big)\Gamma_e\big(pqt^2A^{-2}\big)\Gamma_e\big(pqt^2A^{-1}BC^{\pm1}D^{\pm1}\big)
+\Gamma_e\big(t^{-4}A^2B^{-2}\big)\Gamma_e\big(pqA^{-2}B^2\big)\\
+\quad{} \times\Gamma_e\big( AB^{-1} u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t BD^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A^{-1} C^{\pm1} v^{\pm1}\big)\\
+\quad{} \times\oint \frac{{\rm d}w_2}{4\pi i w_2} \frac{1}{\Gamma_e\big(w_2^{\pm2}\big)}
+\Gamma_e\big((q p)^{\frac12} t^2 A^{-1} B u^{\pm1} w_2^{\pm1}\big) \Gamma_e \big(t^{-1} B^{-1} D^{\pm1}w_2^{\pm1}\big)
+\Gamma_e\big( t^{-1} A C^{\pm1} w_2^{\pm1}\big) .
+\end{gather*}
+Integral over $w_2$ can be evaluated using the elliptic beta integral formula, and the final result is
+\begin{gather*}
+\Gamma_e\big(pqA^{-2}B^2\big) \Gamma_e\big( AB^{-1} u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t BD^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A^{-1} C^{\pm1} v^{\pm1}\big)\\
+\quad{}\times \Gamma_e\big((pq)^\frac12 t B C^{\pm1}u^{\pm1}\big) \Gamma_e\big((pq)^\frac12 t A^{-1}D^{\pm1}u^{\pm1}\big) .
+\end{gather*}
+We glue this to another three punctured sphere closed with $a_i=A^{-1}B$ and the claim is that gluing this to a given model we get the same model. Indeed we have
+\begin{gather*}
+ T_{{\mathfrak J}_C}(u)\times_u \big(\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(w,u,v)\times_w C^{(0,0;AB^{-1})}_{{\mathfrak J}_B}(w)\big)\\
+ \quad{} \times_v\big(T_{{\mathfrak J}_B, {\mathfrak J}_C,{\mathfrak J}_D}(h,z,v)\times_h C^{(0,0;A^{-1}B)}_{{\mathfrak J}_B}(h)\big)\big)\\
+=(q;q)^2(p;p)^2\Gamma_e\big(pq\big(A^{-2}B^2\big)^{\pm1}\big)\Gamma_e\big((pq)^\frac12 t B^{-1} C^{\pm1}z^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t AD^{\pm1}z^{\pm1}\big)\\
+\quad{} \times\oint\frac{{\rm d}u}{4\pi i u} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} D^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} C^{\pm1}u^{\pm1}\big)}{\Gamma\big(u^{\pm2}\big)}\\
+\quad{} \times\Gamma_e\big((pq)^\frac12 t B C^{\pm1}u^{\pm1}\big)
+\Gamma_e\big((pq)^\frac12 t A^{-1}D^{\pm1}u^{\pm1}\big)T_{{\mathfrak J}_C}(u)\\
+\quad{} \times\oint\frac{{\rm d}v}{4\pi i v} \frac{\Gamma_e\big((q p)^{\frac12 }t^{-1} A^{\pm1} C^{\pm1}v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12 }t^{-1} B^{\pm1} D^{\pm1}v^{\pm1}\big)}{\Gamma\big(v^{\pm2}\big)}\\
+\quad{} \times\Gamma_e\big( AB^{-1} u^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t BD^{\pm1} v^{\pm1}\big)
+\Gamma_e\big((q p)^{\frac12}t A^{-1} C^{\pm1} v^{\pm1}\big)\\
+\quad{} \times\Gamma_e\big( A^{-1}B z^{\pm1} v^{\pm1}\big)\Gamma_e\big((qp)^{\frac12}t B^{-1}D^{\pm1} v^{\pm1}\big)\Gamma_e\big((q p)^{\frac12}t A C^{\pm1} v^{\pm1}\big) .
+\end{gather*}
+\end{document} 

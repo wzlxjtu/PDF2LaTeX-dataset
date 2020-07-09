@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+under treatment randomization as in successfully conducted experiments. This
+
+allows identifying the ATE: $\Delta_{1} = E[Y_{1}|D\ =\ 1] -E[Y_{1}|D\ =\ 0]$. Furthermore, we
+
+assume the mediator to be weakly monotonic in the treatment.
+
+Assumption 8: Weak monotonicity of the mediator in the treatment.
+
+$\mathrm{P}\mathrm{r}(M(1)\geq M(0))=1.$
+
+Assumption 8 is standard in the instrumental variable literature on local aver-
+
+age treatment effects when denoting by $D$ the instrument and by $M$ the endoge-
+
+nous regressor, see and . It rules out the existence of defiers. As discussed in
+
+the Appendix , the total ATE $\Delta_{1} = E[Y_{1}|D\ =\ 1] - E[Y_{1}|D\ =\ 0]$ and QTE
+
+$\Delta_{1}(q) =F_{Y_{1}|D=1}^{-1}(q)-F_{Y_{1}|D=0}^{-1}(q)$ for the entire population are identified under As-
+
+sumption 7. Furthermore, Assumptions 7 and 8 yield the strata proportions, de-
+
+noted by $p_{Д} =$ Pr(t), as functions of the conditional mediator probabilities given
+
+the treatment, which we denote by $p_{(m|d)} = \mathrm{P}\mathrm{r} (M\ =\ m|D\ =\ d)$ for {\it d}, $m \in \{0$, 1$\}$
+
+(see Appendix ):
+\begin{center}
+$pa=p_{1|0},\ pc=p_{1|1}-p_{1|0}=p_{0|0}-p_{0|1},\ pn=p_{0|1}$.   (1)
+\end{center}
+Furthermore, Assumptions 2, 7, and 8 imply that (see Appendix )
+\begin{center}
+$\displaystyle \Delta_{0,c}=E[Y_{0}(1,1)-Y_{0}(0,0)|c]\ =\frac{E[Y_{0}|D=1]-E[Y_{0}|D=0]}{p_{1|1}-p_{1|0}}=0$.   (2)
+\end{center}
+Therefore, a rejection of the testable implication $E[Y_{0}|D\ =\ 1]-E[Y_{0}|D\ =\ 0] = 0$
+
+in the data would point to a violation of these assumptions. Assumptions 7 and
+
+8 permit identifying additional parameters, namely the total, direct, and indirect
+
+effects on compliers, and the direct effects on never- and always-takers, as shown in
+
+Theorems 3 to 5. This follows from the fact that defiers are ruled out and that the
+
+proportions and potential outcome distributions of the various principal strata are
+
+not selective w.r. $\mathrm{t}$. the treatment.
+
+Theorem 3: Under Assumptions $1\ovalbox{\tt\small REJECT} 3$, 7-8,
+\end{document}

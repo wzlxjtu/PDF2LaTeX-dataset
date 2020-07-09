@@ -1,0 +1,31 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[flushmargin]{footmisc}
+\usepackage{setspace}
+\usepackage[comma]{natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ae}
+\usepackage{caption}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document} \doublespacing \pagestyle{plain}
+function is $F_{Y_{t}|D=d,M=m}^{-1}(q) = \inf \{y : F_{Y_t|D=d,M=m}(y) \geq q \}$. Furthermore,
+\begin{equation*}
+Q_{dm}(y) := F_{Y_{1}|D=d,M=m}^{-1} \circ F_{Y_{0}|D=d,M=m}(y) = F_{Y_{1}|D=d,M=m}^{-1}(F_{Y_{0}|D=d,M=m}(y))
+\end{equation*}
+is the quantile-quantile transform of the conditional outcome from period 0 to 1 given treatment $d$ and mediator status $m$. This transform maps $y$ at rank $q$ in period 0 ($q = F_{Y_{0}|D=d,M=m}(y)$) into the corresponding $y'$ at rank $q$ in period 1 ($y'= F_{Y_{1}|D=d,M=m}^{-1}(q)$).
+\section{Identification and Estimation}
+\subsection{Identification}
+This sections discusses the identifying assumptions along with the identification results for the various direct and indirect effects. We note that our assumptions could be adjusted to only hold conditional on a vector of observed covariates. In this case, the identification results would hold within cells defined upon covariate values. In our main discussion, however, covariates are not considered for the sake of ease of notation. For notational convenience, we maintain throughout that $\Pr(T=t, D=d, M=m)>0$ for $t,d,m$ $\in\{1,0\}$, implying that all possible treatment-mediator combinations exist in the population in both time periods. Our first assumption implies that potential outcomes are characterized by a continuous nonparametric function, denoted by $h$, that is strictly monotonic in a scalar $U$ that reflects unobserved heterogeneity.\vspace{5 pt}\\
+\textbf{Assumption 1:} Strict monotonicity of continuous potential outcomes in unobserved heterogeneity.\\
+The potential outcomes satisfy the following model: $Y_t(d,m)= h(d,m, t, U)$, with the general function $h$ being continuous and strictly increasing in the scalar unobservable $U \in \mathbb{R}$ for all $d,m,t \in \{0,1\}$.\vspace{5 pt}\\
+Assumption 1 requires the potential outcomes to be continuous implying that there
+\end{document}

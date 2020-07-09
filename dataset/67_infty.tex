@@ -1,0 +1,222 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+ZENIT (Zero Emission Neighborhood Investment Tool) is
+
+a tool for minimizing the cost of investing and operating the
+
+energy system of a Zero Emission Neighborhood (ZEN). It
+
+uses a MILP model to find the optimal type and size of
+
+technology needed to provide heat and electricity to a ZEN.
+
+The concept contains much more than only the energy system
+
+(materials and architecture to name two examples) but this
+
+tool’s focus is energy systems. The idea behind ZEN is to limit
+
+emissions and that it is possible to compensate for the various
+
+emissions of $CO_{2}$ in the neighborhood by exporting electricity
+
+to the grid. Indeed, by exporting electricity produced from
+
+on-site renewable to the grid, we assume that the production
+
+in the system is reduced by the corresponding amount and
+
+thus reduces the emission of the total system. The model
+
+used in this paper is based on the model presented in . In
+
+this section, the main elements of the model will be repeated
+
+and the differences with the model from presented. For the
+
+details on the model not repeated, one can refer to that paper.
+
+Then the implementation and case chosen will be presented.
+
+The optimization is written in Python and uses Gurobi as a
+
+solver. In this paper, we interpret the definition of a ZEN as
+
+a neighborhood that has $0$ emissions over its lifetime, which
+
+is set to 60 years. However due to practical reasons and to
+
+reduce the computational time, different periods of the lifetime
+
+can be defined using one representative year for each. In this
+
+study we use a single period. The different decision variables
+
+are the amount of investment in each technology for heat,
+
+power and energy storage as well as the operation related
+
+variables defined for each hour (e.g. amount of electricity
+
+produced, amount of fuel consumed). Multiple constraints are
+
+used, to enforce the $CO_{2}$ limitations necessary in the ZEN
+
+context and to represent the operation of the neighborhood
+
+and in particular of each technology. It is important to note
+
+that part load limitations and start up/shutdown constraints are
+
+not implemented. The objective function of the optimization
+
+is the following: {\it Minimize}:
+
+$\displaystyle \sum_{\iota}$ {\it Cidisc} $\cdot x_{i}+b_{hg} \cdot C_{hg}+\displaystyle \frac{1}{\ovalbox{\tt\small REJECT}_{r,D}^{tot}}\sum_{\dot{\iota}}$ {\it Cmaint}$\cdot x_{i}$
+$$
++\frac{1}{\ovalbox{\tt\small REJECT}_{r,D}^{tot}}(\sum_{t}(\sum_{f}f_{f,t}\cdot P_{f}^{fuel}+(P_{t}^{spot}+P^{grid}
+$$
+\begin{center}
+$+P^{ret})\displaystyle \cdot(y_{t}^{imp}+\sum_{est}y_{t,e\overline{s}t}^{gbimp})-P_{t}^{spot}\cdot y_{t}^{exp}))$   (1)
+\end{center}
+Where $C_{i}^{disc}$ is the discounted investment cost in technology
+
+$i$ including re-investments and salvage value, $x_{i}$ the capacity
+
+of technology $i, b_{hg}$ the binary variable for investment in
+
+a heating grid, $C_{hg}$ the cost of the heating grid, e{\it troDt} the
+
+discount factor for the whole lifetime of the neighborhood
+
+with discount rate $\mathrm{r}, C_{i}^{maint}$ the annual maintenance cost,
+
+$f_{f,t}$ the fuel consumption, $P_{f}^{fuel}$ the fuel price, $P_{t}^{spot}$ the
+
+electricity spot price, $P^{grid}$ and $P^{ret}$ the grid and retailer
+
+tariffs, $y_{t}^{imp}$ and $y_{t}^{exp}$ the import and export of electricity from
+
+the neighborhood and $y_{t,\overline{es}t}^{gbimp}$ the import of electricity to the
+
+storage. The subscript $t$ represent timesteps, $i$ the technologies
+
+with in particular $f$ for the technologies using other fuel than
+
+electricity and {\it est} for energy storages. It minimizes the cost
+
+of investing in the different technologies and the operating
+
+costs, fuels, electricity and O\& M costs and contains the costs
+
+of the heating grid and a binary associated with it that also
+
+gives access to technologies at a neighborhood level. The
+
+most important constraint in the case of ZENs is the $CO_{2}$
+
+balance $($??$)$ , whose principle was explained earlier. In $($??$)$ ,
+
+$y_{est}^{gb_{-}imp}, y_{est}^{gb_{-}xp}$ and $y_{t,\overline{es}t}^{pbexp}$ are respectively the import and
+
+export on the grid side battery and the export from the on-
+
+site technologies producing electricity, $\phi_{e}^{CO_{2}}$ and $\phi_{f}^{CO_{2}}$ the
+
+$CO_{2}$ factors for electricity and other fuels, ?{\it est} the efficiency
+
+of battery and $y_{t,g}^{exp}$ the export of electricity from the on-site
+
+technologies.
+
+$\displaystyle \sum((y_{t}^{imp}\ +\ \sum y_{t,\overline{es}t}^{gbimp})\ .\ \phi_{e}^{CO_{2}})$
+
+$t$ {\it est}
+$$
++\sum\sum\ (\phi_{f}^{CO_{2}}\ .\ f_{f,t})\ \leq\ \sum(\sum(y_{t,\overline{es}t}^{gbexp}
+$$
+$t f t$ {\it est}
+\begin{center}
+$+y_{t,\overline{es}t}^{pbexp}) \cdot$?{\it est} $+\displaystyle \sum y_{t,g}^{exp}$) $\cdot \phi_{e}^{CO_{2}}$   (2)
+$$
+g
+$$
+\end{center}
+Fig. presents graphically the electricity balance and the differ-
+
+ent equations associated. Different technologies are included
+
+in the study; some of them are only available at the building
+
+level and others at the neighborhood level in a centralized pro-
+
+duction plant. The different technologies are: at the building
+
+level : Solar Panels (PV), Solar Thermal (ST), Heat Pumps
+
+(HP), Biomass Boiler (BB), Electric Boiler (EB), Gas Boiler
+
+(GB); and at the neighborhood levels: CHP $($nCHP) , Gas
+
+Boiler $(\mathrm{n}\mathrm{G}\mathrm{B})$ , Electric Boiler $(\mathrm{n}\mathrm{E}\mathrm{B})$ , Heat Pumps $(\mathrm{n}\mathrm{H}\mathrm{P})$ . In
+
+addition, Batteries (Bat) and Heat Storage (HS) are available
+
+at both levels. Different subcategories can be available to
+
+choose from within each category, for instance air-water or
+
+water-water heat pumps. In parenthesis is the notation used
+
+for the rest of the study for each technology. Unlike the
+
+model in , the model used for this paper uses a disaggregrated
+
+heat load. The buildings’ load are not summed, but types
+
+of buildings are identified and the loads are aggregated per
+
+building type. It is possible to use a completely disaggregated
+
+heat load but the lack of available data motivated not doing
+
+it. The input data necessary to run ZENIT are the electric and
+
+heating loads (ideally separated between domestic hot water
+
+and space heating), the outside and ground temperatures, the
+
+solar insolation and the electricity prices. Hourly timeseries
+
+for each representative years are necessary. A description of
+
+the neighborhood and its buildings with the floor and the roof
+
+area, and the layout of the neighborhoods is also needed. In
+
+this study we assume the heating grid is there (and set the
+
+corresponding binary to 1) because there is one in the location
+
+that inspired this case. Its characteristics (layout, losses and
+
+cost) are then necessary but a module can be used to provide
+
+an estimate of the losses and cost based on the layout of the
+
+neighborhood. The $CO_{2}$ factors used were 17 $\mathrm{g}CO_{2}/\mathrm{k}\mathrm{W}\mathrm{h}$ for
+
+electricity, 277 $\mathrm{g}CO_{2}/\mathrm{k}\mathrm{W}\mathrm{h}$ for gas and 7 $\mathrm{g}CO_{2}/\mathrm{k}\mathrm{W}\mathrm{h}$ for wood
+
+chips . The electricity produced via solar panels or
+\end{document}

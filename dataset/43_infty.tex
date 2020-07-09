@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+Proof. See Appendix . Theorem 5: Under Assumptions 1-3, 5, 7-8,
+
+a) and Assumptions $4\mathrm{a}, 6\mathrm{a}$, the total average treatment effect on compliers is
+
+identified:
+$$
+\Delta_{1}^{c}=\frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=1,\ M=1]-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})|D=0,\ M=1]
+$$
+$$
+-\frac{p_{0|0}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=0,\ M=0]+\frac{p_{0|1}}{p_{1|1}-p_{1|0}}E[Q_{00}(Y_{0})|D=1,\ M=0].
+$$
+Furthermore, the total quantile treatment effect on compliers $\Delta_{1}^{c}(q)=F_{Y_{1}(1,1)|c}^{-1}(q)-$
+
+$F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified using the inverse of $()$ and $()$ .
+
+b) and Assumptions $4\mathrm{a}, 6\mathrm{b}$, the average indirect effect under $d=0$ on compliers
+
+is identified:
+
+d1{\it c}(0) $=\displaystyle \frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})|D=1,\ M=1]-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=0,\ M=1]$
+$$
+-\frac{p_{0|0}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=0,\ M=0]+\frac{p_{0|1}}{p_{1|1}-p_{1|0}}E[Q_{00}(Y_{0})|D=1,\ M=0].
+$$
+Furthermore, the quantile indirect effect under $d=0$ on compliers d1 $(q,\ 0) =$
+
+$F_{Y_{1}(0,1)|c}^{-1}(q)-F_{Y_{1}(0,0)|c}^{-1}(q)$ is identified using the inverse of $()$ and $()$ .
+
+c) and Assumptions $4\mathrm{b}, 6\mathrm{a}$, the average indirect effect under $d=1$ on compliers
+
+is identified:
+\begin{center}
+d1 (1) $=\displaystyle \frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=1,\ M=1]-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})|D=0,\ M=1]$
+$$
+-\frac{p_{0|0}}{p_{1|1}-p_{1|0}}E[Q_{00}(Y_{0})|D=0,\ M=0]+\frac{p_{0|1}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=1,\ M=0].
+$$
+\end{center}
+Furthermore, the quantile indirect effect under $d= 1$ on compliers d1 $(q,\ 1) =$
+
+$F_{Y_{1}(1,1)|c}^{-1}(q)-F_{Y_{1}(1,0)|c}^{-1}(q)$ is identified using the inverse of $()$ and $()$ .
+
+Proof. See Appendix .
+\end{document}

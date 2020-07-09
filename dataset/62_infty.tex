@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+0.1 Average direct effect under $\mathrm{d}=1$ on compliers
+
+In the following, we show that
+\begin{center}
+?1 (1) $=E[Y_{1}(1,1)-Y_{1}(0,\ 1)|Д\ =c],$
+$$
+=\frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Y_{1-}Q01(Y_{0})|D=1,\ M=1]
+$$
+$$
+-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})-Y_{1}|D=0,\ M=1].
+$$
+\end{center}
+Plugging $()$ in $()$ , we obtain
+$$
+E[Y_{1}|D=1,\ M=1]\ =\frac{p_{a}}{p_{a}+p_{c}}E[Q_{11}(Y_{0})|D=0,\ M=1]
+$$
+$$
++\frac{p_{c}}{p_{a}+p_{c}}E[Y_{1}\ (1,\ 1)|Д=c].
+$$
+This allows identifying
+$$
+E[Y_{1}\ (1,\ 1)|Д=c]=\frac{p_{1|1}}{p_{1|1}-p_{1|0}}E[Y_{1}|D=1,\ M=1]
+$$
+(1)
+$$
+-\frac{p_{1|0}}{p_{1|1}-p_{1|0}}E[Q_{11}(Y_{0})|D=0,\ M=1].
+$$
+From $()$ we have $E[Y_{1}(0,1)|D=\ 1,\ M=\ 1] =E[Q_{01}(Y_{0})|D=\ 1,\ M=\ 1]$. Applying
+
+the law of iterative expectations, gives
+$$
+E[Y_{1}(0,1)|D=1,\ M=1]=\frac{p_{a}}{p_{a}+p_{c}}E[Y_{1}(0,1)|D=1,\ M=1,\ Д\ =a]
+$$
+$$
++\frac{p_{c}}{p_{a}+p_{c}}E[Y_{1}(0,1)|D=1,\ M=1,\ Д\ =c],
+$$
+$$
+A7=\frac{p_{a}}{p_{a}+p_{c}}E[Y_{1}\ (0,\ 1)|Д\ =a]+\frac{p_{c}}{p_{a}+p_{c}}E[Y_{1}(0,\ 1)|Д\ =c].
+$$
+After some rearrangements and using $()$ , we obtain
+
+$E[Y_{1}\ (0,\ 1)|Д\ =c] =\displaystyle \frac{p_{a}+p_{c}}{p_{c}}E[Q_{01}(Y_{0})|D=1,\ M=1]-\frac{p_{a}}{p_{c}}E[Y_{1}|D=0,\ M=1].$
+\end{document}

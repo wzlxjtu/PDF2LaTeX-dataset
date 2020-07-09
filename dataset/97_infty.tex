@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+questioning the presence of $(i,j)$ in each structure. By construction, the
+
+distribution of $X_{i,j}$ is given by the base pairing probability $\mathbb{P}(X_{i,j}(s)=1)=p_{i,j}$ .
+
+Any base pair, $(i,j)$ , has an {\it entropy}, defined by the information entropy of $X_{i,j}$ ,
+
+i.e.
+$$
+H(X_{i,j})=-p_{i,j}\log_{2}p_{i,j}-(1-p_{i,j})\log_{2}(1-p_{i,j})\ ,
+$$
+where the units of $H$ are in bits. The entropy $H (X_{i,j}\ )$ measures the uncertainty
+
+of the base pair $(i,\ j)$ in $\Omega$ . When abase pair $(i,\ j)$ is certain to either exist
+
+or not, its entropy $H (X_{i,j}\ )$ is $0$. However, in case $p_{i,j}$ is closer to 1/2, $H(X_{i,j})$
+
+becomes larger. The r.v. $X_{i,j}$ partitions the space $\Omega$ into two disjoint sub-
+
+spaces $\Omega_{0}$ and $\Omega_{1}$, where $\Omega_{k} = \{s\ \in\ \Omega\ :\ X_{i,j}(s)\ =\ k\} (k\ =\ 0,1)$ , and the
+
+induced distributions are given by
+
+$p_{0}(s)=\displaystyle \frac{p(s)}{1-p_{i,j}}$ for{\it s} $\in\Omega_{0}, p_{1}(s)=\displaystyle \frac{p(s)}{p_{i,j}}$ for{\it s} $\in\Omega_{1}.$
+
+Intuitively, $H(X_{i,j})$ quantifies the average bits of information we would expect
+
+to gain about the ensemble when querying a base pair $(i,j)$ This motivates
+
+us to consider the {\it maximum entropy base pairs}, the base pair $(i_{0},j_{0})$ having
+
+maximum entropy among all base pairs in $\Omega$, i.e.
+$$
+(i_{0},j_{0})={\rm argmax} H(X_{i,j})(i,j).
+$$
+As we shall prove in Section, $X_{i_{0},j_{0}}$ produces maximally balanced splits.
+
+0.1. {\it The ensemble tree}
+
+Equipped with the notion of ensemble and bit query (i.e. the respective max-
+
+imum entropy base pairs), we proceed by describing our strategy to identify the
+
+target structure as specified in Problem. The first step consists in having a
+
+closer look at the space of ensemble reductions. Each split obtained by parti-
+
+tioning the ensemble $\Omega$ using r.v. $X_{i,j}$, can in turn be bipartitioned itself via
+
+any of its maximum entropy base pairs. This recursive splitting induces the
+
+{\it ensemble tree}, $T(\Omega)$ , whose vertices are sub-samples and in which its {\it k}-th layer
+
+represents a partition of the original ensemble into $2^{k}$ blocks. $T(\Omega)$ , isarooted
+
+binary tree, in which
+
+$\epsilon_{i,j} ((x_{1},\ .\ .\ .\ x_{j}),\ (y_{1},\ .\ .\ .\ y_{m})) = (y_{1},\ .\ .\ .\ y_{i-1},\ x_{1},\ .\ .\ .\ x_{j},\ y_{i+1},\ .\ .\ .\ y_{m})$
+\begin{center}
+?$i,j (x_{1},\ .\ .\ .\ x_{n}) = (\ (x_{i},\ .\ .\ .\ x_{j}),\ (x_{1},\ .\ .\ .\ x_{i-1},\ x_{j+1},\ .\ .\ .\ x_{n}))$ .
+\end{center}
+To quantify to what extent modularity can discriminate base pairs, we perform
+
+computational experiments on random sequences via splittings. For each se-
+
+quence, we consider its MFE structure $s$ computed via ViennaRNA (?) . Given
+
+two positions $i$ and $j$, we cut the entire sequence $\mathrm{x}$ into two fragments, $\mathrm{x}_{i,j}$ and
+
+the remainder $\overline{\mathrm{x}}_{i,j}$, i.e., ?{\it i}, $j(\mathrm{X}) = (\mathrm{x}_{i,j}\ ,\ \overline{\mathrm{x}}_{i,j})$ . Subsequently, the two fragments
+
+$\mathrm{x}_{i,j}$ and $\overline{\mathrm{x}}_{i,j}$ refold into their MFE structures $s_{i,j}$ and $\overline{s}_{i,j}$, respectively, which
+
+are combined into a structure $\epsilon_{i,j} (s_{i,j}\ ,\ \overline{s}_{i,j})$ . If bases{\it i} and{\it j} are paired in $s$
+
+1
+\end{document}

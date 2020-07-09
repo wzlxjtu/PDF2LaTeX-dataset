@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pagestyle{plain}
+\usepackage{fancybox}
+\usepackage{bm}
+
+\begin{document}
+
+In both the Lorentzian and Euclidean cases, a convenient way of formulating the coset
+
+space non-linear sigma model is to have the scalars $\phi^{\alpha I}$ parameterize an element $L$ of $G.$
+
+The so-called coset representative $L$ is an $(n+4)\times(n+4)$ matrix with matrix elements $L^{\Lambda_{\Sigma}},$
+
+for $\Lambda, \Sigma=1$, . . . $n+4$. Using this representative, one may construct a left-invariant 1-form,
+\begin{center}
+$L^{-1}dL\in \mathrm{g}$   (1)
+\end{center}
+where $\mathrm{g}=\mathrm{L}\mathrm{i}\mathrm{e}(G)$ . To build a $K$-invariant kinetic term from the above, we decompose
+\begin{center}
+$L^{-1}dL=Q+P$   (2)
+\end{center}
+where $Q\in \mathrm{k}=\mathrm{L}\mathrm{i}\mathrm{e}(K)$ and $P$ lies in the complement of $\mathrm{k}$ in $\mathrm{g}$. Explicitly, the coset vielbein
+
+forms are given by,
+\begin{center}
+$P_{\alpha}=\ (L^{-1})\ \Lambda(dL_{\alpha}^{\Lambda}+f_{\Gamma\Pi}^{\Lambda}A^{\Gamma}L_{\alpha}^{\Pi})$   (3)
+\end{center}
+where the $f_{\Lambda\Sigma}^{\Gamma}$ are structure constants of the gauge algebra, i.e.
+\begin{center}
+$[T_{\Lambda},\ T_{\Sigma}]=f_{\Lambda\Sigma}^{\Gamma}T_{\Gamma}$   (4)
+\end{center}
+We may then use $P$ to build the kinetic term for the vector multiplet scalars as,
+\begin{center}
+$\displaystyle \mathcal{L}_{\mathrm{c}\mathrm{o}\mathrm{s}\mathrm{e}\mathrm{t}}=-\frac{1}{4}eP_{I\alpha\mu}P^{I\alpha\mu}$   (5)
+\end{center}
+where $e = \sqrt{|\det g|}$ and we've defined $P_{\mu}^{I\alpha} = P_{i}^{I\alpha}\partial_{\mu}\phi^{i}$, for $i = 0$, . . . , $4n- 1$. With this
+
+formulation for the coset space non-linear sigma model, we may now write down the full
+
+bosonic Lagrangian of the theory. We will be interested in the case in which only the metric
+
+and the scalars are non-vanishing. In this case the Lorentzian theory is given by
+\begin{center}
+$e^{-1}\displaystyle \mathcal{L}=-\frac{1}{4}R+\partial_{\mu}\sigma\partial^{\mu}\sigma-\frac{1}{4}P_{I\alpha\mu}P^{I\alpha\mu}-$   (6)
+\end{center}
+with the scalar potential $V$ given by
+$$
+V=-e^{2\sigma}\ [\frac{1}{36}A^{2}+\frac{1}{4}B^{i}B_{i}+\frac{1}{4}(C_{t}^{I}C_{It}+4D_{t}D_{It})]\ +m^{2}e^{-6\sigma}\mathcal{N}_{00}
+$$
+\begin{center}
+$-me^{-2\sigma}\displaystyle \ [\frac{2}{3}AL_{00}-2B^{i}L_{0i}]$   (7)
+\end{center}
+The scalar potential features the following quantities,
+$$
+A=\epsilon^{rst}K_{rst}\ B^{r}\ =\ \epsilon^{rst}K_{st0}
+$$
+\begin{center}
+$C_{I}^{t}=\epsilon^{trs}K_{rIs}\ D_{It}\ =\ K_{0It}$   (8)
+\end{center}
+1
+\end{document}
